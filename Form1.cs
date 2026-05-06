@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Sql;
-using BCrypt;
+using BCrypt.Net;
 using System.Drawing;
 using System.Linq;
 using System.Text;
