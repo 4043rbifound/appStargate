@@ -1,4 +1,5 @@
-﻿using System;
+﻿using appStargate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,26 @@ namespace appliPandora
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInfosMissions_Click(object sender, EventArgs e)
+        {
+
+            DataTable dtSchema = maConnec.GetSchema("Tables");
+            for (int i = 1; i < dtSchema.Rows.Count; i++)
+            {
+                string nomTable = dtSchema.Rows[i]["TABLE_NAME"].ToString();
+                string requete = "select * from " + nomTable;
+                SQLiteCommand cd = new SQLiteCommand(requete, maConnec);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(cd);
+                da.SelectCommand = cd;
+                da.Fill(MesDatas.DsGlobal, nomTable);
+            }
+
+            maConnec.Close();
+
+            FormulaireInfoMissions fenetreInfosMissions = new FormulaireInfoMissions();
+            fenetreInfosMissions.ShowDialog();
         }
     }
 }
