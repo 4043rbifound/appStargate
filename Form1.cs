@@ -1,4 +1,5 @@
-﻿using System;
+﻿using appStargate;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,9 @@ namespace appliPandora
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            formAuthentification formAuth = new formAuthentification();
+            formAuth.Show();
         }
     }
+
 }
