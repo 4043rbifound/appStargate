@@ -27,7 +27,8 @@ namespace appliPandora
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            formAuthentification formAuth = new formAuthentification();
+            formAuth.Show();
         }
 
         private void btnInfosMissions_Click(object sender, EventArgs e)
@@ -50,4 +51,5 @@ namespace appliPandora
             fenetreInfosMissions.ShowDialog();
         }
     }
+
 }
