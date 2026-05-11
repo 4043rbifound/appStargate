@@ -1,4 +1,4 @@
-﻿namespace appStargate
+﻿namespace appliPandora
 {
     partial class formAuthentification
     {
