@@ -16,5 +16,10 @@ namespace appStargate
         {
             InitializeComponent();
         }
+
+        private void flpPlanetes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
