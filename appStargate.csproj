@@ -66,6 +66,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPlanetes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPlanetes.Designer.cs">
+      <DependentUpon>FormPlanetes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormulaireInfoMissions.cs">
       <SubType>Form</SubType>
     </Compile>
