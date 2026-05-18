@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace appliPandora
+namespace appStargate
 {
     public partial class UCPlanete : UserControl
     {
@@ -69,7 +69,7 @@ namespace appliPandora
             lblNom.Click += UCPlanete_Click;
             lblTemp.Click += UCPlanete_Click;
             lblGravite.Click += UCPlanete_Click;
-            lblDatabaz.Click += UCPlanete_Click;
+            lblDatabaz.Click += UCPlanete_Click;            
         }
 
         /// <summary>

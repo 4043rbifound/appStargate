@@ -1,4 +1,4 @@
-﻿namespace appliPandora
+﻿namespace appStargate
 {
     partial class UCPlanete
     {
