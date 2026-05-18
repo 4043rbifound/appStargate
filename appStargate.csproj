@@ -183,6 +183,9 @@
     <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
     <Content Include="Images\458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom.png" />
     <Content Include="Images\694985.png" />
+    <Content Include="Images\Mercure.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="obj\Debug\appStargate.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\appStargate.exe" />
     <Content Include="obj\Debug\appStargate.pdb" />

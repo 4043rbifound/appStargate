@@ -88,7 +88,7 @@ namespace appStargate
 
                 // Chemin vers l'image dans le dossier img
                 string cheminImage = Path.Combine(
-                    Application.StartupPath, "img", nom + ".jpg"
+                    Application.StartupPath, "images", nom + ".jpg"
                 );
 
                 // Création du User Control
