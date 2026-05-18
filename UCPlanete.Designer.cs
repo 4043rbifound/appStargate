@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbPlanete = new System.Windows.Forms.PictureBox();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblTemp = new System.Windows.Forms.Label();
             this.lblGravite = new System.Windows.Forms.Label();
             this.lblDatabaz = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbPlanete
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(19, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 120);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbPlanete.Location = new System.Drawing.Point(19, 3);
+            this.pbPlanete.Name = "pbPlanete";
+            this.pbPlanete.Size = new System.Drawing.Size(120, 120);
+            this.pbPlanete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPlanete.TabIndex = 0;
+            this.pbPlanete.TabStop = false;
             // 
             // lblNom
             // 
@@ -59,27 +59,24 @@
             this.lblTemp.AutoSize = true;
             this.lblTemp.Location = new System.Drawing.Point(16, 183);
             this.lblTemp.Name = "lblTemp";
-            this.lblTemp.Size = new System.Drawing.Size(44, 16);
+            this.lblTemp.Size = new System.Drawing.Size(0, 16);
             this.lblTemp.TabIndex = 2;
-            this.lblTemp.Text = "label2";
             // 
             // lblGravite
             // 
             this.lblGravite.AutoSize = true;
             this.lblGravite.Location = new System.Drawing.Point(16, 199);
             this.lblGravite.Name = "lblGravite";
-            this.lblGravite.Size = new System.Drawing.Size(44, 16);
+            this.lblGravite.Size = new System.Drawing.Size(0, 16);
             this.lblGravite.TabIndex = 3;
-            this.lblGravite.Text = "label3";
             // 
             // lblDatabaz
             // 
             this.lblDatabaz.AutoSize = true;
             this.lblDatabaz.Location = new System.Drawing.Point(16, 215);
             this.lblDatabaz.Name = "lblDatabaz";
-            this.lblDatabaz.Size = new System.Drawing.Size(44, 16);
+            this.lblDatabaz.Size = new System.Drawing.Size(0, 16);
             this.lblDatabaz.TabIndex = 4;
-            this.lblDatabaz.Text = "label4";
             // 
             // UCPlanete
             // 
@@ -89,11 +86,11 @@
             this.Controls.Add(this.lblGravite);
             this.Controls.Add(this.lblTemp);
             this.Controls.Add(this.lblNom);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbPlanete);
             this.Name = "UCPlanete";
             this.Size = new System.Drawing.Size(160, 240);
             this.Load += new System.EventHandler(this.UCPlanete_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,7 +98,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPlanete;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblTemp;
         private System.Windows.Forms.Label lblGravite;
