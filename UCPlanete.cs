@@ -12,6 +12,12 @@ namespace appStargate
 {
     public partial class UCPlanete : UserControl
     {
+        // Constructeur par défaut — nécessaire pour le designer Visual Studio
+        public UCPlanete()
+        {
+            InitializeComponent();
+        }
+
         // Délégué : on délègue le clic au formulaire parent
         public delegate void AfficherDetailPlanete(object sender, EventArgs e);
         public AfficherDetailPlanete afficheurDetail;
