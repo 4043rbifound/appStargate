@@ -10,7 +10,7 @@
         /// <summary> 
         /// Nettoyage des ressources utilisées.
         /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -35,16 +35,16 @@
             this.lblChefMission = new System.Windows.Forms.Label();
             this.lblDateFinMission = new System.Windows.Forms.Label();
             this.lblBudget = new System.Windows.Forms.Label();
-            this.ImageLoupe = new System.Windows.Forms.PictureBox();
             this.ImageMission = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ImageLoupe)).BeginInit();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -115,19 +115,6 @@
             this.lblBudget.TabIndex = 10;
             this.lblBudget.Text = "Budget : 5000€";
             // 
-            // ImageLoupe
-            // 
-            this.ImageLoupe.BackColor = System.Drawing.Color.Transparent;
-            this.ImageLoupe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ImageLoupe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ImageLoupe.Image = global::appStargate.Properties.Resources._694985;
-            this.ImageLoupe.Location = new System.Drawing.Point(800, 58);
-            this.ImageLoupe.Name = "ImageLoupe";
-            this.ImageLoupe.Size = new System.Drawing.Size(74, 73);
-            this.ImageLoupe.TabIndex = 11;
-            this.ImageLoupe.TabStop = false;
-            this.ImageLoupe.Click += new System.EventHandler(this.ImageLoupe_Click);
-            // 
             // ImageMission
             // 
             this.ImageMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(102)))));
@@ -136,6 +123,7 @@
             this.ImageMission.Location = new System.Drawing.Point(23, 21);
             this.ImageMission.Name = "ImageMission";
             this.ImageMission.Size = new System.Drawing.Size(155, 154);
+            this.ImageMission.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImageMission.TabIndex = 1;
             this.ImageMission.TabStop = false;
             this.ImageMission.Click += new System.EventHandler(this.ImageMission_Click);
@@ -167,11 +155,24 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::appStargate.Properties.Resources._694985;
+            this.pictureBox4.Location = new System.Drawing.Point(771, 46);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 85);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // MissionUserControle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.ImageLoupe);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblBudget);
             this.Controls.Add(this.lblDateFinMission);
             this.Controls.Add(this.lblChefMission);
@@ -183,11 +184,11 @@
             this.Controls.Add(this.pictureBox3);
             this.Name = "MissionUserControle";
             this.Size = new System.Drawing.Size(886, 192);
-            ((System.ComponentModel.ISupportInitialize)(this.ImageLoupe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,9 +203,9 @@
         private System.Windows.Forms.Label lblChefMission;
         private System.Windows.Forms.Label lblDateFinMission;
         private System.Windows.Forms.Label lblBudget;
-        private System.Windows.Forms.PictureBox ImageLoupe;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
