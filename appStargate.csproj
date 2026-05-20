@@ -183,7 +183,19 @@
     <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
     <Content Include="Images\458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom.png" />
     <Content Include="Images\694985.png" />
+    <Content Include="Images\Jupiter.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Mars.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Images\Mercure.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Terre.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Vénus.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="obj\Debug\appStargate.csproj.FileListAbsolute.txt" />
