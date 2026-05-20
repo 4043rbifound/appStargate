@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Sql;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
@@ -19,10 +18,11 @@ namespace appliPandora
         {
             InitializeComponent();
         }
+
         SQLiteConnection maConnec = Connexion.Connec;
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -84,12 +84,11 @@ namespace appliPandora
 
         private void btn_NVplnt_Click(object sender, EventArgs e)
         {
-            // Vérifie si le formulaire n'est pas déjà ouvert
             foreach (Form f in Application.OpenForms)
             {
                 if (f is FormPlanetes)
                 {
-                    f.BringToFront(); // Le ramène au premier plan
+                    f.BringToFront();
                     return;
                 }
             }
@@ -98,5 +97,4 @@ namespace appliPandora
             frmPlanetes.Show();
         }
     }
-
 }
