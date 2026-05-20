@@ -120,6 +120,7 @@
             this.ImageLoupe.BackColor = System.Drawing.Color.Transparent;
             this.ImageLoupe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ImageLoupe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ImageLoupe.Image = global::appStargate.Properties.Resources._694985;
             this.ImageLoupe.Location = new System.Drawing.Point(800, 58);
             this.ImageLoupe.Name = "ImageLoupe";
             this.ImageLoupe.Size = new System.Drawing.Size(74, 73);
@@ -131,6 +132,7 @@
             // 
             this.ImageMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(102)))));
             this.ImageMission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ImageMission.Image = global::appStargate.Properties.Resources._458_4583476_stargate_command_uk_stargate_command_logo_hd_png_Photoroom;
             this.ImageMission.Location = new System.Drawing.Point(23, 21);
             this.ImageMission.Name = "ImageMission";
             this.ImageMission.Size = new System.Drawing.Size(155, 154);
