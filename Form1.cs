@@ -33,22 +33,53 @@ namespace appliPandora
 
         private void btnInfosMissions_Click(object sender, EventArgs e)
         {
-
-            DataTable dtSchema = maConnec.GetSchema("Tables");
-            for (int i = 1; i < dtSchema.Rows.Count; i++)
+            try
             {
-                string nomTable = dtSchema.Rows[i]["TABLE_NAME"].ToString();
-                string requete = "select * from " + nomTable;
-                SQLiteCommand cd = new SQLiteCommand(requete, maConnec);
-                SQLiteDataAdapter da = new SQLiteDataAdapter(cd);
-                da.SelectCommand = cd;
-                da.Fill(MesDatas.DsGlobal, nomTable);
+                if (maConnec.State != ConnectionState.Open) maConnec.Open();
+
+                DataTable dtSchema = maConnec.GetSchema("Tables");
+
+                for (int i = 0; i < dtSchema.Rows.Count; i++)
+                {
+                    string nomTable = dtSchema.Rows[i]["TABLE_NAME"].ToString();
+                    if (nomTable.StartsWith("sqlite_")) continue;
+
+                    if (MesDatas.DsGlobal.Tables.Contains(nomTable))
+                        MesDatas.DsGlobal.Tables[nomTable].Clear();
+
+                    string requete = "SELECT * FROM [" + nomTable + "]";
+                    SQLiteCommand cd = new SQLiteCommand(requete, maConnec);
+                    SQLiteDataAdapter da = new SQLiteDataAdapter(cd);
+                    da.Fill(MesDatas.DsGlobal, nomTable);
+                }
+                maConnec.Close();
+
+                flowLayoutPanelMissions.Controls.Clear();
+
+                DataTable dtMissions = MesDatas.DsGlobal.Tables["Mission"];
+                DataTable dtMembres = MesDatas.DsGlobal.Tables["Membre"];
+
+                foreach (DataRow ligneMission in dtMissions.Rows)
+                {
+                    MissionUserControle uc = new MissionUserControle();
+
+                    string matricule = ligneMission["matriculeChef"].ToString();
+                    DataRow[] membresTrouves = dtMembres.Select("matricule = '" + matricule + "'");
+
+                    string nomComplet = "Inconnu";
+                    if (membresTrouves.Length > 0)
+                    {
+                        nomComplet = membresTrouves[0]["prenom"].ToString() + " " + membresTrouves[0]["nom"].ToString();
+                    }
+
+                    uc.ChargerDonnees(ligneMission, nomComplet);
+                    flowLayoutPanelMissions.Controls.Add(uc);
+                }
             }
-
-            maConnec.Close();
-
-            FormulaireInfoMissions fenetreInfosMissions = new FormulaireInfoMissions();
-            fenetreInfosMissions.ShowDialog();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btn_NVplnt_Click(object sender, EventArgs e)

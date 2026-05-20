@@ -32,6 +32,8 @@
             this.btnNouvelleMission = new System.Windows.Forms.Button();
             this.btnInfosMissions = new System.Windows.Forms.Button();
             this.btn_NVplnt = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.flowLayoutPanelMissions = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // button1
@@ -62,7 +64,7 @@
             this.btnInfosMissions.Name = "btnInfosMissions";
             this.btnInfosMissions.Size = new System.Drawing.Size(149, 22);
             this.btnInfosMissions.TabIndex = 2;
-            this.btnInfosMissions.Text = "Infos Missions";
+            this.btnInfosMissions.Text = "Missions";
             this.btnInfosMissions.UseVisualStyleBackColor = true;
             this.btnInfosMissions.Click += new System.EventHandler(this.btnInfosMissions_Click);
             // 
@@ -77,15 +79,31 @@
             this.btn_NVplnt.UseVisualStyleBackColor = true;
             this.btn_NVplnt.Click += new System.EventHandler(this.btn_NVplnt_Click);
             // 
+            // flowLayoutPanelMissions
+            // 
+            this.flowLayoutPanelMissions.AutoScroll = true;
+            this.flowLayoutPanelMissions.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelMissions.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelMissions.Location = new System.Drawing.Point(196, 27);
+            this.flowLayoutPanelMissions.Name = "flowLayoutPanelMissions";
+            this.flowLayoutPanelMissions.Size = new System.Drawing.Size(904, 547);
+            this.flowLayoutPanelMissions.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 486);
             this.Controls.Add(this.btn_NVplnt);
+            this.BackgroundImage = global::appStargate.Properties.Resources.background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1128, 608);
+            this.Controls.Add(this.flowLayoutPanelMissions);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.btnInfosMissions);
             this.Controls.Add(this.btnNouvelleMission);
             this.Controls.Add(this.button1);
+            this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -100,6 +118,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnNouvelleMission;
         private System.Windows.Forms.Button btnInfosMissions;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMissions;
         private System.Windows.Forms.Button btn_NVplnt;
     }
 }
