@@ -31,24 +31,27 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnNouvelleMission = new System.Windows.Forms.Button();
             this.btnInfosMissions = new System.Windows.Forms.Button();
+            this.btn_NVplnt = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.flowLayoutPanelMissions = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(35, 17);
+            this.button1.Location = new System.Drawing.Point(31, 14);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 28);
+            this.button1.Size = new System.Drawing.Size(75, 22);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // btnNouvelleMission
             // 
-            this.btnNouvelleMission.Location = new System.Drawing.Point(35, 158);
+            this.btnNouvelleMission.Location = new System.Drawing.Point(31, 126);
+            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
-            this.btnNouvelleMission.Size = new System.Drawing.Size(84, 28);
+            this.btnNouvelleMission.Size = new System.Drawing.Size(75, 22);
             this.btnNouvelleMission.TabIndex = 1;
             this.btnNouvelleMission.Text = "Nouvelle mission";
             this.btnNouvelleMission.UseVisualStyleBackColor = true;
@@ -56,22 +59,25 @@
             // 
             // btnInfosMissions
             // 
-            this.btnInfosMissions.Location = new System.Drawing.Point(35, 282);
+            this.btnInfosMissions.Location = new System.Drawing.Point(31, 226);
+            this.btnInfosMissions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInfosMissions.Name = "btnInfosMissions";
-            this.btnInfosMissions.Size = new System.Drawing.Size(84, 28);
+            this.btnInfosMissions.Size = new System.Drawing.Size(149, 22);
             this.btnInfosMissions.TabIndex = 2;
             this.btnInfosMissions.Text = "Missions";
             this.btnInfosMissions.UseVisualStyleBackColor = true;
             this.btnInfosMissions.Click += new System.EventHandler(this.btnInfosMissions_Click);
             // 
-            // button4
+            // btn_NVplnt
             // 
-            this.button4.Location = new System.Drawing.Point(35, 438);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 28);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_NVplnt.Location = new System.Drawing.Point(31, 350);
+            this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NVplnt.Name = "btn_NVplnt";
+            this.btn_NVplnt.Size = new System.Drawing.Size(149, 22);
+            this.btn_NVplnt.TabIndex = 3;
+            this.btn_NVplnt.Text = "Infos Planétes";
+            this.btn_NVplnt.UseVisualStyleBackColor = true;
+            this.btn_NVplnt.Click += new System.EventHandler(this.btn_NVplnt_Click);
             // 
             // flowLayoutPanelMissions
             // 
@@ -85,8 +91,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1003, 486);
+            this.Controls.Add(this.btn_NVplnt);
             this.BackgroundImage = global::appStargate.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1128, 608);
@@ -112,6 +120,7 @@
         private System.Windows.Forms.Button btnInfosMissions;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMissions;
+        private System.Windows.Forms.Button btn_NVplnt;
     }
 }
 

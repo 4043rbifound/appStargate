@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace appliPandora
 {
@@ -28,14 +29,14 @@ namespace appliPandora
                     {
                         // Chaîne de connexion à votre base de données
                         //string chaine = @"Data Source = ..\..\..\Stargate.db";
-                        string chaine = @"Data Source = Stargate.db";
+                        string chaine = @"Data Source=" + AppDomain.CurrentDomain.BaseDirectory + "Stargate.db";
                         connec = new SQLiteConnection(chaine);
                         connec.Open();
                         //MessageBox.Show(connec.State.ToString());
                     }
                     catch (SQLiteException err) 
                     {
-                        Console.WriteLine($"Erreur lors de l'ouverture de la connexion : {err.Message}");
+                        MessageBox.Show($"Erreur connexion : {err.Message}");
                     }
                 }
 				//Dans tous les cas on renvoie la connexion

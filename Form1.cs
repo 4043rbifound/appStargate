@@ -81,6 +81,22 @@ namespace appliPandora
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btn_NVplnt_Click(object sender, EventArgs e)
+        {
+            // Vérifie si le formulaire n'est pas déjà ouvert
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is FormPlanetes)
+                {
+                    f.BringToFront(); // Le ramène au premier plan
+                    return;
+                }
+            }
+
+            FormPlanetes frmPlanetes = new FormPlanetes();
+            frmPlanetes.Show();
+        }
     }
 
 }
