@@ -160,9 +160,9 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = global::appStargate.Properties.Resources._694985;
-            this.pictureBox4.Location = new System.Drawing.Point(771, 46);
+            this.pictureBox4.Location = new System.Drawing.Point(789, 58);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 85);
+            this.pictureBox4.Size = new System.Drawing.Size(84, 71);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;

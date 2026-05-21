@@ -23,63 +23,60 @@ namespace appliPandora
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            try
+            {
+                if (maConnec.State != ConnectionState.Open) maConnec.Open();
+
+                if (MesDatas.DsGlobal.Tables.Contains("Mission")) 
+                    { MesDatas.DsGlobal.Tables["Mission"].Clear(); }
+                if (MesDatas.DsGlobal.Tables.Contains("Membre"))
+                    { MesDatas.DsGlobal.Tables["Membre"].Clear(); }
+
+                SQLiteCommand cmdMission = new SQLiteCommand("SELECT * FROM Mission", maConnec);
+                SQLiteDataAdapter daMission = new SQLiteDataAdapter(cmdMission);
+                daMission.Fill(MesDatas.DsGlobal, "Mission");
+
+                SQLiteCommand cmdMembre = new SQLiteCommand("SELECT * FROM Membre", maConnec);
+                SQLiteDataAdapter daMembre = new SQLiteDataAdapter(cmdMembre);
+                daMembre.Fill(MesDatas.DsGlobal, "Membre");
+
+                maConnec.Close();
+
+                flowLayoutPanelMissions.Controls.Clear();
+
+                foreach (DataRow ligneMission in MesDatas.DsGlobal.Tables["Mission"].Rows)
+                {
+                    MissionUserControle uc = new MissionUserControle();
+                    string matriculeChef = ligneMission["matriculeChef"].ToString();
+                    string nomCompletChef = "Inconnu";
+
+                    foreach (DataRow ligneMembre in MesDatas.DsGlobal.Tables["Membre"].Rows)
+                    {
+                        if (ligneMembre["matricule"].ToString() == matriculeChef)
+                        {
+                            nomCompletChef = ligneMembre["prenom"].ToString() + " " + ligneMembre["nom"].ToString();
+                            break;
+                        }
+                    }
+
+                    uc.ChargerDonnees(ligneMission, nomCompletChef);
+                    flowLayoutPanelMissions.Controls.Add(uc);
+                }
+
+                int total = MesDatas.DsGlobal.Tables["Mission"].Rows.Count;
+                lblTotalMission.Text = "Missions : " + total.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             formAuthentification formAuth = new formAuthentification();
             formAuth.Show();
-        }
-
-        private void btnInfosMissions_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (maConnec.State != ConnectionState.Open) maConnec.Open();
-
-                DataTable dtSchema = maConnec.GetSchema("Tables");
-
-                for (int i = 0; i < dtSchema.Rows.Count; i++)
-                {
-                    string nomTable = dtSchema.Rows[i]["TABLE_NAME"].ToString();
-                    if (nomTable.StartsWith("sqlite_")) continue;
-
-                    if (MesDatas.DsGlobal.Tables.Contains(nomTable))
-                        MesDatas.DsGlobal.Tables[nomTable].Clear();
-
-                    string requete = "SELECT * FROM [" + nomTable + "]";
-                    SQLiteCommand cd = new SQLiteCommand(requete, maConnec);
-                    SQLiteDataAdapter da = new SQLiteDataAdapter(cd);
-                    da.Fill(MesDatas.DsGlobal, nomTable);
-                }
-                maConnec.Close();
-
-                flowLayoutPanelMissions.Controls.Clear();
-
-                DataTable dtMissions = MesDatas.DsGlobal.Tables["Mission"];
-                DataTable dtMembres = MesDatas.DsGlobal.Tables["Membre"];
-
-                foreach (DataRow ligneMission in dtMissions.Rows)
-                {
-                    MissionUserControle uc = new MissionUserControle();
-
-                    string matricule = ligneMission["matriculeChef"].ToString();
-                    DataRow[] membresTrouves = dtMembres.Select("matricule = '" + matricule + "'");
-
-                    string nomComplet = "Inconnu";
-                    if (membresTrouves.Length > 0)
-                    {
-                        nomComplet = membresTrouves[0]["prenom"].ToString() + " " + membresTrouves[0]["nom"].ToString();
-                    }
-
-                    uc.ChargerDonnees(ligneMission, nomComplet);
-                    flowLayoutPanelMissions.Controls.Add(uc);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void btn_NVplnt_Click(object sender, EventArgs e)

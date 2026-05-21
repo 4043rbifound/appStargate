@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace appliPandora
+namespace appStargate
 {
-    public partial class FormulaireInfoMissions : Form
+    public partial class DetailsMission : Form
     {
-        public FormulaireInfoMissions()
+        public DetailsMission()
         {
             InitializeComponent();
-        }
-
-        private void FormulaireInfoMissions_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
