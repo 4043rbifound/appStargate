@@ -28,7 +28,11 @@ namespace appliPandora
         private void button2_Click(object sender, EventArgs e)
         {
             formAuthentification formAuth = new formAuthentification();
-            formAuth.Show();
+            if(formAuth.ShowDialog() == DialogResult.OK)
+            {
+                formNouvelleMission formCrea = new formNouvelleMission();
+                formCrea.ShowDialog();
+            }
         }
 
         private void btnInfosMissions_Click(object sender, EventArgs e)
