@@ -16,5 +16,10 @@ namespace appStargate
         {
             InitializeComponent();
         }
+
+        private void formNouvelleMission_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
