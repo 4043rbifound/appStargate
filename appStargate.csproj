@@ -122,7 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\appliPandora.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\appliPandora.formAuthentification.resources" />
-    <EmbeddedResource Include="obj\Debug\appliPandora.FormulaireInfoMissions.resources" />
     <EmbeddedResource Include="obj\Debug\appStargate.Properties.Resources.resources" />
     <EmbeddedResource Include="MissionUserControle.resx">
       <DependentUpon>MissionUserControle.cs</DependentUpon>
