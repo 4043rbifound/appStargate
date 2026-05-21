@@ -40,7 +40,6 @@ namespace appliPandora
                 SQLiteDataAdapter daMembre = new SQLiteDataAdapter(cmdMembre);
                 daMembre.Fill(MesDatas.DsGlobal, "Membre");
 
-                maConnec.Close();
 
                 flowLayoutPanelMissions.Controls.Clear();
 
