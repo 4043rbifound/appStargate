@@ -34,11 +34,13 @@
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.lblMdp = new System.Windows.Forms.Label();
             this.lblLogin = new System.Windows.Forms.Label();
+            this.lblErreur = new System.Windows.Forms.Label();
             this.grpAuth.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpAuth
             // 
+            this.grpAuth.Controls.Add(this.lblErreur);
             this.grpAuth.Controls.Add(this.btnValider);
             this.grpAuth.Controls.Add(this.txtMdp);
             this.grpAuth.Controls.Add(this.txtLogin);
@@ -53,6 +55,7 @@
             this.grpAuth.TabIndex = 0;
             this.grpAuth.TabStop = false;
             this.grpAuth.Text = "Authentification";
+            this.grpAuth.Enter += new System.EventHandler(this.grpAuth_Enter);
             // 
             // btnValider
             // 
@@ -103,16 +106,26 @@
             this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Login";
             // 
+            // lblErreur
+            // 
+            this.lblErreur.AutoSize = true;
+            this.lblErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErreur.ForeColor = System.Drawing.Color.Red;
+            this.lblErreur.Location = new System.Drawing.Point(272, 436);
+            this.lblErreur.Name = "lblErreur";
+            this.lblErreur.Size = new System.Drawing.Size(0, 42);
+            this.lblErreur.TabIndex = 5;
+            // 
             // formAuthentification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1269, 760);
+            this.ClientSize = new System.Drawing.Size(1551, 912);
             this.Controls.Add(this.grpAuth);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formAuthentification";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "x²";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Formulaire d\'authentification";
             this.Load += new System.EventHandler(this.formAuthentification_Load);
             this.grpAuth.ResumeLayout(false);
             this.grpAuth.PerformLayout();
@@ -128,5 +141,6 @@
         private System.Windows.Forms.TextBox txtMdp;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label lblMdp;
+        private System.Windows.Forms.Label lblErreur;
     }
 }

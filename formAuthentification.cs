@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows .Forms;
 
 namespace appliPandora
 {
@@ -23,14 +23,24 @@ namespace appliPandora
 
         }
 
+
         private void btnValider_Click(object sender, EventArgs e)
         {
+            // On vide le message d'erreur à chaque clic
+            lblErreur.Text = "";
+
+            if (string.IsNullOrEmpty(txtLogin.Text) || string.IsNullOrEmpty(txtMdp.Text))
+            {
+                lblErreur.Text = "Veuillez remplir tous les champs.";
+                return;
+            }
+
             try
             {
                 string requete = "SELECT mdp FROM Admin WHERE login = @login";
 
-                SQLiteCommand  cd = new SQLiteCommand(requete, Connexion.Connec);
-                cd.Parameters.AddWithValue("@login", txtLogin.Text); // Sécurité supplementaire pour éviter les injection SQL ex : je t'expliquerais pas comment faire
+                SQLiteCommand cd = new SQLiteCommand(requete, Connexion.Connec);
+                cd.Parameters.AddWithValue("@login", txtLogin.Text);
 
                 object resultat = cd.ExecuteScalar();
 
@@ -40,24 +50,28 @@ namespace appliPandora
 
                     if (BCrypt.Net.BCrypt.Verify(txtMdp.Text, mdpStocke))
                     {
-                        MessageBox.Show("Accès autorisé", "Authentification");
                         this.DialogResult = DialogResult.OK;
                         this.Close();
                     }
                     else
                     {
-                        MessageBox.Show("Accès refusé : mauvais mot de passe", "Authentification");
+                        lblErreur.Text = "Mot de passe incorrect.";
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Utilisateur inconnu", "Authentification");
+                    lblErreur.Text = "Utilisateur inconnu.";
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erreur : " + ex.Message);
+                lblErreur.Text = "Erreur technique : " + ex.Message;
             }
+        }
+
+        private void grpAuth_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }           
