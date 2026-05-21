@@ -60,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connexion.cs" />
+    <Compile Include="DetailsMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsMission.Designer.cs">
+      <DependentUpon>DetailsMission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +83,6 @@
     </Compile>
     <Compile Include="FormPlanetes.Designer.cs">
       <DependentUpon>FormPlanetes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormulaireInfoMissions.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormulaireInfoMissions.Designer.cs">
-      <DependentUpon>FormulaireInfoMissions.cs</DependentUpon>
     </Compile>
     <Compile Include="formAuthentification.cs">
       <SubType>Form</SubType>
@@ -120,15 +120,11 @@
     <EmbeddedResource Include="FormPlanetes.resx">
       <DependentUpon>FormPlanetes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormulaireInfoMissions.resx">
-      <DependentUpon>FormulaireInfoMissions.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formAuthentification.resx">
       <DependentUpon>formAuthentification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\appliPandora.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\appliPandora.formAuthentification.resources" />
-    <EmbeddedResource Include="obj\Debug\appliPandora.FormulaireInfoMissions.resources" />
     <EmbeddedResource Include="obj\Debug\appStargate.Properties.Resources.resources" />
     <EmbeddedResource Include="MissionUserControle.resx">
       <DependentUpon>MissionUserControle.cs</DependentUpon>
