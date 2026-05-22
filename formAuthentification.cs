@@ -40,7 +40,7 @@ namespace appliPandora
                 string requete = "SELECT mdp FROM Admin WHERE login = @login";
 
                 SQLiteCommand cd = new SQLiteCommand(requete, Connexion.Connec);
-                cd.Parameters.AddWithValue("@login", txtLogin.Text);
+                cd.Parameters.AddWithValue("@login", txtLogin.Text); // permet d'éviter les injections SQL
 
                 object resultat = cd.ExecuteScalar();
 
