@@ -74,6 +74,7 @@ namespace appliPandora
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // button ouvrant le form d'authentification et si la connection se passe bien on ouvre le form d'insertion de mission
             formAuthentification formAuth = new formAuthentification();
             if(formAuth.ShowDialog() == DialogResult.OK)
             {
