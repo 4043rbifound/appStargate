@@ -1,8 +1,10 @@
-﻿using System;
+﻿using appliPandora;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,11 +22,15 @@ namespace appStargate
         public void ChargerDonnees(DataRow ligne, string nomChefComplet)
         {
             lblTitreMission.Text = "Mission | " + ligne["nomPlanete"].ToString() + " " + ligne["numero"];
-            lblDateDebutMission.Text = "Départ : " + ligne["dateDepart"].ToString();
-            lblDateFinMission.Text = "Retour : " + ligne["dateRetour"].ToString();
             lblBudget.Text = "Budget : " + ligne["budget"].ToString() + " €";
 
             lblChefMission.Text = "Chef : " + nomChefComplet;
+
+            pictureBox4.Tag = ligne;
+            DateTime dateDepart = Convert.ToDateTime(ligne["dateDepart"]);
+            lblDateDebutMission.Text = $"Départ : {dateDepart.ToString("d", new CultureInfo("fr-FR"))}";
+            DateTime dateRetour = Convert.ToDateTime(ligne["dateRetour"]);
+            lblDateFinMission.Text = $"Départ : {dateRetour.ToString("d", new CultureInfo("fr-FR"))}";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -49,7 +55,10 @@ namespace appStargate
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Message");
+            DataRow ligneSelectionnee = (DataRow)pictureBox4.Tag; //le cast sert à faire comprendre que le tag est une ligne de la db
+
+            DetailsMission detMis = new DetailsMission(ligneSelectionnee);
+            detMis.ShowDialog();
         }
     }
 }

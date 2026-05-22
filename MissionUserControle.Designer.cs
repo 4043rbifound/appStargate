@@ -35,16 +35,16 @@
             this.lblChefMission = new System.Windows.Forms.Label();
             this.lblDateFinMission = new System.Windows.Forms.Label();
             this.lblBudget = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.ImageMission = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -70,11 +70,11 @@
             // 
             this.lblDateDebutMission.AutoSize = true;
             this.lblDateDebutMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.lblDateDebutMission.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDateDebutMission.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.lblDateDebutMission.ForeColor = System.Drawing.Color.White;
             this.lblDateDebutMission.Location = new System.Drawing.Point(233, 93);
             this.lblDateDebutMission.Name = "lblDateDebutMission";
-            this.lblDateDebutMission.Size = new System.Drawing.Size(109, 24);
+            this.lblDateDebutMission.Size = new System.Drawing.Size(132, 29);
             this.lblDateDebutMission.TabIndex = 6;
             this.lblDateDebutMission.Text = "DateDebut";
             this.lblDateDebutMission.Click += new System.EventHandler(this.lblDateDebutMission_Click);
@@ -83,11 +83,11 @@
             // 
             this.lblChefMission.AutoSize = true;
             this.lblChefMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.lblChefMission.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblChefMission.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.lblChefMission.ForeColor = System.Drawing.Color.White;
             this.lblChefMission.Location = new System.Drawing.Point(502, 93);
             this.lblChefMission.Name = "lblChefMission";
-            this.lblChefMission.Size = new System.Drawing.Size(54, 24);
+            this.lblChefMission.Size = new System.Drawing.Size(66, 29);
             this.lblChefMission.TabIndex = 7;
             this.lblChefMission.Text = "Chef";
             // 
@@ -95,11 +95,11 @@
             // 
             this.lblDateFinMission.AutoSize = true;
             this.lblDateFinMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.lblDateFinMission.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblDateFinMission.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.lblDateFinMission.ForeColor = System.Drawing.Color.White;
             this.lblDateFinMission.Location = new System.Drawing.Point(233, 151);
             this.lblDateFinMission.Name = "lblDateFinMission";
-            this.lblDateFinMission.Size = new System.Drawing.Size(82, 24);
+            this.lblDateFinMission.Size = new System.Drawing.Size(101, 29);
             this.lblDateFinMission.TabIndex = 8;
             this.lblDateFinMission.Text = "DateFin";
             // 
@@ -107,19 +107,32 @@
             // 
             this.lblBudget.AutoSize = true;
             this.lblBudget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.lblBudget.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblBudget.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.lblBudget.ForeColor = System.Drawing.Color.White;
             this.lblBudget.Location = new System.Drawing.Point(502, 151);
             this.lblBudget.Name = "lblBudget";
-            this.lblBudget.Size = new System.Drawing.Size(152, 24);
+            this.lblBudget.Size = new System.Drawing.Size(182, 29);
             this.lblBudget.TabIndex = 10;
             this.lblBudget.Text = "Budget : 5000€";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::appStargate.Properties.Resources._694985;
+            this.pictureBox4.Location = new System.Drawing.Point(817, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(68, 59);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // ImageMission
             // 
             this.ImageMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(102)))));
             this.ImageMission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ImageMission.Image = global::appStargate.Properties.Resources._458_4583476_stargate_command_uk_stargate_command_logo_hd_png_Photoroom;
+            this.ImageMission.Image = global::appStargate.Properties.Resources.Artemis_II_patch;
             this.ImageMission.Location = new System.Drawing.Point(23, 21);
             this.ImageMission.Name = "ImageMission";
             this.ImageMission.Size = new System.Drawing.Size(155, 154);
@@ -130,7 +143,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(128)))), ((int)(((byte)(63)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(10, 192);
@@ -155,19 +168,6 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = global::appStargate.Properties.Resources._694985;
-            this.pictureBox4.Location = new System.Drawing.Point(789, 58);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(84, 71);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // MissionUserControle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -184,11 +184,11 @@
             this.Controls.Add(this.pictureBox3);
             this.Name = "MissionUserControle";
             this.Size = new System.Drawing.Size(886, 192);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
