@@ -31,6 +31,26 @@ namespace appStargate
 
             // Cache le panel de détail au départ
             splitContainer1.Panel2Collapsed = true;
+            // Création du bouton retour par code
+            Button btnRetour = new Button();
+            btnRetour.Text = "← Retour";
+            btnRetour.Size = new Size(120, 35);
+            btnRetour.BackColor = Color.FromArgb(44, 62, 80);
+            btnRetour.ForeColor = Color.White;
+            btnRetour.FlatStyle = FlatStyle.Flat;
+            btnRetour.Font = new Font("Arial", 10, FontStyle.Bold);
+            btnRetour.Cursor = Cursors.Hand;
+
+            // Position : en bas à gauche du Panel1
+            btnRetour.Location = new Point(
+                10,
+                splitContainer1.Panel1.Height - btnRetour.Height - 10
+            );
+
+            btnRetour.Click += (s, ev) => this.Close();
+
+            splitContainer1.Panel1.Controls.Add(btnRetour);
+            btnRetour.BringToFront();
 
         }
 
@@ -335,6 +355,10 @@ namespace appStargate
                 };
                 timerReorg.Start();
             }
+        }
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)

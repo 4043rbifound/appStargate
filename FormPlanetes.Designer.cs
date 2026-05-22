@@ -37,10 +37,12 @@
             this.lblTitrePlanete = new System.Windows.Forms.Label();
             this.pnlNotif = new System.Windows.Forms.Panel();
             this.lblNotif = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.flpPlanetes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).BeginInit();
             this.pnlNotif.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +72,7 @@
             // flpPlanetes
             // 
             this.flpPlanetes.AutoScroll = true;
+            this.flpPlanetes.Controls.Add(this.button1);
             this.flpPlanetes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpPlanetes.Location = new System.Drawing.Point(0, 0);
             this.flpPlanetes.Name = "flpPlanetes";
@@ -147,6 +150,15 @@
             this.lblNotif.Text = "label3";
             this.lblNotif.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 99);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormPlanetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -161,6 +173,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.flpPlanetes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).EndInit();
             this.pnlNotif.ResumeLayout(false);
             this.pnlNotif.PerformLayout();
@@ -179,5 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel pnlNotif;
         private System.Windows.Forms.Label lblNotif;
+        private System.Windows.Forms.Button button1;
     }
 }
