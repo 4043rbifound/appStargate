@@ -50,24 +50,32 @@
             // 
             // btnNouvelleMission
             // 
+            this.btnNouvelleMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnNouvelleMission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNouvelleMission.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNouvelleMission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.btnNouvelleMission.Location = new System.Drawing.Point(35, 88);
             this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
             this.btnNouvelleMission.Size = new System.Drawing.Size(212, 69);
             this.btnNouvelleMission.TabIndex = 1;
             this.btnNouvelleMission.Text = "Nouvelle mission";
-            this.btnNouvelleMission.UseVisualStyleBackColor = true;
+            this.btnNouvelleMission.UseVisualStyleBackColor = false;
             this.btnNouvelleMission.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_NVplnt
             // 
+            this.btn_NVplnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btn_NVplnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_NVplnt.Font = new System.Drawing.Font("Impact", 12F);
+            this.btn_NVplnt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.btn_NVplnt.Location = new System.Drawing.Point(35, 200);
             this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_NVplnt.Name = "btn_NVplnt";
             this.btn_NVplnt.Size = new System.Drawing.Size(212, 69);
             this.btn_NVplnt.TabIndex = 3;
             this.btn_NVplnt.Text = "Infos Planètes";
-            this.btn_NVplnt.UseVisualStyleBackColor = true;
+            this.btn_NVplnt.UseVisualStyleBackColor = false;
             this.btn_NVplnt.Click += new System.EventHandler(this.btn_NVplnt_Click);
             // 
             // flowLayoutPanelMissions

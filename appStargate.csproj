@@ -111,8 +111,14 @@
     <Compile Include="UCPlanete.Designer.cs">
       <DependentUpon>UCPlanete.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DetailsMission.resx">
+      <DependentUpon>DetailsMission.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formNouvelleMission.resx">
+      <DependentUpon>formNouvelleMission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPlanetes.resx">
       <DependentUpon>FormPlanetes.cs</DependentUpon>
@@ -189,6 +195,7 @@
     <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
     <Content Include="Images\458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom.png" />
     <Content Include="Images\694985.png" />
+    <None Include="Images\Artemis_II_patch.png" />
     <Content Include="Images\Jupiter.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
