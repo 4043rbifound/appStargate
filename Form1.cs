@@ -97,5 +97,20 @@ namespace appliPandora
             FormPlanetes frmPlanetes = new FormPlanetes();
             frmPlanetes.Show();
         }
+
+        private void btnRaces_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is FormRaces)
+                {
+                    f.BringToFront();
+                    return;
+                }
+            }
+
+            FormRaces frmRaces = new FormRaces();
+            frmRaces.Show();
+        }
     }
 }
