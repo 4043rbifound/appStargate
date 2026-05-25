@@ -51,7 +51,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -77,7 +77,7 @@
             this.flpPlanetes.Controls.Add(this.button1);
             this.flpPlanetes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpPlanetes.Location = new System.Drawing.Point(0, 0);
-            this.flpPlanetes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpPlanetes.Margin = new System.Windows.Forms.Padding(2);
             this.flpPlanetes.Name = "flpPlanetes";
             this.flpPlanetes.Size = new System.Drawing.Size(242, 531);
             this.flpPlanetes.TabIndex = 0;
@@ -85,7 +85,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(2, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 80);
             this.button1.TabIndex = 0;
@@ -117,7 +117,7 @@
             this.lbMissions.FormattingEnabled = true;
             this.lbMissions.HorizontalScrollbar = true;
             this.lbMissions.Location = new System.Drawing.Point(35, 225);
-            this.lbMissions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbMissions.Margin = new System.Windows.Forms.Padding(2);
             this.lbMissions.Name = "lbMissions";
             this.lbMissions.Size = new System.Drawing.Size(361, 121);
             this.lbMissions.TabIndex = 2;
@@ -126,7 +126,7 @@
             // 
             this.dgvRaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRaces.Location = new System.Drawing.Point(35, 62);
-            this.dgvRaces.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRaces.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRaces.Name = "dgvRaces";
             this.dgvRaces.RowHeadersWidth = 51;
             this.dgvRaces.RowTemplate.Height = 24;
@@ -150,7 +150,7 @@
             this.pnlNotif.Controls.Add(this.lblNotif);
             this.pnlNotif.ForeColor = System.Drawing.Color.Snow;
             this.pnlNotif.Location = new System.Drawing.Point(2, 0);
-            this.pnlNotif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlNotif.Margin = new System.Windows.Forms.Padding(2);
             this.pnlNotif.Name = "pnlNotif";
             this.pnlNotif.Size = new System.Drawing.Size(295, 20);
             this.pnlNotif.TabIndex = 1;
@@ -176,7 +176,7 @@
             this.ClientSize = new System.Drawing.Size(729, 531);
             this.Controls.Add(this.pnlNotif);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPlanetes";
             this.Text = "FormPlanetes";
             this.splitContainer1.Panel1.ResumeLayout(false);
