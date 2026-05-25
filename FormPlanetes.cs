@@ -1,14 +1,10 @@
-﻿using System;
-using appliPandora;
+﻿using appliPandora;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace appStargate
@@ -32,6 +28,29 @@ namespace appStargate
         {
             ChargerDonnees();
             AfficherCartesPlanetes();
+
+            // Cache le panel de détail au départ
+            splitContainer1.Panel2Collapsed = true;
+            // Création du bouton retour par code
+            Button btnRetour = new Button();
+            btnRetour.Text = "← Retour";
+            btnRetour.Size = new Size(120, 35);
+            btnRetour.BackColor = Color.FromArgb(44, 62, 80);
+            btnRetour.ForeColor = Color.White;
+            btnRetour.FlatStyle = FlatStyle.Flat;
+            btnRetour.Font = new Font("Arial", 10, FontStyle.Bold);
+            btnRetour.Cursor = Cursors.Hand;
+
+            // Position : en bas à gauche du Panel1
+            btnRetour.Location = new Point(
+                10,
+                splitContainer1.Panel1.Height - btnRetour.Height - 10
+            );
+
+            btnRetour.Click += (s, ev) => this.Close();
+
+            splitContainer1.Panel1.Controls.Add(btnRetour);
+            btnRetour.BringToFront();
 
         }
 
@@ -112,19 +131,28 @@ namespace appStargate
         /// </summary>
         private void AfficherDetail(object sender, EventArgs e)
         {
-
             UCPlanete uc = sender as UCPlanete;
-            if (uc == null)
-            {
-                MessageBox.Show("uc est null !");
-                return;
-            }
+            if (uc == null) return;
 
             string nomPlanete = uc.NomPlanete;
 
+            // Vérifie s'il y a des races ou des missions
+            DataRow[] races = MesDatas.DsGlobal.Tables["Habiter"].Select($"nomPlanete = '{nomPlanete}'");
+            DataRow[] missions = MesDatas.DsGlobal.Tables["Mission"].Select($"nomPlanete = '{nomPlanete}'");
+
+            if (races.Length == 0 && missions.Length == 0)
+            {
+                // Aucune info : on cache le panel et on affiche un message
+                splitContainer1.Panel2Collapsed = true;
+                AfficherNotif($"Aucune information disponible sur {nomPlanete}.");
+                return;
+            }
+
+            // Il y a des infos : on affiche le panel
             lblTitrePlanete.Text = nomPlanete;
             AfficherRacesPlanete(nomPlanete);
             AfficherMissionsPlanete(nomPlanete);
+            splitContainer1.Panel2Collapsed = false;
         }
 
         /// <summary>
@@ -213,7 +241,132 @@ namespace appStargate
             }
         }
 
+        // ─── SYSTÈME DE NOTIFICATIONS ─────────────────────────────────────────────
+
+        private List<Panel> _notifs = new List<Panel>();
+
+        private void AfficherNotif(string message)
+        {
+            // Création d'un nouveau panel de notif
+            Panel notif = new Panel();
+            notif.Size = new Size(350, 60);
+            notif.BackColor = Color.FromArgb(192, 57, 43);
+
+            Label lbl = new Label();
+            lbl.Text = message;
+            lbl.Dock = DockStyle.Fill;
+            lbl.TextAlign = ContentAlignment.MiddleCenter;
+            lbl.ForeColor = Color.White;
+            lbl.Font = new Font("Arial", 10, FontStyle.Bold);
+            notif.Controls.Add(lbl);
+
+            // Position de départ selon le nombre de notifs déjà affichées
+            int posY = 20 + (_notifs.Count * 70); // 70 = hauteur + marge
+            notif.Location = new Point(-notif.Width, posY);
+
+            this.Controls.Add(notif);
+            notif.BringToFront();
+            _notifs.Add(notif);
+
+            // Animation entrée
+            AnimerEntree(notif, 20, posY);
+        }
+
+        private void AnimerEntree(Panel notif, int cibleX, int posY)
+        {
+            Timer timerEntree = new Timer();
+            timerEntree.Interval = 5;
+            timerEntree.Tick += (s, ev) =>
+            {
+                if (notif.Left < cibleX)
+                {
+                    int pas = Math.Max(2, (cibleX - notif.Left) / 4);
+                    notif.Left += pas;
+                }
+                else
+                {
+                    notif.Left = cibleX;
+                    timerEntree.Stop();
+                    timerEntree.Dispose();
+
+                    // Attend puis fait sortir
+                    Timer timerAttente = new Timer();
+                    timerAttente.Interval = 2500;
+                    timerAttente.Tick += (s2, ev2) =>
+                    {
+                        timerAttente.Stop();
+                        timerAttente.Dispose();
+                        AnimerSortie(notif);
+                    };
+                    timerAttente.Start();
+                }
+            };
+            timerEntree.Start();
+        }
+
+        private void AnimerSortie(Panel notif)
+        {
+            Timer timerSortie = new Timer();
+            timerSortie.Interval = 5;
+            timerSortie.Tick += (s, ev) =>
+            {
+                if (notif.Left > -notif.Width)
+                {
+                    int pas = Math.Max(2, (notif.Left + notif.Width) / 4);
+                    notif.Left -= pas;
+                }
+                else
+                {
+                    // Supprime la notif et réorganise les autres
+                    timerSortie.Stop();
+                    timerSortie.Dispose();
+                    _notifs.Remove(notif);
+                    this.Controls.Remove(notif);
+                    notif.Dispose();
+                    ReorganiserNotifs();
+                }
+            };
+            timerSortie.Start();
+        }
+
+        private void ReorganiserNotifs()
+        {
+            // Replace les notifs restantes à la bonne hauteur
+            for (int i = 0; i < _notifs.Count; i++)
+            {
+                int cibleY = 20 + (i * 70);
+                Panel notif = _notifs[i];
+
+                Timer timerReorg = new Timer();
+                timerReorg.Interval = 5;
+                timerReorg.Tick += (s, ev) =>
+                {
+                    if (notif.Top != cibleY)
+                    {
+                        int pas = Math.Max(1, Math.Abs(notif.Top - cibleY) / 4);
+                        if (notif.Top > cibleY) notif.Top -= pas;
+                        else notif.Top += pas;
+                    }
+                    else
+                    {
+                        timerReorg.Stop();
+                        timerReorg.Dispose();
+                    }
+                };
+                timerReorg.Start();
+            }
+        }
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvRaces_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

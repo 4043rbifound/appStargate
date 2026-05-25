@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.grpAuth = new System.Windows.Forms.GroupBox();
-            this.lblErreur = new System.Windows.Forms.Label();
             this.btnValider = new System.Windows.Forms.Button();
             this.txtMdp = new System.Windows.Forms.TextBox();
             this.txtLogin = new System.Windows.Forms.TextBox();
@@ -40,39 +39,28 @@
             // 
             // grpAuth
             // 
-            this.grpAuth.Controls.Add(this.lblErreur);
             this.grpAuth.Controls.Add(this.btnValider);
             this.grpAuth.Controls.Add(this.txtMdp);
             this.grpAuth.Controls.Add(this.txtLogin);
             this.grpAuth.Controls.Add(this.lblMdp);
             this.grpAuth.Controls.Add(this.lblLogin);
             this.grpAuth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.grpAuth.Location = new System.Drawing.Point(127, 128);
-            this.grpAuth.Margin = new System.Windows.Forms.Padding(2);
+            this.grpAuth.Location = new System.Drawing.Point(85, 83);
+            this.grpAuth.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.grpAuth.Name = "grpAuth";
-            this.grpAuth.Padding = new System.Windows.Forms.Padding(2);
-            this.grpAuth.Size = new System.Drawing.Size(994, 504);
+            this.grpAuth.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.grpAuth.Size = new System.Drawing.Size(663, 328);
             this.grpAuth.TabIndex = 0;
             this.grpAuth.TabStop = false;
             this.grpAuth.Text = "Authentification";
             this.grpAuth.Enter += new System.EventHandler(this.grpAuth_Enter);
             // 
-            // lblErreur
-            // 
-            this.lblErreur.AutoSize = true;
-            this.lblErreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.85714F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErreur.ForeColor = System.Drawing.Color.Red;
-            this.lblErreur.Location = new System.Drawing.Point(250, 68);
-            this.lblErreur.Name = "lblErreur";
-            this.lblErreur.Size = new System.Drawing.Size(0, 37);
-            this.lblErreur.TabIndex = 5;
-            // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(740, 363);
-            this.btnValider.Margin = new System.Windows.Forms.Padding(2);
+            this.btnValider.Location = new System.Drawing.Point(493, 236);
+            this.btnValider.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(194, 82);
+            this.btnValider.Size = new System.Drawing.Size(129, 53);
             this.btnValider.TabIndex = 4;
             this.btnValider.Text = "Valider";
             this.btnValider.UseVisualStyleBackColor = true;
@@ -80,28 +68,28 @@
             // 
             // txtMdp
             // 
-            this.txtMdp.Location = new System.Drawing.Point(378, 316);
-            this.txtMdp.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMdp.Location = new System.Drawing.Point(252, 205);
+            this.txtMdp.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtMdp.Name = "txtMdp";
-            this.txtMdp.Size = new System.Drawing.Size(245, 39);
+            this.txtMdp.Size = new System.Drawing.Size(165, 29);
             this.txtMdp.TabIndex = 3;
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(378, 170);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLogin.Location = new System.Drawing.Point(252, 110);
+            this.txtLogin.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(245, 39);
+            this.txtLogin.Size = new System.Drawing.Size(165, 29);
             this.txtLogin.TabIndex = 2;
             // 
             // lblMdp
             // 
             this.lblMdp.AutoSize = true;
             this.lblMdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMdp.Location = new System.Drawing.Point(149, 316);
-            this.lblMdp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMdp.Location = new System.Drawing.Point(99, 205);
+            this.lblMdp.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblMdp.Name = "lblMdp";
-            this.lblMdp.Size = new System.Drawing.Size(189, 33);
+            this.lblMdp.Size = new System.Drawing.Size(123, 24);
             this.lblMdp.TabIndex = 1;
             this.lblMdp.Text = "Mot de passe";
             // 
@@ -109,20 +97,20 @@
             // 
             this.lblLogin.AutoSize = true;
             this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.Location = new System.Drawing.Point(149, 170);
-            this.lblLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLogin.Location = new System.Drawing.Point(99, 110);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(86, 33);
+            this.lblLogin.Size = new System.Drawing.Size(57, 24);
             this.lblLogin.TabIndex = 0;
             this.lblLogin.Text = "Login";
             // 
             // formAuthentification
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1269, 760);
+            this.ClientSize = new System.Drawing.Size(846, 494);
             this.Controls.Add(this.grpAuth);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.Name = "formAuthentification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Formulaire d\'authentification";
@@ -141,6 +129,5 @@
         private System.Windows.Forms.TextBox txtMdp;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Label lblMdp;
-        private System.Windows.Forms.Label lblErreur;
     }
 }

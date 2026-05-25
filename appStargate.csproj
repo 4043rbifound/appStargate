@@ -90,6 +90,12 @@
     <Compile Include="formAuthentification.Designer.cs">
       <DependentUpon>formAuthentification.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRaces.Designer.cs">
+      <DependentUpon>FormRaces.cs</DependentUpon>
+    </Compile>
     <Compile Include="mesDatas.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="MissionUserControle.cs">
@@ -104,6 +110,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UCAlien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAlien.Designer.cs">
+      <DependentUpon>UCAlien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCFiltres.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCFiltres.Designer.cs">
+      <DependentUpon>UCFiltres.cs</DependentUpon>
     </Compile>
     <Compile Include="UCPlanete.cs">
       <SubType>UserControl</SubType>
@@ -126,6 +144,9 @@
     <EmbeddedResource Include="formAuthentification.resx">
       <DependentUpon>formAuthentification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormRaces.resx">
+      <DependentUpon>FormRaces.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\appliPandora.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\appliPandora.formAuthentification.resources" />
     <EmbeddedResource Include="obj\Debug\appStargate.Properties.Resources.resources" />
@@ -136,6 +157,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAlien.resx">
+      <DependentUpon>UCAlien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCFiltres.resx">
+      <DependentUpon>UCFiltres.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCPlanete.resx">
       <DependentUpon>UCPlanete.cs</DependentUpon>
