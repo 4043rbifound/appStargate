@@ -22,13 +22,13 @@ namespace appStargate
 
             this.Text = "Détails de la mission : " + maMission["nomPlanete"].ToString() +" "+ maMission["numero"];
 
-            lblTitreMission.Text = "Mission : " +maMission["nomPlanete"].ToString() + " " + maMission["numero"];
+            lblTitreMission.Text = "Mission | " +maMission["nomPlanete"].ToString() + " " + maMission["numero"];
             lblBudget.Text = "Budget : " + maMission["budget"];
             lblChefMission.Text = "Chef : ";
             DateTime dateDepart = Convert.ToDateTime(maMission["dateDepart"]);
             lblDateDebutMission.Text = $"Départ : {dateDepart.ToString("d", new CultureInfo("fr-FR"))}";
             DateTime dateRetour = Convert.ToDateTime(maMission["dateRetour"]);
-            lblDateFinMission.Text = $"Départ : {dateRetour.ToString("d", new CultureInfo("fr-FR"))}";
+            lblDateFinMission.Text = $"Retour : {dateRetour.ToString("d", new CultureInfo("fr-FR"))}";
         }
 
         private void DetailsMission_Load(object sender, EventArgs e)

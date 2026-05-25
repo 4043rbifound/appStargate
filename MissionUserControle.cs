@@ -30,7 +30,7 @@ namespace appStargate
             DateTime dateDepart = Convert.ToDateTime(ligne["dateDepart"]);
             lblDateDebutMission.Text = $"Départ : {dateDepart.ToString("d", new CultureInfo("fr-FR"))}";
             DateTime dateRetour = Convert.ToDateTime(ligne["dateRetour"]);
-            lblDateFinMission.Text = $"Départ : {dateRetour.ToString("d", new CultureInfo("fr-FR"))}";
+            lblDateFinMission.Text = $"Retour : {dateRetour.ToString("d", new CultureInfo("fr-FR"))}";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
