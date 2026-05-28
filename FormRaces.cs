@@ -104,8 +104,8 @@ namespace appStargate
                 if (_filtreType != "Tous" && type != _filtreType)
                     continue;
 
-                // Filtre nom
-                if (_filtreNom != "" && !nom.Equals(_filtreNom, StringComparison.OrdinalIgnoreCase))
+                // Filtre nom — contient les caractères saisis
+                if (_filtreNom != "" && nom.IndexOf(_filtreNom, StringComparison.OrdinalIgnoreCase) < 0)
                     continue;
 
                 // Filtre couleur

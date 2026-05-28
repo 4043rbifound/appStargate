@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using appliPandora;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace appStargate
 {
     public partial class UCFiltres : UserControl
     {
-        // Référence vers le FormRaces pour appeler AppliquerFiltres
         private FormRaces _formRaces;
 
         // Constructeur par défaut pour le designer
@@ -26,15 +20,40 @@ namespace appStargate
         {
             InitializeComponent();
             _formRaces = formRaces;
+
+            ChargerCouleurs();
+
+            // Filtre en temps réel
+            txtNom.TextChanged += (s, e) => AppliquerFiltres();
+            CboCouleur.SelectedIndexChanged += (s, e) => AppliquerFiltres();
         }
 
         /// <summary>
-        /// Quand on clique sur la loupe, on envoie les filtres au FormRaces
+        /// Charge les couleurs distinctes depuis le DataSet dans le ComboBox
         /// </summary>
-        private void btnFiltrer_Click(object sender, EventArgs e)
+        private void ChargerCouleurs()
         {
+            CboCouleur.Items.Clear();
+            CboCouleur.Items.Add("Toutes");
+            CboCouleur.SelectedIndex = 0;
+
+            DataTable dtEspece = MesDatas.DsGlobal.Tables["Espece"];
+            if (dtEspece == null) return;
+
+            foreach (DataRow row in dtEspece.Rows)
+            {
+                string couleur = row["couleur"].ToString();
+                if (!CboCouleur.Items.Contains(couleur))
+                    CboCouleur.Items.Add(couleur);
+            }
+        }
+
+        private void AppliquerFiltres()
+        {
+            if (_formRaces == null) return;
+
             string nom = txtNom.Text.Trim();
-            string couleur = txtCouleur.Text.Trim();
+            string couleur = CboCouleur.SelectedIndex <= 0 ? "" : CboCouleur.SelectedItem.ToString();
 
             _formRaces.AppliquerFiltres(nom, couleur);
         }
