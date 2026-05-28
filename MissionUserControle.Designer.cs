@@ -114,6 +114,7 @@
             this.lblBudget.Size = new System.Drawing.Size(182, 29);
             this.lblBudget.TabIndex = 10;
             this.lblBudget.Text = "Budget : 5000€";
+            this.lblBudget.Click += new System.EventHandler(this.lblBudget_Click);
             // 
             // pictureBox4
             // 

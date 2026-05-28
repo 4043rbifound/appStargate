@@ -96,6 +96,12 @@
     <Compile Include="FormRaces.Designer.cs">
       <DependentUpon>FormRaces.cs</DependentUpon>
     </Compile>
+    <Compile Include="Membre.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Membre.Designer.cs">
+      <DependentUpon>Membre.cs</DependentUpon>
+    </Compile>
     <Compile Include="mesDatas.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="MissionUserControle.cs">
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRaces.resx">
       <DependentUpon>FormRaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Membre.resx">
+      <DependentUpon>Membre.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\appliPandora.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\appliPandora.formAuthentification.resources" />
