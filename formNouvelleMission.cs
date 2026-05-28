@@ -21,5 +21,15 @@ namespace appStargate
         {
 
         }
+
+        private void lblNom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboPlanete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
