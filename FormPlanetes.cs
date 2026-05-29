@@ -149,8 +149,7 @@ namespace appStargate
 
         private void AfficherMissionsPlanete(string nomPlanete)
         {
-            lbMissions.Items.Clear();
-            lbMissions.HorizontalScrollbar = true;
+            lbMissions.Text = "";
 
             DataTable dtMissions = MesDatas.DsGlobal.Tables["Mission"];
             DataTable dtMembres = MesDatas.DsGlobal.Tables["Membre"];
@@ -159,9 +158,11 @@ namespace appStargate
 
             if (missionRows.Length == 0)
             {
-                lbMissions.Items.Add("Aucune mission sur cette planète.");
+                lbMissions.Text = "Aucune mission sur cette planète.";
                 return;
             }
+
+            string texte = "";
 
             foreach (DataRow mission in missionRows)
             {
@@ -176,10 +177,12 @@ namespace appStargate
                     ? $"{chefRows[0]["prenom"]} {chefRows[0]["nom"]}"
                     : matricule;
 
-                lbMissions.Items.Add(
-                    $"Mission {nomPlanete}-{numero} | {depart} → {retour} | Chef : {nomChef} | Budget : {budget}€"
-                );
+                texte += $"• Mission {nomPlanete}-{numero}\n";
+                texte += $"  Départ : {depart}  →  Retour : {retour}\n";
+                texte += $"  Chef : {nomChef}  |  Budget : {budget}€\n\n";
             }
+
+            lbMissions.Text = texte.TrimEnd();
         }
 
         // ─── SYSTÈME DE NOTIFICATIONS ─────────────────────────────────────────────
