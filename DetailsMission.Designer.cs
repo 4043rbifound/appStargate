@@ -35,19 +35,19 @@
             this.lblDateDebutMission = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblObjDatabaz = new System.Windows.Forms.Label();
-            this.grpDiverseInfos = new System.Windows.Forms.GroupBox();
-            this.richTextBoxDiverseInfos = new System.Windows.Forms.RichTextBox();
-            this.btnVoirMembresOuFeuille = new System.Windows.Forms.Button();
             this.lblSolde = new System.Windows.Forms.Label();
+            this.diverseInfosPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblFeuilleDeRoute = new System.Windows.Forms.Label();
+            this.btnVoirMembresOuFeuille = new System.Windows.Forms.Button();
             this.ImageMission = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.grpDiverseInfos.SuspendLayout();
+            this.diverseInfosPanel.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitreMission
@@ -136,42 +136,6 @@
             this.lblObjDatabaz.Text = "Objectif de Databaz : ";
             this.lblObjDatabaz.Click += new System.EventHandler(this.lblObjDatabaz_Click);
             // 
-            // grpDiverseInfos
-            // 
-            this.grpDiverseInfos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.grpDiverseInfos.Controls.Add(this.richTextBoxDiverseInfos);
-            this.grpDiverseInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.grpDiverseInfos.ForeColor = System.Drawing.Color.White;
-            this.grpDiverseInfos.Location = new System.Drawing.Point(217, 494);
-            this.grpDiverseInfos.Name = "grpDiverseInfos";
-            this.grpDiverseInfos.Size = new System.Drawing.Size(1028, 242);
-            this.grpDiverseInfos.TabIndex = 24;
-            this.grpDiverseInfos.TabStop = false;
-            this.grpDiverseInfos.Text = "Feuille de route";
-            // 
-            // richTextBoxDiverseInfos
-            // 
-            this.richTextBoxDiverseInfos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.richTextBoxDiverseInfos.Location = new System.Drawing.Point(23, 35);
-            this.richTextBoxDiverseInfos.Name = "richTextBoxDiverseInfos";
-            this.richTextBoxDiverseInfos.Size = new System.Drawing.Size(981, 185);
-            this.richTextBoxDiverseInfos.TabIndex = 1;
-            this.richTextBoxDiverseInfos.Text = "";
-            // 
-            // btnVoirMembresOuFeuille
-            // 
-            this.btnVoirMembresOuFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.btnVoirMembresOuFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoirMembresOuFeuille.Font = new System.Drawing.Font("Impact", 12F);
-            this.btnVoirMembresOuFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(214, 407);
-            this.btnVoirMembresOuFeuille.Name = "btnVoirMembresOuFeuille";
-            this.btnVoirMembresOuFeuille.Size = new System.Drawing.Size(270, 66);
-            this.btnVoirMembresOuFeuille.TabIndex = 25;
-            this.btnVoirMembresOuFeuille.Text = "Voir Membres";
-            this.btnVoirMembresOuFeuille.UseVisualStyleBackColor = false;
-            this.btnVoirMembresOuFeuille.Click += new System.EventHandler(this.btnVoirMembresOuFeuille_Click);
-            // 
             // lblSolde
             // 
             this.lblSolde.AutoSize = true;
@@ -184,6 +148,55 @@
             this.lblSolde.TabIndex = 26;
             this.lblSolde.Text = "Solde : 250€";
             this.lblSolde.Click += new System.EventHandler(this.lblSolde_Click);
+            // 
+            // diverseInfosPanel
+            // 
+            this.diverseInfosPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.diverseInfosPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.diverseInfosPanel.Controls.Add(this.flowLayoutPanel1);
+            this.diverseInfosPanel.Location = new System.Drawing.Point(217, 512);
+            this.diverseInfosPanel.Name = "diverseInfosPanel";
+            this.diverseInfosPanel.Size = new System.Drawing.Size(1028, 253);
+            this.diverseInfosPanel.TabIndex = 0;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Controls.Add(this.lblFeuilleDeRoute);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 18);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(32, 18, 3, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(963, 192);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // lblFeuilleDeRoute
+            // 
+            this.lblFeuilleDeRoute.AutoSize = true;
+            this.lblFeuilleDeRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFeuilleDeRoute.ForeColor = System.Drawing.Color.White;
+            this.lblFeuilleDeRoute.Location = new System.Drawing.Point(3, 0);
+            this.lblFeuilleDeRoute.MaximumSize = new System.Drawing.Size(963, 0);
+            this.lblFeuilleDeRoute.Name = "lblFeuilleDeRoute";
+            this.lblFeuilleDeRoute.Size = new System.Drawing.Size(70, 25);
+            this.lblFeuilleDeRoute.TabIndex = 0;
+            this.lblFeuilleDeRoute.Text = "label2";
+            // 
+            // btnVoirMembresOuFeuille
+            // 
+            this.btnVoirMembresOuFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnVoirMembresOuFeuille.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoirMembresOuFeuille.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoirMembresOuFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoirMembresOuFeuille.Font = new System.Drawing.Font("Impact", 15F);
+            this.btnVoirMembresOuFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(214, 407);
+            this.btnVoirMembresOuFeuille.Name = "btnVoirMembresOuFeuille";
+            this.btnVoirMembresOuFeuille.Size = new System.Drawing.Size(270, 66);
+            this.btnVoirMembresOuFeuille.TabIndex = 25;
+            this.btnVoirMembresOuFeuille.Text = "Voir Membres";
+            this.btnVoirMembresOuFeuille.UseVisualStyleBackColor = false;
+            this.btnVoirMembresOuFeuille.Click += new System.EventHandler(this.btnVoirMembresOuFeuille_Click);
             // 
             // ImageMission
             // 
@@ -215,23 +228,15 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.pictureBox3.Location = new System.Drawing.Point(163, -4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1164, 801);
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
-            // 
             // DetailsMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1269, 760);
+            this.Controls.Add(this.diverseInfosPanel);
             this.Controls.Add(this.lblSolde);
             this.Controls.Add(this.btnVoirMembresOuFeuille);
-            this.Controls.Add(this.grpDiverseInfos);
             this.Controls.Add(this.lblObjDatabaz);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBudget);
@@ -242,16 +247,16 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblTitreMission);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox3);
             this.Name = "DetailsMission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetailsMission";
             this.Load += new System.EventHandler(this.DetailsMission_Load);
-            this.grpDiverseInfos.ResumeLayout(false);
+            this.diverseInfosPanel.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,8 +266,6 @@
 
         private System.Windows.Forms.Label lblTitreMission;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblBudget;
         private System.Windows.Forms.Label lblDateFinMission;
         private System.Windows.Forms.Label lblChefMission;
@@ -270,9 +273,11 @@
         private System.Windows.Forms.PictureBox ImageMission;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblObjDatabaz;
-        private System.Windows.Forms.GroupBox grpDiverseInfos;
-        private System.Windows.Forms.RichTextBox richTextBoxDiverseInfos;
         private System.Windows.Forms.Button btnVoirMembresOuFeuille;
         private System.Windows.Forms.Label lblSolde;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel diverseInfosPanel;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label lblFeuilleDeRoute;
     }
 }
