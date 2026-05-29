@@ -63,7 +63,7 @@ namespace appliPandora
                 }
 
                 int total = MesDatas.DsGlobal.Tables["Mission"].Rows.Count;
-                lblTotalMission.Text = "Missions : " + total.ToString();
+                lblTotalMission.Text = total.ToString();
 
             }
             catch (Exception ex)
@@ -111,6 +111,16 @@ namespace appliPandora
 
             FormRaces frmRaces = new FormRaces();
             frmRaces.Show();
+        }
+
+        private void lblTotalMission_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQuitter_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

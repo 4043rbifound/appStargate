@@ -257,6 +257,7 @@
     <Content Include="Images\Jupiter.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Images\logoSg.png" />
     <Content Include="Images\Mars.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

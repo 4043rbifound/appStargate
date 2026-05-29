@@ -48,6 +48,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVoirFeuille = new System.Windows.Forms.Button();
+            this.grpObjectifCapture = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -78,7 +79,7 @@
             this.lblBudget.BackColor = System.Drawing.Color.Transparent;
             this.lblBudget.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblBudget.ForeColor = System.Drawing.Color.White;
-            this.lblBudget.Location = new System.Drawing.Point(229, 359);
+            this.lblBudget.Location = new System.Drawing.Point(263, 363);
             this.lblBudget.Name = "lblBudget";
             this.lblBudget.Size = new System.Drawing.Size(228, 35);
             this.lblBudget.TabIndex = 21;
@@ -90,7 +91,7 @@
             this.lblDateFinMission.BackColor = System.Drawing.Color.Transparent;
             this.lblDateFinMission.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateFinMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateFinMission.Location = new System.Drawing.Point(975, 195);
+            this.lblDateFinMission.Location = new System.Drawing.Point(1009, 214);
             this.lblDateFinMission.Name = "lblDateFinMission";
             this.lblDateFinMission.Size = new System.Drawing.Size(270, 37);
             this.lblDateFinMission.TabIndex = 20;
@@ -102,7 +103,7 @@
             this.lblChefMission.BackColor = System.Drawing.Color.Transparent;
             this.lblChefMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblChefMission.ForeColor = System.Drawing.Color.White;
-            this.lblChefMission.Location = new System.Drawing.Point(227, 288);
+            this.lblChefMission.Location = new System.Drawing.Point(261, 292);
             this.lblChefMission.Name = "lblChefMission";
             this.lblChefMission.Size = new System.Drawing.Size(247, 35);
             this.lblChefMission.TabIndex = 19;
@@ -114,7 +115,7 @@
             this.lblDateDebutMission.BackColor = System.Drawing.Color.Transparent;
             this.lblDateDebutMission.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateDebutMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateDebutMission.Location = new System.Drawing.Point(210, 195);
+            this.lblDateDebutMission.Location = new System.Drawing.Point(244, 214);
             this.lblDateDebutMission.Name = "lblDateDebutMission";
             this.lblDateDebutMission.Size = new System.Drawing.Size(271, 37);
             this.lblDateDebutMission.TabIndex = 18;
@@ -126,7 +127,7 @@
             this.lblObjDatabaz.BackColor = System.Drawing.Color.Transparent;
             this.lblObjDatabaz.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblObjDatabaz.ForeColor = System.Drawing.Color.White;
-            this.lblObjDatabaz.Location = new System.Drawing.Point(756, 288);
+            this.lblObjDatabaz.Location = new System.Drawing.Point(790, 292);
             this.lblObjDatabaz.Name = "lblObjDatabaz";
             this.lblObjDatabaz.Size = new System.Drawing.Size(320, 35);
             this.lblObjDatabaz.TabIndex = 23;
@@ -139,7 +140,7 @@
             this.lblSolde.BackColor = System.Drawing.Color.Transparent;
             this.lblSolde.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblSolde.ForeColor = System.Drawing.Color.White;
-            this.lblSolde.Location = new System.Drawing.Point(756, 359);
+            this.lblSolde.Location = new System.Drawing.Point(790, 363);
             this.lblSolde.Name = "lblSolde";
             this.lblSolde.Size = new System.Drawing.Size(190, 35);
             this.lblSolde.TabIndex = 26;
@@ -152,7 +153,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(479, 195);
+            this.label1.Location = new System.Drawing.Point(512, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(503, 37);
             this.label1.TabIndex = 22;
@@ -163,7 +164,7 @@
             this.pictureBox6.BackColor = System.Drawing.Color.Black;
             this.pictureBox6.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(742, 345);
+            this.pictureBox6.Location = new System.Drawing.Point(776, 349);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(503, 64);
             this.pictureBox6.TabIndex = 30;
@@ -174,7 +175,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Black;
             this.pictureBox5.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(742, 275);
+            this.pictureBox5.Location = new System.Drawing.Point(776, 279);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(503, 64);
             this.pictureBox5.TabIndex = 29;
@@ -185,7 +186,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Black;
             this.pictureBox4.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(217, 345);
+            this.pictureBox4.Location = new System.Drawing.Point(251, 349);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(501, 64);
             this.pictureBox4.TabIndex = 28;
@@ -196,7 +197,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(215, 275);
+            this.pictureBox3.Location = new System.Drawing.Point(249, 279);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(503, 64);
             this.pictureBox3.TabIndex = 27;
@@ -208,7 +209,7 @@
             this.diverseInfosPanel.BackgroundImage = global::appStargate.Properties.Resources.imgfondtext;
             this.diverseInfosPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.diverseInfosPanel.Controls.Add(this.flowLayoutPanel1);
-            this.diverseInfosPanel.Location = new System.Drawing.Point(217, 663);
+            this.diverseInfosPanel.Location = new System.Drawing.Point(206, 680);
             this.diverseInfosPanel.Name = "diverseInfosPanel";
             this.diverseInfosPanel.Size = new System.Drawing.Size(1131, 368);
             this.diverseInfosPanel.TabIndex = 0;
@@ -245,7 +246,7 @@
             this.btnVoirMembresOuFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoirMembresOuFeuille.Font = new System.Drawing.Font("Impact", 15F);
             this.btnVoirMembresOuFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(448, 431);
+            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(482, 598);
             this.btnVoirMembresOuFeuille.Name = "btnVoirMembresOuFeuille";
             this.btnVoirMembresOuFeuille.Size = new System.Drawing.Size(270, 66);
             this.btnVoirMembresOuFeuille.TabIndex = 25;
@@ -294,12 +295,23 @@
             this.btnVoirFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoirFeuille.Font = new System.Drawing.Font("Impact", 15F);
             this.btnVoirFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))));
-            this.btnVoirFeuille.Location = new System.Drawing.Point(742, 431);
+            this.btnVoirFeuille.Location = new System.Drawing.Point(776, 598);
             this.btnVoirFeuille.Name = "btnVoirFeuille";
             this.btnVoirFeuille.Size = new System.Drawing.Size(270, 66);
             this.btnVoirFeuille.TabIndex = 31;
             this.btnVoirFeuille.Text = "Voir Feuille";
             this.btnVoirFeuille.UseVisualStyleBackColor = false;
+            // 
+            // grpObjectifCapture
+            // 
+            this.grpObjectifCapture.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.grpObjectifCapture.ForeColor = System.Drawing.Color.White;
+            this.grpObjectifCapture.Location = new System.Drawing.Point(251, 419);
+            this.grpObjectifCapture.Name = "grpObjectifCapture";
+            this.grpObjectifCapture.Size = new System.Drawing.Size(1028, 159);
+            this.grpObjectifCapture.TabIndex = 32;
+            this.grpObjectifCapture.TabStop = false;
+            this.grpObjectifCapture.Text = "Objectifs de capture";
             // 
             // DetailsMission
             // 
@@ -308,6 +320,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1595, 1026);
+            this.Controls.Add(this.grpObjectifCapture);
             this.Controls.Add(this.btnVoirFeuille);
             this.Controls.Add(this.lblSolde);
             this.Controls.Add(this.lblObjDatabaz);
@@ -367,5 +380,6 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Button btnVoirFeuille;
+        private System.Windows.Forms.GroupBox grpObjectifCapture;
     }
 }
