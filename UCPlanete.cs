@@ -38,12 +38,12 @@ namespace appStargate
 
             if (databazON)
             {
-                lblDatabaz.Text = "Présence de Databaz";
+                lblDatabaz.Text = "✅ Databaz";
                 lblDatabaz.ForeColor = Color.Green;
             }
             else
             {
-                lblDatabaz.Text = "Pas de Databaz";
+                lblDatabaz.Text = "❌ Sans Databaz";
                 lblDatabaz.ForeColor = Color.Red;
             }
 
@@ -92,5 +92,6 @@ namespace appStargate
         {
         }
 
+       
     }
 }
