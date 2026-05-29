@@ -31,62 +31,69 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCouleur = new System.Windows.Forms.TextBox();
             this.btnFiltrer = new System.Windows.Forms.Button();
+            this.CboCouleur = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 15);
+            this.label1.Location = new System.Drawing.Point(13, 18);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nom :";
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(10, 35);
+            this.txtNom.Location = new System.Drawing.Point(13, 43);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(4);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(160, 20);
+            this.txtNom.Size = new System.Drawing.Size(212, 22);
             this.txtNom.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 75);
+            this.label2.Location = new System.Drawing.Point(13, 92);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(59, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Couleur :";
             // 
-            // txtCouleur
-            // 
-            this.txtCouleur.Location = new System.Drawing.Point(10, 95);
-            this.txtCouleur.Name = "txtCouleur";
-            this.txtCouleur.Size = new System.Drawing.Size(160, 20);
-            this.txtCouleur.TabIndex = 3;
-            // 
             // btnFiltrer
             // 
-            this.btnFiltrer.Location = new System.Drawing.Point(60, 135);
+            this.btnFiltrer.Location = new System.Drawing.Point(80, 166);
+            this.btnFiltrer.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrer.Name = "btnFiltrer";
-            this.btnFiltrer.Size = new System.Drawing.Size(60, 35);
+            this.btnFiltrer.Size = new System.Drawing.Size(80, 43);
             this.btnFiltrer.TabIndex = 4;
             this.btnFiltrer.Text = "🔍";
             this.btnFiltrer.UseVisualStyleBackColor = true;
+            this.btnFiltrer.Visible = false;
+            // 
+            // CboCouleur
+            // 
+            this.CboCouleur.FormattingEnabled = true;
+            this.CboCouleur.Location = new System.Drawing.Point(13, 111);
+            this.CboCouleur.Name = "CboCouleur";
+            this.CboCouleur.Size = new System.Drawing.Size(212, 24);
+            this.CboCouleur.TabIndex = 5;
             // 
             // UCFiltres
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.CboCouleur);
             this.Controls.Add(this.btnFiltrer);
-            this.Controls.Add(this.txtCouleur);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCFiltres";
-            this.Size = new System.Drawing.Size(180, 190);
+            this.Size = new System.Drawing.Size(240, 234);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,7 +104,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCouleur;
         private System.Windows.Forms.Button btnFiltrer;
+        private System.Windows.Forms.ComboBox CboCouleur;
     }
 }
