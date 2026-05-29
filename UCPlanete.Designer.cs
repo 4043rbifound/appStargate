@@ -2,15 +2,8 @@
 {
     partial class UCPlanete
     {
-        /// <summary> 
-        /// Variable nécessaire au concepteur.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Nettoyage des ressources utilisées.
-        /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,12 +13,6 @@
             base.Dispose(disposing);
         }
 
-        #region Code généré par le Concepteur de composants
-
-        /// <summary> 
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
-        /// le contenu de cette méthode avec l'éditeur de code.
-        /// </summary>
         private void InitializeComponent()
         {
             this.pbPlanete = new System.Windows.Forms.PictureBox();
@@ -35,53 +22,54 @@
             this.lblDatabaz = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).BeginInit();
             this.SuspendLayout();
-            // 
+
             // pbPlanete
-            // 
-            this.pbPlanete.Location = new System.Drawing.Point(19, 3);
+            this.pbPlanete.Location = new System.Drawing.Point(15, 10);
             this.pbPlanete.Name = "pbPlanete";
             this.pbPlanete.Size = new System.Drawing.Size(120, 120);
             this.pbPlanete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPlanete.TabIndex = 0;
             this.pbPlanete.TabStop = false;
-            // 
+
             // lblNom
-            // 
-            this.lblNom.AutoSize = true;
-            this.lblNom.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNom.Location = new System.Drawing.Point(15, 152);
+            this.lblNom.AutoSize = false;
+            this.lblNom.Location = new System.Drawing.Point(5, 135);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(0, 21);
+            this.lblNom.Size = new System.Drawing.Size(145, 20);
             this.lblNom.TabIndex = 1;
-            // 
+            this.lblNom.Text = "";
+            this.lblNom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNom.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+
             // lblTemp
-            // 
-            this.lblTemp.AutoSize = true;
-            this.lblTemp.Location = new System.Drawing.Point(16, 183);
+            this.lblTemp.AutoSize = false;
+            this.lblTemp.Location = new System.Drawing.Point(5, 158);
             this.lblTemp.Name = "lblTemp";
-            this.lblTemp.Size = new System.Drawing.Size(0, 16);
+            this.lblTemp.Size = new System.Drawing.Size(145, 20);
             this.lblTemp.TabIndex = 2;
-            // 
+            this.lblTemp.Text = "";
+            this.lblTemp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // lblGravite
-            // 
-            this.lblGravite.AutoSize = true;
-            this.lblGravite.Location = new System.Drawing.Point(16, 199);
+            this.lblGravite.AutoSize = false;
+            this.lblGravite.Location = new System.Drawing.Point(5, 178);
             this.lblGravite.Name = "lblGravite";
-            this.lblGravite.Size = new System.Drawing.Size(0, 16);
+            this.lblGravite.Size = new System.Drawing.Size(145, 20);
             this.lblGravite.TabIndex = 3;
-            // 
+            this.lblGravite.Text = "";
+            this.lblGravite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // lblDatabaz
-            // 
-            this.lblDatabaz.AutoSize = true;
-            this.lblDatabaz.Location = new System.Drawing.Point(16, 215);
+            this.lblDatabaz.AutoSize = false;
+            this.lblDatabaz.Location = new System.Drawing.Point(5, 198);
             this.lblDatabaz.Name = "lblDatabaz";
-            this.lblDatabaz.Size = new System.Drawing.Size(0, 16);
+            this.lblDatabaz.Size = new System.Drawing.Size(145, 20);
             this.lblDatabaz.TabIndex = 4;
-            // 
+            this.lblDatabaz.Text = "";
+            this.lblDatabaz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+
             // UCPlanete
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.lblDatabaz);
             this.Controls.Add(this.lblGravite);
             this.Controls.Add(this.lblTemp);
@@ -92,11 +80,7 @@
             this.Load += new System.EventHandler(this.UCPlanete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
-
         }
-
-        #endregion
 
         private System.Windows.Forms.PictureBox pbPlanete;
         private System.Windows.Forms.Label lblNom;
