@@ -33,9 +33,13 @@
             this.lblDateFinMission = new System.Windows.Forms.Label();
             this.lblChefMission = new System.Windows.Forms.Label();
             this.lblDateDebutMission = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblObjDatabaz = new System.Windows.Forms.Label();
             this.lblSolde = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.diverseInfosPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblFeuilleDeRoute = new System.Windows.Forms.Label();
@@ -43,6 +47,11 @@
             this.ImageMission = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnVoirFeuille = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.diverseInfosPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).BeginInit();
@@ -53,7 +62,7 @@
             // lblTitreMission
             // 
             this.lblTitreMission.AutoSize = true;
-            this.lblTitreMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.lblTitreMission.BackColor = System.Drawing.Color.Transparent;
             this.lblTitreMission.Font = new System.Drawing.Font("Impact", 50F);
             this.lblTitreMission.ForeColor = System.Drawing.Color.White;
             this.lblTitreMission.Location = new System.Drawing.Point(194, 37);
@@ -66,10 +75,10 @@
             // lblBudget
             // 
             this.lblBudget.AutoSize = true;
-            this.lblBudget.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.lblBudget.BackColor = System.Drawing.Color.Transparent;
             this.lblBudget.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblBudget.ForeColor = System.Drawing.Color.White;
-            this.lblBudget.Location = new System.Drawing.Point(721, 280);
+            this.lblBudget.Location = new System.Drawing.Point(229, 359);
             this.lblBudget.Name = "lblBudget";
             this.lblBudget.Size = new System.Drawing.Size(228, 35);
             this.lblBudget.TabIndex = 21;
@@ -78,22 +87,22 @@
             // lblDateFinMission
             // 
             this.lblDateFinMission.AutoSize = true;
-            this.lblDateFinMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.lblDateFinMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
+            this.lblDateFinMission.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateFinMission.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateFinMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateFinMission.Location = new System.Drawing.Point(955, 195);
+            this.lblDateFinMission.Location = new System.Drawing.Point(975, 195);
             this.lblDateFinMission.Name = "lblDateFinMission";
-            this.lblDateFinMission.Size = new System.Drawing.Size(290, 35);
+            this.lblDateFinMission.Size = new System.Drawing.Size(270, 37);
             this.lblDateFinMission.TabIndex = 20;
             this.lblDateFinMission.Text = "Retour : 05/05/2027";
             // 
             // lblChefMission
             // 
             this.lblChefMission.AutoSize = true;
-            this.lblChefMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.lblChefMission.BackColor = System.Drawing.Color.Transparent;
             this.lblChefMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblChefMission.ForeColor = System.Drawing.Color.White;
-            this.lblChefMission.Location = new System.Drawing.Point(211, 280);
+            this.lblChefMission.Location = new System.Drawing.Point(227, 288);
             this.lblChefMission.Name = "lblChefMission";
             this.lblChefMission.Size = new System.Drawing.Size(247, 35);
             this.lblChefMission.TabIndex = 19;
@@ -102,34 +111,22 @@
             // lblDateDebutMission
             // 
             this.lblDateDebutMission.AutoSize = true;
-            this.lblDateDebutMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.lblDateDebutMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
+            this.lblDateDebutMission.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateDebutMission.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDateDebutMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateDebutMission.Location = new System.Drawing.Point(208, 195);
+            this.lblDateDebutMission.Location = new System.Drawing.Point(210, 195);
             this.lblDateDebutMission.Name = "lblDateDebutMission";
-            this.lblDateDebutMission.Size = new System.Drawing.Size(289, 35);
+            this.lblDateDebutMission.Size = new System.Drawing.Size(271, 37);
             this.lblDateDebutMission.TabIndex = 18;
             this.lblDateDebutMission.Text = "Départ : 05/05/2026";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(494, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(455, 35);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "--------------------------------------------";
             // 
             // lblObjDatabaz
             // 
             this.lblObjDatabaz.AutoSize = true;
-            this.lblObjDatabaz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.lblObjDatabaz.BackColor = System.Drawing.Color.Transparent;
             this.lblObjDatabaz.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblObjDatabaz.ForeColor = System.Drawing.Color.White;
-            this.lblObjDatabaz.Location = new System.Drawing.Point(209, 351);
+            this.lblObjDatabaz.Location = new System.Drawing.Point(756, 288);
             this.lblObjDatabaz.Name = "lblObjDatabaz";
             this.lblObjDatabaz.Size = new System.Drawing.Size(320, 35);
             this.lblObjDatabaz.TabIndex = 23;
@@ -139,24 +136,81 @@
             // lblSolde
             // 
             this.lblSolde.AutoSize = true;
-            this.lblSolde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.lblSolde.BackColor = System.Drawing.Color.Transparent;
             this.lblSolde.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblSolde.ForeColor = System.Drawing.Color.White;
-            this.lblSolde.Location = new System.Drawing.Point(721, 351);
+            this.lblSolde.Location = new System.Drawing.Point(756, 359);
             this.lblSolde.Name = "lblSolde";
             this.lblSolde.Size = new System.Drawing.Size(190, 35);
             this.lblSolde.TabIndex = 26;
             this.lblSolde.Text = "Solde : 250€";
             this.lblSolde.Click += new System.EventHandler(this.lblSolde_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(479, 195);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(503, 37);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "------------------------------------------------------";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Black;
+            this.pictureBox6.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(742, 345);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(503, 64);
+            this.pictureBox6.TabIndex = 30;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Black;
+            this.pictureBox5.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(742, 275);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(503, 64);
+            this.pictureBox5.TabIndex = 29;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Black;
+            this.pictureBox4.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(217, 345);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(501, 64);
+            this.pictureBox4.TabIndex = 28;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Black;
+            this.pictureBox3.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(215, 275);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(503, 64);
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            // 
             // diverseInfosPanel
             // 
-            this.diverseInfosPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.diverseInfosPanel.BackColor = System.Drawing.Color.Transparent;
+            this.diverseInfosPanel.BackgroundImage = global::appStargate.Properties.Resources.imgfondtext;
             this.diverseInfosPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.diverseInfosPanel.Controls.Add(this.flowLayoutPanel1);
-            this.diverseInfosPanel.Location = new System.Drawing.Point(217, 512);
+            this.diverseInfosPanel.Location = new System.Drawing.Point(217, 663);
             this.diverseInfosPanel.Name = "diverseInfosPanel";
-            this.diverseInfosPanel.Size = new System.Drawing.Size(1028, 253);
+            this.diverseInfosPanel.Size = new System.Drawing.Size(1131, 368);
             this.diverseInfosPanel.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -167,7 +221,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(32, 18);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(32, 18, 3, 3);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(963, 192);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1064, 290);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // lblFeuilleDeRoute
@@ -176,7 +230,7 @@
             this.lblFeuilleDeRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFeuilleDeRoute.ForeColor = System.Drawing.Color.White;
             this.lblFeuilleDeRoute.Location = new System.Drawing.Point(3, 0);
-            this.lblFeuilleDeRoute.MaximumSize = new System.Drawing.Size(963, 0);
+            this.lblFeuilleDeRoute.MaximumSize = new System.Drawing.Size(1030, 0);
             this.lblFeuilleDeRoute.Name = "lblFeuilleDeRoute";
             this.lblFeuilleDeRoute.Size = new System.Drawing.Size(70, 25);
             this.lblFeuilleDeRoute.TabIndex = 0;
@@ -185,12 +239,13 @@
             // btnVoirMembresOuFeuille
             // 
             this.btnVoirMembresOuFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnVoirMembresOuFeuille.BackgroundImage = global::appStargate.Properties.Resources.btnimg;
             this.btnVoirMembresOuFeuille.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnVoirMembresOuFeuille.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoirMembresOuFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVoirMembresOuFeuille.Font = new System.Drawing.Font("Impact", 15F);
             this.btnVoirMembresOuFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(214, 407);
+            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(448, 431);
             this.btnVoirMembresOuFeuille.Name = "btnVoirMembresOuFeuille";
             this.btnVoirMembresOuFeuille.Size = new System.Drawing.Size(270, 66);
             this.btnVoirMembresOuFeuille.TabIndex = 25;
@@ -200,7 +255,7 @@
             // 
             // ImageMission
             // 
-            this.ImageMission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(102)))));
+            this.ImageMission.BackColor = System.Drawing.Color.Transparent;
             this.ImageMission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ImageMission.Image = global::appStargate.Properties.Resources.Artemis_II_patch;
             this.ImageMission.Location = new System.Drawing.Point(20, 20);
@@ -213,35 +268,59 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.pictureBox2.Location = new System.Drawing.Point(0, -4);
+            this.pictureBox2.Location = new System.Drawing.Point(1, -4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(10, 769);
+            this.pictureBox2.Size = new System.Drawing.Size(10, 1035);
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(102)))));
+            this.pictureBox1.BackgroundImage = global::appStargate.Properties.Resources.fond_gauche;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, -4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(188, 790);
+            this.pictureBox1.Size = new System.Drawing.Size(188, 1035);
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnVoirFeuille
+            // 
+            this.btnVoirFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnVoirFeuille.BackgroundImage = global::appStargate.Properties.Resources.btnimggris;
+            this.btnVoirFeuille.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoirFeuille.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoirFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoirFeuille.Font = new System.Drawing.Font("Impact", 15F);
+            this.btnVoirFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))));
+            this.btnVoirFeuille.Location = new System.Drawing.Point(742, 431);
+            this.btnVoirFeuille.Name = "btnVoirFeuille";
+            this.btnVoirFeuille.Size = new System.Drawing.Size(270, 66);
+            this.btnVoirFeuille.TabIndex = 31;
+            this.btnVoirFeuille.Text = "Voir Feuille";
+            this.btnVoirFeuille.UseVisualStyleBackColor = false;
             // 
             // DetailsMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(1269, 760);
-            this.Controls.Add(this.diverseInfosPanel);
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1595, 1026);
+            this.Controls.Add(this.btnVoirFeuille);
             this.Controls.Add(this.lblSolde);
-            this.Controls.Add(this.btnVoirMembresOuFeuille);
             this.Controls.Add(this.lblObjDatabaz);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBudget);
-            this.Controls.Add(this.lblDateFinMission);
+            this.Controls.Add(this.pictureBox6);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.lblChefMission);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.diverseInfosPanel);
+            this.Controls.Add(this.btnVoirMembresOuFeuille);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDateFinMission);
             this.Controls.Add(this.lblDateDebutMission);
             this.Controls.Add(this.ImageMission);
             this.Controls.Add(this.pictureBox2);
@@ -251,6 +330,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetailsMission";
             this.Load += new System.EventHandler(this.DetailsMission_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.diverseInfosPanel.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
@@ -271,7 +354,6 @@
         private System.Windows.Forms.Label lblChefMission;
         private System.Windows.Forms.Label lblDateDebutMission;
         private System.Windows.Forms.PictureBox ImageMission;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblObjDatabaz;
         private System.Windows.Forms.Button btnVoirMembresOuFeuille;
         private System.Windows.Forms.Label lblSolde;
@@ -279,5 +361,11 @@
         private System.Windows.Forms.FlowLayoutPanel diverseInfosPanel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label lblFeuilleDeRoute;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Button btnVoirFeuille;
     }
 }

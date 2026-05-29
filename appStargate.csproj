@@ -253,6 +253,7 @@
     <None Include="Images\imgfondtext.png" />
     <None Include="Images\imgtext.png" />
     <None Include="Images\btnimggris.png" />
+    <None Include="Images\ContourText.png" />
     <Content Include="Images\Jupiter.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
