@@ -117,6 +117,12 @@
     <Compile Include="Membre.Designer.cs">
       <DependentUpon>Membre.cs</DependentUpon>
     </Compile>
+    <Compile Include="MembreUserControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MembreUserControle.Designer.cs">
+      <DependentUpon>MembreUserControle.cs</DependentUpon>
+    </Compile>
     <Compile Include="mesDatas.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="MissionUserControle.cs">
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Membre.resx">
       <DependentUpon>Membre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MembreUserControle.resx">
+      <DependentUpon>MembreUserControle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\appliPandora.Form1.resources" />
     <EmbeddedResource Include="obj\Debug\appliPandora.formAuthentification.resources" />
@@ -254,6 +263,7 @@
     <None Include="Images\imgtext.png" />
     <None Include="Images\btnimggris.png" />
     <None Include="Images\ContourText.png" />
+    <None Include="Images\civil.png" />
     <Content Include="Images\Jupiter.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -264,6 +274,9 @@
     <Content Include="Images\Mercure.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Images\out.png" />
+    <None Include="Images\soldat.png" />
+    <None Include="Images\Saturne.png" />
     <Content Include="Images\Terre.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

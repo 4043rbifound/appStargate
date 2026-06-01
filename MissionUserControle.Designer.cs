@@ -123,7 +123,7 @@
             this.pictureBox4.Image = global::appStargate.Properties.Resources._694985;
             this.pictureBox4.Location = new System.Drawing.Point(817, 3);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(68, 59);
+            this.pictureBox4.Size = new System.Drawing.Size(68, 62);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
@@ -163,9 +163,9 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.pictureBox3.Location = new System.Drawing.Point(187, 0);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(712, 192);
+            this.pictureBox3.Size = new System.Drawing.Size(886, 192);
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 

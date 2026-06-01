@@ -17,9 +17,17 @@ namespace appliPandora
         public Form1()
         {
             InitializeComponent();
+            ConfigurerFlowLayoutPanel();
         }
 
         SQLiteConnection maConnec = Connexion.Connec;
+
+        private void ConfigurerFlowLayoutPanel()
+        {
+            flowLayoutPanelMissions.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanelMissions.WrapContents = false;
+            flowLayoutPanelMissions.AutoScroll = true;
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -27,10 +35,10 @@ namespace appliPandora
             {
                 if (maConnec.State != ConnectionState.Open) maConnec.Open();
 
-                if (MesDatas.DsGlobal.Tables.Contains("Mission")) 
-                    { MesDatas.DsGlobal.Tables["Mission"].Clear(); }
+                if (MesDatas.DsGlobal.Tables.Contains("Mission"))
+                { MesDatas.DsGlobal.Tables["Mission"].Clear(); }
                 if (MesDatas.DsGlobal.Tables.Contains("Membre"))
-                    { MesDatas.DsGlobal.Tables["Membre"].Clear(); }
+                { MesDatas.DsGlobal.Tables["Membre"].Clear(); }
 
                 SQLiteCommand cmdMission = new SQLiteCommand("SELECT * FROM Mission", maConnec);
                 SQLiteDataAdapter daMission = new SQLiteDataAdapter(cmdMission);
@@ -40,12 +48,12 @@ namespace appliPandora
                 SQLiteDataAdapter daMembre = new SQLiteDataAdapter(cmdMembre);
                 daMembre.Fill(MesDatas.DsGlobal, "Membre");
 
-
                 flowLayoutPanelMissions.Controls.Clear();
 
                 foreach (DataRow ligneMission in MesDatas.DsGlobal.Tables["Mission"].Rows)
                 {
                     MissionUserControle uc = new MissionUserControle();
+
                     string matriculeChef = ligneMission["matriculeChef"].ToString();
                     string nomCompletChef = "Inconnu";
 
@@ -74,9 +82,8 @@ namespace appliPandora
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // button ouvrant le form d'authentification et si la connection se passe bien on ouvre le form d'insertion de mission
             formAuthentification formAuth = new formAuthentification();
-            if(formAuth.ShowDialog() == DialogResult.OK)
+            if (formAuth.ShowDialog() == DialogResult.OK)
             {
                 formNouvelleMission formCrea = new formNouvelleMission();
                 formCrea.ShowDialog();
@@ -115,10 +122,9 @@ namespace appliPandora
 
         private void lblTotalMission_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void btnQuitter_Click(object sender, EventArgs e)
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
             this.Close();
         }

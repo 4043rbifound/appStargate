@@ -11,60 +11,51 @@ namespace appStargate
     public partial class DetailsMission : Form
     {
         private DataRow maMission;
+        private DataTable tableMembres = new DataTable();
 
         public DetailsMission(DataRow ligneRecue, string nomChefComplet)
         {
             InitializeComponent();
             maMission = ligneRecue;
+            btnVoirMembresOuFeuille.Tag = "ROUGE";
+            btnVoirFeuille.Tag = "GRIS";
 
-            // REMPLISSAGE INFOS
             Text = "Détails : " + maMission["nomPlanete"] + " " + maMission["numero"];
             lblTitreMission.Text = "Mission | " + maMission["nomPlanete"] + " " + maMission["numero"];
             lblChefMission.Text = "Chef : " + nomChefComplet;
-            lblObjDatabaz.Text = "Objectif de Databaz : " + maMission["objectifDatabaz"];
+            lblObjDatabaz.Text = "Objectif de Databaz : " + maMission["objectifDatabaz"] + "kg";
             lblFeuilleDeRoute.Text = maMission["feuilleDeRoute"].ToString();
+            grpImagePlanete.Text = "La Planète " + maMission["nomPlanete"];
 
-            // DATES
             DateTime dateDepart = Convert.ToDateTime(maMission["dateDepart"]);
             lblDateDebutMission.Text = "Départ : " + dateDepart.ToString("d", new CultureInfo("fr-FR"));
 
             DateTime dateRetour = Convert.ToDateTime(maMission["dateRetour"]);
             lblDateFinMission.Text = "Retour : " + dateRetour.ToString("d", new CultureInfo("fr-FR"));
 
-            // CALCUL DU SOLDE (MODE DÉCONNECTÉ)
             double budget = Convert.ToDouble(maMission["budget"]);
             double totalDepenses = 0;
 
             string planete = maMission["nomPlanete"].ToString();
             string num = maMission["numero"].ToString();
 
-            // Requête SQL simple
             string sql = "SELECT montant FROM depense WHERE nomPlanete = '" + planete + "' AND numeroMission = " + num;
 
-            // Table mémoire
             DataTable tableDepenses = new DataTable();
-
-            // DataAdapter (mode déconnecté)
             SQLiteDataAdapter adapter = new SQLiteDataAdapter(sql, Connexion.Connec);
-
-            // Remplit le DataTable
             adapter.Fill(tableDepenses);
 
-            // Calcul des dépenses en mémoire
             foreach (DataRow ligne in tableDepenses.Rows)
             {
                 totalDepenses += Convert.ToDouble(ligne["montant"]);
             }
 
-            // Calcul du solde
             double solde = budget - totalDepenses;
             double ratio = (solde / budget) * 100;
 
-            // AFFICHAGE BUDGET
             lblBudget.Text = "Budget : " + budget + " €";
             lblSolde.Text = "Solde restant : " + solde + " € (" + Math.Round(ratio, 2) + "%)";
 
-            // COULEURS
             if (ratio > 75)
             {
                 lblSolde.ForeColor = Color.LimeGreen;
@@ -77,21 +68,67 @@ namespace appStargate
             {
                 lblSolde.ForeColor = Color.Red;
             }
+
+            string sqlCapture = "SELECT Espece.nom, ObjectifCapture.objectif FROM ObjectifCapture INNER JOIN Espece ON ObjectifCapture.idEspeceEnnemi = Espece.id WHERE ObjectifCapture.nomPlanete = '" + planete + "' AND ObjectifCapture.numeroMission = " + num;
+            DataTable tableCaptures = new DataTable();
+            SQLiteDataAdapter adapterCap = new SQLiteDataAdapter(sqlCapture, Connexion.Connec);
+            adapterCap.Fill(tableCaptures);
+
+            string texteObjectifs = "";
+            if (tableCaptures.Rows.Count > 0)
+            {
+                foreach (DataRow ligne in tableCaptures.Rows)
+                {
+                    texteObjectifs += "- " + ligne["nom"].ToString() + " : " + ligne["objectif"].ToString() + "\n";
+                }
+            }
+            else
+            {
+                texteObjectifs = "Aucun objectif de capture";
+            }
+            lblListeObjectifs.Text = texteObjectifs;
+
+            // Remplir tableMembres
+            string sqlMembres = "SELECT Membre.matricule, Membre.nom, Membre.prenom FROM Membre " +
+                                 "INNER JOIN Composer ON Membre.matricule = Composer.matriculeMembre " +
+                                 "WHERE Composer.nomPlanete = '" + planete + "' AND Composer.numeroMission = " + num;
+
+            SQLiteDataAdapter adapterMembres = new SQLiteDataAdapter(sqlMembres, Connexion.Connec);
+            adapterMembres.Fill(tableMembres);
+
+            // Etat initial : feuille visible, membres cachés
+            diverseInfosPanel.Visible = true;
+            panelMembres.Visible = false;
         }
 
         private void btnVoirMembresOuFeuille_Click(object sender, EventArgs e)
         {
-            if (btnVoirMembresOuFeuille.Text == "Voir Membres")
+            if (btnVoirMembresOuFeuille.Tag?.ToString() == "ROUGE")
             {
-                btnVoirMembresOuFeuille.Text = "Voir Feuille";
-                lblFeuilleDeRoute.Visible = false;
+                btnVoirMembresOuFeuille.BackgroundImage = Properties.Resources.btnimggris;
+                btnVoirMembresOuFeuille.ForeColor = Color.FromArgb(128, 128, 129);
+                btnVoirMembresOuFeuille.Tag = "GRIS";
+
+                btnVoirFeuille.BackgroundImage = Properties.Resources.btnimg;
+                btnVoirFeuille.ForeColor = Color.FromArgb(229, 0, 43);
+                btnVoirFeuille.Tag = "ROUGE";
+
                 diverseInfosPanel.Visible = false;
-            }
-            else
-            {
-                btnVoirMembresOuFeuille.Text = "Voir Membres";
-                lblFeuilleDeRoute.Visible = true;
-                diverseInfosPanel.Visible = true;
+
+                flowMembres.Controls.Clear();
+                panelMembres.Visible = true;
+                flowMembres.Visible = true;
+
+                foreach (DataRow ligne in tableMembres.Rows)
+                {
+                    MembreUserControle uc = new MembreUserControle();
+                    uc.ChargerDonnees(
+                        ligne["matricule"].ToString(),
+                        ligne["nom"].ToString(),
+                        ligne["prenom"].ToString()
+                    );
+                    flowMembres.Controls.Add(uc);
+                }
             }
         }
 
@@ -109,6 +146,33 @@ namespace appStargate
 
         private void lblSolde_Click(object sender, EventArgs e)
         {
+        }
+
+        private void grpObjectifCapture_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnVoirFeuille_Click(object sender, EventArgs e)
+        {
+            if (btnVoirFeuille.Tag?.ToString() == "ROUGE")
+            {
+                btnVoirFeuille.BackgroundImage = Properties.Resources.btnimggris;
+                btnVoirFeuille.ForeColor = Color.FromArgb(128, 128, 129);
+                btnVoirFeuille.Tag = "GRIS";
+
+                btnVoirMembresOuFeuille.BackgroundImage = Properties.Resources.btnimg;
+                btnVoirMembresOuFeuille.ForeColor = Color.FromArgb(229, 0, 43);
+                btnVoirMembresOuFeuille.Tag = "ROUGE";
+
+                flowMembres.Controls.Clear();
+                panelMembres.Visible = false;
+                diverseInfosPanel.Visible = true;
+            }
         }
     }
 }
