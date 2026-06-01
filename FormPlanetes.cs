@@ -15,48 +15,21 @@ namespace appStargate
         {
             InitializeComponent();
             this.Load += FormPlanetes_Load;
-            // Force l'ordre de dock : pnlDetail doit être avant flpPlanetes
             flpPlanetes.SendToBack();
         }
 
+        private void flpPlanetes_Paint(object sender, PaintEventArgs e) { }
 
-        private void flpPlanetes_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void FormPlanetes_Load(object sender, EventArgs e)
         {
+            // Force pnlBas à être visible
+            splitContainer1.SendToBack();
             ChargerDonnees();
             AfficherCartesPlanetes();
-
-            // Cache le panel de détail au départ
             splitContainer1.Panel2Collapsed = true;
-            // Création du bouton retour par code
-            Button btnRetour = new Button();
-            btnRetour.Text = "← Retour";
-            btnRetour.Size = new Size(120, 35);
-            btnRetour.BackColor = Color.FromArgb(44, 62, 80);
-            btnRetour.ForeColor = Color.White;
-            btnRetour.FlatStyle = FlatStyle.Flat;
-            btnRetour.Font = new Font("Arial", 10, FontStyle.Bold);
-            btnRetour.Cursor = Cursors.Hand;
-
-            // Position : en bas à gauche du Panel1
-            btnRetour.Location = new Point(
-                10,
-                splitContainer1.Panel1.Height - btnRetour.Height - 10
-            );
-
-            btnRetour.Click += (s, ev) => this.Close();
-
-            splitContainer1.Panel1.Controls.Add(btnRetour);
-            btnRetour.BringToFront();
 
         }
 
-        /// <summary>
-        /// Charge les tables nécessaires dans le DataSet global (mode déconnecté)
-        /// </summary>
         private void ChargerDonnees()
         {
             DataSet ds = MesDatas.DsGlobal;
@@ -64,9 +37,7 @@ namespace appStargate
 
             foreach (string nomTable in tables)
             {
-                // On ne recharge pas si déjà présente
                 if (ds.Tables.Contains(nomTable)) continue;
-
                 try
                 {
                     SQLiteDataAdapter adapter = new SQLiteDataAdapter($"SELECT * FROM {nomTable}", Connexion.Connec);
@@ -77,14 +48,9 @@ namespace appStargate
                     MessageBox.Show($"Erreur chargement {nomTable} : {ex.Message}");
                 }
             }
-
-            // Mode déconnecté : on ferme la connexion
             Connexion.FermerConnexion();
         }
 
-        /// <summary>
-        /// Crée et affiche un UC par planète dans le FlowLayoutPanel
-        /// </summary>
         private void AfficherCartesPlanetes()
         {
             flpPlanetes.Controls.Clear();
@@ -98,37 +64,24 @@ namespace appStargate
 
             foreach (DataRow row in dtPlanetes.Rows)
             {
-
-                this.Refresh();
                 string nom = row["nom"].ToString();
                 int temperature = row["temperature"] == DBNull.Value ? 0 : Convert.ToInt32(row["temperature"]);
                 double gravite = row["gravite"] == DBNull.Value ? 0.0 : Convert.ToDouble(row["gravite"]);
                 bool databazON = row["dataBazON"] != DBNull.Value && Convert.ToInt32(row["dataBazON"]) == 1;
 
-                // Chemin vers l'image dans le dossier img
-                string cheminImage = Path.Combine(
-                    Application.StartupPath, "images", nom + ".jpg"
-                );
+                string cheminImage = Path.Combine(Application.StartupPath, "images", nom + ".jpg");
 
-                // Création du User Control
                 UCPlanete uc = new UCPlanete(nom, temperature, gravite, databazON, cheminImage);
-
-                // On branche le délégué
                 uc.afficheurDetail = AfficherDetail;
-
-                // Taille et style de la carte
-                uc.Width = 160;
-                uc.Height = 240;
-                uc.Margin = new Padding(10);
+                uc.Width = 390;
+                uc.Height = 70;
+                uc.Margin = new Padding(5, 3, 5, 3);
                 uc.BorderStyle = BorderStyle.FixedSingle;
 
                 flpPlanetes.Controls.Add(uc);
             }
         }
 
-        /// <summary>
-        /// Méthode déléguée : appelée quand on clique sur un UC planète
-        /// </summary>
         private void AfficherDetail(object sender, EventArgs e)
         {
             UCPlanete uc = sender as UCPlanete;
@@ -136,29 +89,22 @@ namespace appStargate
 
             string nomPlanete = uc.NomPlanete;
 
-            // Vérifie s'il y a des races ou des missions
             DataRow[] races = MesDatas.DsGlobal.Tables["Habiter"].Select($"nomPlanete = '{nomPlanete}'");
             DataRow[] missions = MesDatas.DsGlobal.Tables["Mission"].Select($"nomPlanete = '{nomPlanete}'");
 
             if (races.Length == 0 && missions.Length == 0)
             {
-                // Aucune info : on cache le panel et on affiche un message
                 splitContainer1.Panel2Collapsed = true;
                 AfficherNotif($"Aucune information disponible sur {nomPlanete}.");
                 return;
             }
 
-            // Il y a des infos : on affiche le panel
             lblTitrePlanete.Text = nomPlanete;
             AfficherRacesPlanete(nomPlanete);
             AfficherMissionsPlanete(nomPlanete);
             splitContainer1.Panel2Collapsed = false;
         }
 
-        /// <summary>
-        /// Affiche les races présentes sur la planète dans le DataGridView
-        /// Tout depuis le DataSet — aucun accès base de données
-        /// </summary>
         private void AfficherRacesPlanete(string nomPlanete)
         {
             DataSet ds = MesDatas.DsGlobal;
@@ -167,7 +113,6 @@ namespace appStargate
             DataTable dtAllie = ds.Tables["Allie"];
             DataTable dtEnnemi = ds.Tables["Ennemi"];
 
-            // Table temporaire pour l'affichage
             DataTable dtAffichage = new DataTable();
             dtAffichage.Columns.Add("Espèce");
             dtAffichage.Columns.Add("Couleur");
@@ -202,13 +147,9 @@ namespace appStargate
             dgvRaces.AllowUserToAddRows = false;
         }
 
-        /// <summary>
-        /// Affiche les missions effectuées sur la planète dans la ListBox
-        /// Tout depuis le DataSet — aucun accès base de données
-        /// </summary>
         private void AfficherMissionsPlanete(string nomPlanete)
         {
-            lbMissions.Items.Clear();
+            lbMissions.Text = "";
 
             DataTable dtMissions = MesDatas.DsGlobal.Tables["Mission"];
             DataTable dtMembres = MesDatas.DsGlobal.Tables["Membre"];
@@ -217,9 +158,11 @@ namespace appStargate
 
             if (missionRows.Length == 0)
             {
-                lbMissions.Items.Add("Aucune mission sur cette planète.");
+                lbMissions.Text = "Aucune mission sur cette planète.";
                 return;
             }
+
+            string texte = "";
 
             foreach (DataRow mission in missionRows)
             {
@@ -229,16 +172,17 @@ namespace appStargate
                 string matricule = mission["matriculeChef"].ToString();
                 int budget = Convert.ToInt32(mission["budget"]);
 
-                // Recherche du nom du chef
                 DataRow[] chefRows = dtMembres.Select($"matricule = '{matricule}'");
                 string nomChef = chefRows.Length > 0
                     ? $"{chefRows[0]["prenom"]} {chefRows[0]["nom"]}"
                     : matricule;
 
-                lbMissions.Items.Add(
-                    $"Mission {nomPlanete}-{numero} | {depart} → {retour} | Chef : {nomChef} | Budget : {budget}€"
-                );
+                texte += $"• Mission {nomPlanete}-{numero}\n";
+                texte += $"  Départ : {depart}  →  Retour : {retour}\n";
+                texte += $"  Chef : {nomChef}  |  Budget : {budget}€\n\n";
             }
+
+            lbMissions.Text = texte.TrimEnd();
         }
 
         // ─── SYSTÈME DE NOTIFICATIONS ─────────────────────────────────────────────
@@ -247,7 +191,6 @@ namespace appStargate
 
         private void AfficherNotif(string message)
         {
-            // Création d'un nouveau panel de notif
             Panel notif = new Panel();
             notif.Size = new Size(350, 60);
             notif.BackColor = Color.FromArgb(192, 57, 43);
@@ -260,15 +203,13 @@ namespace appStargate
             lbl.Font = new Font("Arial", 10, FontStyle.Bold);
             notif.Controls.Add(lbl);
 
-            // Position de départ selon le nombre de notifs déjà affichées
-            int posY = 20 + (_notifs.Count * 70); // 70 = hauteur + marge
+            int posY = 20 + (_notifs.Count * 70);
             notif.Location = new Point(-notif.Width, posY);
 
             this.Controls.Add(notif);
             notif.BringToFront();
             _notifs.Add(notif);
 
-            // Animation entrée
             AnimerEntree(notif, 20, posY);
         }
 
@@ -289,7 +230,6 @@ namespace appStargate
                     timerEntree.Stop();
                     timerEntree.Dispose();
 
-                    // Attend puis fait sortir
                     Timer timerAttente = new Timer();
                     timerAttente.Interval = 2500;
                     timerAttente.Tick += (s2, ev2) =>
@@ -317,7 +257,6 @@ namespace appStargate
                 }
                 else
                 {
-                    // Supprime la notif et réorganise les autres
                     timerSortie.Stop();
                     timerSortie.Dispose();
                     _notifs.Remove(notif);
@@ -331,7 +270,6 @@ namespace appStargate
 
         private void ReorganiserNotifs()
         {
-            // Replace les notifs restantes à la bonne hauteur
             for (int i = 0; i < _notifs.Count; i++)
             {
                 int cibleY = 20 + (i * 70);
@@ -356,19 +294,9 @@ namespace appStargate
                 timerReorg.Start();
             }
         }
-        private void btnRetour_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvRaces_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        private void btnRetour_Click(object sender, EventArgs e) { this.Close(); }
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e) { }
+        private void dgvRaces_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
     }
 }

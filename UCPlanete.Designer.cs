@@ -22,53 +22,54 @@
             this.lblDatabaz = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).BeginInit();
             this.SuspendLayout();
-
+            // 
             // pbPlanete
-            this.pbPlanete.Location = new System.Drawing.Point(15, 10);
+            // 
+            this.pbPlanete.Location = new System.Drawing.Point(5, 5);
             this.pbPlanete.Name = "pbPlanete";
-            this.pbPlanete.Size = new System.Drawing.Size(120, 120);
+            this.pbPlanete.Size = new System.Drawing.Size(60, 60);
             this.pbPlanete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPlanete.TabIndex = 0;
             this.pbPlanete.TabStop = false;
-
+            // 
             // lblNom
-            this.lblNom.AutoSize = false;
-            this.lblNom.Location = new System.Drawing.Point(5, 135);
+            // 
+            this.lblNom.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lblNom.Location = new System.Drawing.Point(75, 5);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(145, 20);
+            this.lblNom.Size = new System.Drawing.Size(150, 20);
             this.lblNom.TabIndex = 1;
-            this.lblNom.Text = "";
-            this.lblNom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblNom.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-
+            this.lblNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblTemp
-            this.lblTemp.AutoSize = false;
-            this.lblTemp.Location = new System.Drawing.Point(5, 158);
+            // 
+            this.lblTemp.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lblTemp.Location = new System.Drawing.Point(75, 28);
             this.lblTemp.Name = "lblTemp";
-            this.lblTemp.Size = new System.Drawing.Size(145, 20);
+            this.lblTemp.Size = new System.Drawing.Size(150, 18);
             this.lblTemp.TabIndex = 2;
-            this.lblTemp.Text = "";
-            this.lblTemp.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
+            this.lblTemp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblGravite
-            this.lblGravite.AutoSize = false;
-            this.lblGravite.Location = new System.Drawing.Point(5, 178);
+            // 
+            this.lblGravite.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.lblGravite.Location = new System.Drawing.Point(75, 46);
             this.lblGravite.Name = "lblGravite";
-            this.lblGravite.Size = new System.Drawing.Size(145, 20);
+            this.lblGravite.Size = new System.Drawing.Size(150, 18);
             this.lblGravite.TabIndex = 3;
-            this.lblGravite.Text = "";
-            this.lblGravite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
+            this.lblGravite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblDatabaz
-            this.lblDatabaz.AutoSize = false;
-            this.lblDatabaz.Location = new System.Drawing.Point(5, 198);
+            // 
+            this.lblDatabaz.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.lblDatabaz.Location = new System.Drawing.Point(220, 25);
             this.lblDatabaz.Name = "lblDatabaz";
-            this.lblDatabaz.Size = new System.Drawing.Size(145, 20);
+            this.lblDatabaz.Size = new System.Drawing.Size(167, 23);
             this.lblDatabaz.TabIndex = 4;
-            this.lblDatabaz.Text = "";
             this.lblDatabaz.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
+            // 
             // UCPlanete
+            // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.lblDatabaz);
             this.Controls.Add(this.lblGravite);
@@ -76,10 +77,11 @@
             this.Controls.Add(this.lblNom);
             this.Controls.Add(this.pbPlanete);
             this.Name = "UCPlanete";
-            this.Size = new System.Drawing.Size(160, 240);
+            this.Size = new System.Drawing.Size(390, 70);
             this.Load += new System.EventHandler(this.UCPlanete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlanete)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.PictureBox pbPlanete;

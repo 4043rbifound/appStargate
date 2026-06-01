@@ -1,17 +1,17 @@
-﻿using System;
+﻿using appliPandora; // On ajoute le using pour accéder à ta classe Connexion
+using System;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-using System.Data.SQLite;
-using appliPandora; // On ajoute le using pour accéder à ta classe Connexion
 
 namespace appStargate
 {
     public partial class DetailsMission : Form
     {
-        private DataRow maMission;
 
+        private DataRow maMission;
         public DetailsMission(DataRow ligneRecue, string nomChefComplet)
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace appStargate
             lblTitreMission.Text = "Mission | " + maMission["nomPlanete"] + " " + maMission["numero"];
             lblChefMission.Text = "Chef : " + nomChefComplet;
             lblObjDatabaz.Text = "Objectif de Databaz : " + maMission["objectifDatabaz"];
-            richTextBoxDiverseInfos.Text = maMission["feuilleDeRoute"].ToString();
+            lblFeuilleDeRoute.Text = maMission["feuilleDeRoute"].ToString();
 
             // --- DATES ---
             DateTime dateDepart = Convert.ToDateTime(maMission["dateDepart"]);
@@ -69,14 +69,14 @@ namespace appStargate
             if (btnVoirMembresOuFeuille.Text == "Voir Membres")
             {
                 btnVoirMembresOuFeuille.Text = "Voir Feuille";
-                grpDiverseInfos.Text = "Membres";
-                richTextBoxDiverseInfos.Visible = false;
+                lblFeuilleDeRoute.Visible = false;
+                diverseInfosPanel.Visible = false;
             }
             else
             {
                 btnVoirMembresOuFeuille.Text = "Voir Membres";
-                richTextBoxDiverseInfos.Visible = true;
-                grpDiverseInfos.Text = "Feuille de Route";
+                lblFeuilleDeRoute.Visible = true;
+                diverseInfosPanel.Visible= true;
             }
         }
 
