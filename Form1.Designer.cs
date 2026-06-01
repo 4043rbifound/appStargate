@@ -37,14 +37,15 @@
             this.lblTableauBord = new System.Windows.Forms.Label();
             this.lblTotalMission = new System.Windows.Forms.Label();
             this.btnRaces = new System.Windows.Forms.Button();
+            this.btnStats = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 562);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(22, 457);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 22);
+            this.button1.Size = new System.Drawing.Size(112, 18);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -55,10 +56,10 @@
             this.btnNouvelleMission.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNouvelleMission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnNouvelleMission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnNouvelleMission.Location = new System.Drawing.Point(590, 35);
-            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNouvelleMission.Location = new System.Drawing.Point(322, 28);
+            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
-            this.btnNouvelleMission.Size = new System.Drawing.Size(223, 73);
+            this.btnNouvelleMission.Size = new System.Drawing.Size(167, 59);
             this.btnNouvelleMission.TabIndex = 1;
             this.btnNouvelleMission.Text = "Nouvelle mission";
             this.btnNouvelleMission.UseVisualStyleBackColor = false;
@@ -70,10 +71,10 @@
             this.btn_NVplnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_NVplnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btn_NVplnt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btn_NVplnt.Location = new System.Drawing.Point(177, 35);
-            this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NVplnt.Location = new System.Drawing.Point(23, 28);
+            this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_NVplnt.Name = "btn_NVplnt";
-            this.btn_NVplnt.Size = new System.Drawing.Size(223, 73);
+            this.btn_NVplnt.Size = new System.Drawing.Size(167, 59);
             this.btn_NVplnt.TabIndex = 3;
             this.btn_NVplnt.Text = "Infos Planètes";
             this.btn_NVplnt.UseVisualStyleBackColor = false;
@@ -84,10 +85,10 @@
             this.flowLayoutPanelMissions.AutoScroll = true;
             this.flowLayoutPanelMissions.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelMissions.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelMissions.Location = new System.Drawing.Point(430, 155);
-            this.flowLayoutPanelMissions.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flowLayoutPanelMissions.Location = new System.Drawing.Point(322, 126);
+            this.flowLayoutPanelMissions.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.flowLayoutPanelMissions.Name = "flowLayoutPanelMissions";
-            this.flowLayoutPanelMissions.Size = new System.Drawing.Size(939, 614);
+            this.flowLayoutPanelMissions.Size = new System.Drawing.Size(704, 499);
             this.flowLayoutPanelMissions.TabIndex = 4;
             // 
             // contextMenuStrip1
@@ -102,9 +103,10 @@
             this.lblTableauBord.BackColor = System.Drawing.Color.Transparent;
             this.lblTableauBord.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.lblTableauBord.ForeColor = System.Drawing.Color.White;
-            this.lblTableauBord.Location = new System.Drawing.Point(23, 428);
+            this.lblTableauBord.Location = new System.Drawing.Point(17, 348);
+            this.lblTableauBord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTableauBord.Name = "lblTableauBord";
-            this.lblTableauBord.Size = new System.Drawing.Size(280, 40);
+            this.lblTableauBord.Size = new System.Drawing.Size(230, 32);
             this.lblTableauBord.TabIndex = 6;
             this.lblTableauBord.Text = "Tableau de Bord";
             // 
@@ -114,9 +116,10 @@
             this.lblTotalMission.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalMission.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.lblTotalMission.ForeColor = System.Drawing.Color.White;
-            this.lblTotalMission.Location = new System.Drawing.Point(-1, 628);
+            this.lblTotalMission.Location = new System.Drawing.Point(-1, 510);
+            this.lblTotalMission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalMission.Name = "lblTotalMission";
-            this.lblTotalMission.Size = new System.Drawing.Size(211, 40);
+            this.lblTotalMission.Size = new System.Drawing.Size(173, 32);
             this.lblTotalMission.TabIndex = 7;
             this.lblTotalMission.Text = "Missions : n";
             // 
@@ -126,22 +129,38 @@
             this.btnRaces.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRaces.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnRaces.Location = new System.Drawing.Point(1008, 35);
-            this.btnRaces.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRaces.Location = new System.Drawing.Point(591, 28);
+            this.btnRaces.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRaces.Name = "btnRaces";
-            this.btnRaces.Size = new System.Drawing.Size(223, 73);
+            this.btnRaces.Size = new System.Drawing.Size(167, 59);
             this.btnRaces.TabIndex = 8;
             this.btnRaces.Text = "👽 Races";
             this.btnRaces.UseVisualStyleBackColor = false;
             this.btnRaces.Click += new System.EventHandler(this.btnRaces_Click);
             // 
+            // btnStats
+            // 
+            this.btnStats.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnStats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.btnStats.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.btnStats.Location = new System.Drawing.Point(859, 28);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStats.Name = "btnStats";
+            this.btnStats.Size = new System.Drawing.Size(167, 59);
+            this.btnStats.TabIndex = 9;
+            this.btnStats.Text = "Stats";
+            this.btnStats.UseVisualStyleBackColor = false;
+            this.btnStats.Click += new System.EventHandler(this.btnStats_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::appStargate.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1418, 821);
+            this.ClientSize = new System.Drawing.Size(1064, 667);
+            this.Controls.Add(this.btnStats);
             this.Controls.Add(this.btnRaces);
             this.Controls.Add(this.lblTotalMission);
             this.Controls.Add(this.lblTableauBord);
@@ -170,6 +189,7 @@
         private System.Windows.Forms.Label lblTableauBord;
         private System.Windows.Forms.Label lblTotalMission;
         private System.Windows.Forms.Button btnRaces;
+        private System.Windows.Forms.Button btnStats;
     }
 }
 
