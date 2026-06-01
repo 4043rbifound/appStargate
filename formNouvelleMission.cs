@@ -172,6 +172,7 @@ namespace appStargate
             if (string.IsNullOrWhiteSpace(txtBudget.Text)) { AfficherNotif("Veuillez indiquer un budget."); return; }
             if (string.IsNullOrWhiteSpace(txtNbMembre.Text)) { AfficherNotif("Veuillez indiquer le nombre de membres."); return; }
             if (string.IsNullOrWhiteSpace(txtObjectifDataBaz.Text)) { AfficherNotif("Veuillez indiquer l'objectif DataBaz."); return; }
+            if(dtpDepart.Value >= dtpRetour.Value) { AfficherNotif("La date de départ doit être antérieure à la date de retour."); return; }
 
 
             try
@@ -193,6 +194,11 @@ namespace appStargate
 
                 object resultat = cmdMatricule.ExecuteScalar();
 
+                if (resultat == null || resultat == DBNull.Value)
+                {
+                    AfficherNotif($"BDD: Aucun matricule pour Nom='{nomChef}' et Prénom='{prenomChef}'");
+                    return; 
+                }
 
                 string matriculeChef = resultat.ToString();
 
@@ -213,8 +219,27 @@ namespace appStargate
 
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Mission enregistrée avec succès !", "Stargate", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+
+                AfficherNotif("Insertion de la mission en cours...", Color.FromArgb(39, 174, 96));
+                // création d'un timer 
+                Timer timerTransition = new Timer();
+                timerTransition.Interval = 1500; // 1500 millisecondes = 1,5 seconde
+
+                timerTransition.Tick += (s, ev) =>
+                {
+                    // se délcenceh au bout de 1.5 seconde
+                    timerTransition.Stop();  // arrete le timer    
+                    timerTransition.Dispose();   // libere la mémoire
+
+
+                    string planeteMission = lblNomDeMission.Text;
+                    frmEquipageMission frmEquipage = new frmEquipageMission(Convert.ToInt32(lblNumMission.Text), planeteMission, Convert.ToInt32(txtNbMembre.Text));
+
+                    this.Hide();
+                    frmEquipage.ShowDialog();
+                    this.Close();
+                };
+                timerTransition.Start(); 
             }
             catch (Exception ex)
             {
@@ -225,43 +250,31 @@ namespace appStargate
 private List<Panel> _notifs = new List<Panel>();
 
         // Méthode principale pour créer et afficher graphiquement une nouvelle notification
-        private void AfficherNotif(string message)
+        // On ajoute le paramètre 'couleurFond'. Si on ne le précise pas, il prend le rouge par défaut.
+        private void AfficherNotif(string message, Color? couleurFond = null)
         {
-            // On crée un rectangle (Panel) vide qui va servir de conteneur pour la notification
             Panel notif = new Panel();
-            // On lui donne une largeur de 350 pixels et une hauteur de 60 pixels
             notif.Size = new Size(350, 60);
-            // On lui applique une couleur de fond rouge foncé élégante (code RGB)
-            notif.BackColor = Color.FromArgb(192, 57, 43);
 
-            // On crée une zone de texte (Label) pour y mettre le texte de l'erreur
+            // Si aucune couleur n'est fournie, on applique ton rouge foncé élégant par défaut
+            // Sinon, on applique la couleur demandée
+            notif.BackColor = couleurFond ?? Color.FromArgb(192, 57, 43);
+
             Label lbl = new Label();
-            // On lui attribue le message reçu en paramètre de la méthode
             lbl.Text = message;
-            // On lui dit de s'étirer (Dock) pour occuper TOUT l'espace disponible à l'intérieur du Panel
             lbl.Dock = DockStyle.Fill;
-            // On centre le texte parfaitement au milieu (horizontalement et verticalement)
             lbl.TextAlign = ContentAlignment.MiddleCenter;
-            // On met la couleur du texte en blanc pour que ça ressorte bien sur le rouge
             lbl.ForeColor = Color.White;
-            // On change la police en Arial, taille 10, et en gras
             lbl.Font = new Font("Arial", 10, FontStyle.Bold);
-            // On insère le Label à l'intérieur du Panel de notification
             notif.Controls.Add(lbl);
 
-            // On calcule la position verticale (Y) : 20 pixels du haut + 70 pixels par notification déjà présente
             int posY = 20 + (_notifs.Count * 70);
-            // On positionne la notif au départ TOUT À GAUCHE, complètement masquée hors de l'écran (X négatif)
             notif.Location = new Point(-notif.Width, posY);
 
-            // On injecte graphiquement le Panel de notification dans le formulaire actuel
             this.Controls.Add(notif);
-            // On force la notification à passer au-dessus des autres composants du formulaire pour ne pas être cachée
             notif.BringToFront();
-            // On enregistre cette nouvelle notification dans notre liste globale
             _notifs.Add(notif);
 
-            // On lance la méthode qui va faire glisser la notification vers la droite pour l'afficher
             AnimerEntree(notif, 20, posY);
         }
 
@@ -383,7 +396,7 @@ private List<Panel> _notifs = new List<Panel>();
                     else // SINON (la notification est parfaitement arrivée à sa nouvelle hauteur cible)
                     {
                         // On arrête le chrono de réorganisation pour cette notification
-                        timerReorg.Stop();
+                        timerReorg.Stop(); 
                         // On détruit le chrono pour libérer la mémoire
                         timerReorg.Dispose();
                     }
@@ -391,6 +404,11 @@ private List<Panel> _notifs = new List<Panel>();
                 // On démarre le chrono de réorganisation pour lancer l'ajustement visuel
                 timerReorg.Start();
             }
+        }
+
+        private void lblNomDeMission_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
