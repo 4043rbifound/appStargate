@@ -53,10 +53,10 @@
             this.btnNouvelleMission.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnNouvelleMission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnNouvelleMission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnNouvelleMission.Location = new System.Drawing.Point(1096, 2);
-            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNouvelleMission.Location = new System.Drawing.Point(731, 1);
+            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
-            this.btnNouvelleMission.Size = new System.Drawing.Size(251, 91);
+            this.btnNouvelleMission.Size = new System.Drawing.Size(167, 59);
             this.btnNouvelleMission.TabIndex = 1;
             this.btnNouvelleMission.Text = "Nouvelle mission";
             this.btnNouvelleMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -69,10 +69,10 @@
             this.btn_NVplnt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_NVplnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btn_NVplnt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btn_NVplnt.Location = new System.Drawing.Point(846, 2);
-            this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_NVplnt.Location = new System.Drawing.Point(564, 1);
+            this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btn_NVplnt.Name = "btn_NVplnt";
-            this.btn_NVplnt.Size = new System.Drawing.Size(251, 91);
+            this.btn_NVplnt.Size = new System.Drawing.Size(167, 59);
             this.btn_NVplnt.TabIndex = 3;
             this.btn_NVplnt.Text = "Infos Planètes";
             this.btn_NVplnt.UseVisualStyleBackColor = false;
@@ -83,10 +83,10 @@
             this.flowLayoutPanelMissions.AutoScroll = true;
             this.flowLayoutPanelMissions.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelMissions.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelMissions.Location = new System.Drawing.Point(612, 160);
-            this.flowLayoutPanelMissions.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.flowLayoutPanelMissions.Location = new System.Drawing.Point(408, 104);
+            this.flowLayoutPanelMissions.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.flowLayoutPanelMissions.Name = "flowLayoutPanelMissions";
-            this.flowLayoutPanelMissions.Size = new System.Drawing.Size(923, 819);
+            this.flowLayoutPanelMissions.Size = new System.Drawing.Size(615, 532);
             this.flowLayoutPanelMissions.TabIndex = 4;
             // 
             // contextMenuStrip1
@@ -101,9 +101,10 @@
             this.lblTableauBord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
             this.lblTableauBord.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.lblTableauBord.ForeColor = System.Drawing.Color.White;
-            this.lblTableauBord.Location = new System.Drawing.Point(111, 26);
+            this.lblTableauBord.Location = new System.Drawing.Point(74, 17);
+            this.lblTableauBord.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTableauBord.Name = "lblTableauBord";
-            this.lblTableauBord.Size = new System.Drawing.Size(326, 46);
+            this.lblTableauBord.Size = new System.Drawing.Size(230, 32);
             this.lblTableauBord.TabIndex = 6;
             this.lblTableauBord.Text = "Tableau de Bord";
             // 
@@ -113,9 +114,10 @@
             this.lblTotalMission.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalMission.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.lblTotalMission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblTotalMission.Location = new System.Drawing.Point(841, 106);
+            this.lblTotalMission.Location = new System.Drawing.Point(561, 69);
+            this.lblTotalMission.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotalMission.Name = "lblTotalMission";
-            this.lblTotalMission.Size = new System.Drawing.Size(43, 46);
+            this.lblTotalMission.Size = new System.Drawing.Size(31, 32);
             this.lblTotalMission.TabIndex = 7;
             this.lblTotalMission.Text = "n";
             this.lblTotalMission.Click += new System.EventHandler(this.lblTotalMission_Click);
@@ -127,10 +129,10 @@
             this.btnRaces.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRaces.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnRaces.Location = new System.Drawing.Point(1346, 2);
-            this.btnRaces.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRaces.Location = new System.Drawing.Point(897, 1);
+            this.btnRaces.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnRaces.Name = "btnRaces";
-            this.btnRaces.Size = new System.Drawing.Size(251, 91);
+            this.btnRaces.Size = new System.Drawing.Size(167, 59);
             this.btnRaces.TabIndex = 8;
             this.btnRaces.Text = "👽 Races";
             this.btnRaces.UseVisualStyleBackColor = false;
@@ -142,9 +144,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(625, 106);
+            this.label1.Location = new System.Drawing.Point(410, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 46);
+            this.label1.Size = new System.Drawing.Size(156, 32);
             this.label1.TabIndex = 11;
             this.label1.Text = "Missions : ";
             // 
@@ -153,9 +156,10 @@
             this.pictureBox4.BackgroundImage = global::appStargate.Properties.Resources._out;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(-2, 932);
+            this.pictureBox4.Location = new System.Drawing.Point(-1, 606);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(97, 94);
+            this.pictureBox4.Size = new System.Drawing.Size(65, 61);
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
@@ -164,37 +168,40 @@
             // 
             this.pictureBox2.BackgroundImage = global::appStargate.Properties.Resources.logoSg;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(-2, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 92);
+            this.pictureBox2.Size = new System.Drawing.Size(64, 60);
             this.pictureBox2.TabIndex = 10;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.pictureBox1.Location = new System.Drawing.Point(-3, -12);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(852, 104);
+            this.pictureBox1.Size = new System.Drawing.Size(568, 68);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.pictureBox3.Location = new System.Drawing.Point(-2, 89);
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 58);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(96, 956);
+            this.pictureBox3.Size = new System.Drawing.Size(64, 621);
             this.pictureBox3.TabIndex = 12;
             this.pictureBox3.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1595, 1026);
+            this.ClientSize = new System.Drawing.Size(1063, 667);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
@@ -207,7 +214,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
