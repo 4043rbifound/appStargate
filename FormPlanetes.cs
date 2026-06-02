@@ -149,7 +149,7 @@ namespace appStargate
 
         private void AfficherMissionsPlanete(string nomPlanete)
         {
-            lbMissions.Text = "";
+            lblMissions.Text = "";
 
             DataTable dtMissions = MesDatas.DsGlobal.Tables["Mission"];
             DataTable dtMembres = MesDatas.DsGlobal.Tables["Membre"];
@@ -158,7 +158,7 @@ namespace appStargate
 
             if (missionRows.Length == 0)
             {
-                lbMissions.Text = "Aucune mission sur cette planète.";
+                lblMissions.Text = "Aucune mission sur cette planète.";
                 return;
             }
 
@@ -182,7 +182,7 @@ namespace appStargate
                 texte += $"  Chef : {nomChef}  |  Budget : {budget}€\n\n";
             }
 
-            lbMissions.Text = texte.TrimEnd();
+            lblMissions.Text = texte.TrimEnd();
         }
 
         // ─── SYSTÈME DE NOTIFICATIONS ─────────────────────────────────────────────

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailsMission));
             this.lblTitreMission = new System.Windows.Forms.Label();
             this.lblBudget = new System.Windows.Forms.Label();
             this.lblDateFinMission = new System.Windows.Forms.Label();
@@ -172,7 +173,7 @@
             this.pictureBox6.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Location = new System.Drawing.Point(495, 224);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(335, 42);
             this.pictureBox6.TabIndex = 30;
@@ -184,7 +185,7 @@
             this.pictureBox5.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Location = new System.Drawing.Point(495, 179);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(335, 42);
             this.pictureBox5.TabIndex = 29;
@@ -196,7 +197,7 @@
             this.pictureBox4.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(145, 224);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(334, 42);
             this.pictureBox4.TabIndex = 28;
@@ -208,7 +209,7 @@
             this.pictureBox3.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(143, 179);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(335, 42);
             this.pictureBox3.TabIndex = 27;
@@ -221,7 +222,7 @@
             this.diverseInfosPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.diverseInfosPanel.Controls.Add(this.flowLayoutPanel1);
             this.diverseInfosPanel.Location = new System.Drawing.Point(143, 420);
-            this.diverseInfosPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.diverseInfosPanel.Margin = new System.Windows.Forms.Padding(2);
             this.diverseInfosPanel.Name = "diverseInfosPanel";
             this.diverseInfosPanel.Size = new System.Drawing.Size(756, 250);
             this.diverseInfosPanel.TabIndex = 0;
@@ -260,7 +261,7 @@
             this.btnVoirMembresOuFeuille.Font = new System.Drawing.Font("Impact", 15F);
             this.btnVoirMembresOuFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(299, 280);
-            this.btnVoirMembresOuFeuille.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoirMembresOuFeuille.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoirMembresOuFeuille.Name = "btnVoirMembresOuFeuille";
             this.btnVoirMembresOuFeuille.Size = new System.Drawing.Size(180, 43);
             this.btnVoirMembresOuFeuille.TabIndex = 25;
@@ -274,7 +275,7 @@
             this.ImageMission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ImageMission.Image = global::appStargate.Properties.Resources.Artemis_II_patch;
             this.ImageMission.Location = new System.Drawing.Point(13, 13);
-            this.ImageMission.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ImageMission.Margin = new System.Windows.Forms.Padding(2);
             this.ImageMission.Name = "ImageMission";
             this.ImageMission.Size = new System.Drawing.Size(103, 100);
             this.ImageMission.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,7 +286,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.pictureBox2.Location = new System.Drawing.Point(1, -3);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(7, 673);
             this.pictureBox2.TabIndex = 14;
@@ -297,7 +298,7 @@
             this.pictureBox1.BackgroundImage = global::appStargate.Properties.Resources.fond_gauche;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(0, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 673);
             this.pictureBox1.TabIndex = 15;
@@ -313,7 +314,7 @@
             this.btnVoirFeuille.Font = new System.Drawing.Font("Impact", 15F);
             this.btnVoirFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))));
             this.btnVoirFeuille.Location = new System.Drawing.Point(495, 280);
-            this.btnVoirFeuille.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVoirFeuille.Margin = new System.Windows.Forms.Padding(2);
             this.btnVoirFeuille.Name = "btnVoirFeuille";
             this.btnVoirFeuille.Size = new System.Drawing.Size(180, 43);
             this.btnVoirFeuille.TabIndex = 31;
@@ -345,7 +346,8 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblTitreMission);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DetailsMission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetailsMission";

@@ -15,11 +15,12 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlanetes));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flpPlanetes = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lbMissions = new System.Windows.Forms.Label();
+            this.lblMissions = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRaces = new System.Windows.Forms.DataGridView();
@@ -59,8 +60,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.dgvRaces);
             this.splitContainer1.Panel2.Controls.Add(this.lblTitrePlanete);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(979, 555);
-            this.splitContainer1.SplitterDistance = 406;
+            this.splitContainer1.Size = new System.Drawing.Size(1063, 615);
+            this.splitContainer1.SplitterDistance = 440;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -73,7 +74,7 @@
             this.flpPlanetes.Location = new System.Drawing.Point(0, 0);
             this.flpPlanetes.Margin = new System.Windows.Forms.Padding(2);
             this.flpPlanetes.Name = "flpPlanetes";
-            this.flpPlanetes.Size = new System.Drawing.Size(406, 555);
+            this.flpPlanetes.Size = new System.Drawing.Size(440, 615);
             this.flpPlanetes.TabIndex = 0;
             this.flpPlanetes.WrapContents = false;
             // 
@@ -82,29 +83,32 @@
             this.flowLayoutPanel1.BackgroundImage = global::appStargate.Properties.Resources.imgfondtext;
             this.flowLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 252);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(28, 252);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(557, 178);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(559, 158);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Controls.Add(this.lbMissions);
+            this.flowLayoutPanel2.Controls.Add(this.lblMissions);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(317, 133);
-            this.flowLayoutPanel2.TabIndex = 3;
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(500, 103);
+            this.flowLayoutPanel2.TabIndex = 0;
             // 
-            // lbMissions
+            // lblMissions
             // 
-            this.lbMissions.ForeColor = System.Drawing.Color.White;
-            this.lbMissions.Location = new System.Drawing.Point(3, 0);
-            this.lbMissions.Name = "lbMissions";
-            this.lbMissions.Size = new System.Drawing.Size(302, 122);
-            this.lbMissions.TabIndex = 3;
-            this.lbMissions.Text = "label3";
+            this.lblMissions.AutoSize = true;
+            this.lblMissions.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMissions.ForeColor = System.Drawing.Color.White;
+            this.lblMissions.Location = new System.Drawing.Point(3, 0);
+            this.lblMissions.MaximumSize = new System.Drawing.Size(687, 0);
+            this.lblMissions.Name = "lblMissions";
+            this.lblMissions.Size = new System.Drawing.Size(50, 16);
+            this.lblMissions.TabIndex = 3;
+            this.lblMissions.Text = "label3";
             // 
             // label2
             // 
@@ -132,7 +136,7 @@
             // 
             // dgvRaces
             // 
-            this.dgvRaces.BackgroundColor = System.Drawing.Color.Black;
+            this.dgvRaces.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvRaces.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvRaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRaces.GridColor = System.Drawing.Color.White;
@@ -158,21 +162,27 @@
             this.pnlBas.BackColor = System.Drawing.Color.Transparent;
             this.pnlBas.Controls.Add(this.btnRetour);
             this.pnlBas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBas.Location = new System.Drawing.Point(0, 555);
+            this.pnlBas.Location = new System.Drawing.Point(0, 615);
             this.pnlBas.Margin = new System.Windows.Forms.Padding(2);
             this.pnlBas.Name = "pnlBas";
-            this.pnlBas.Size = new System.Drawing.Size(979, 37);
+            this.pnlBas.Size = new System.Drawing.Size(1063, 44);
             this.pnlBas.TabIndex = 2;
             // 
             // btnRetour
             // 
-            this.btnRetour.Location = new System.Drawing.Point(8, 4);
+            this.btnRetour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnRetour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRetour.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnRetour.FlatAppearance.BorderSize = 0;
+            this.btnRetour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.btnRetour.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRetour.Location = new System.Drawing.Point(2, 2);
             this.btnRetour.Margin = new System.Windows.Forms.Padding(2);
             this.btnRetour.Name = "btnRetour";
-            this.btnRetour.Size = new System.Drawing.Size(82, 28);
+            this.btnRetour.Size = new System.Drawing.Size(126, 40);
             this.btnRetour.TabIndex = 0;
             this.btnRetour.Text = "← Retour";
-            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.UseVisualStyleBackColor = false;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
             // pnlNotif
@@ -202,16 +212,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::appStargate.Properties.Resources.background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(979, 592);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1063, 659);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pnlNotif);
             this.Controls.Add(this.pnlBas);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormPlanetes";
-            this.Text = "🌍 Stargate — Planètes";
+            this.Text = " Stargate — Planètes";
             this.Load += new System.EventHandler(this.FormPlanetes_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -220,6 +230,7 @@
             this.splitContainer1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).EndInit();
             this.pnlBas.ResumeLayout(false);
             this.pnlNotif.ResumeLayout(false);
@@ -239,6 +250,6 @@
         private System.Windows.Forms.Label lblNotif;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label lbMissions;
+        private System.Windows.Forms.Label lblMissions;
     }
 }
