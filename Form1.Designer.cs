@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.btnNouvelleMission = new System.Windows.Forms.Button();
             this.btn_NVplnt = new System.Windows.Forms.Button();
@@ -43,7 +44,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(22, 457);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 18);
             this.button1.TabIndex = 0;
@@ -57,7 +58,7 @@
             this.btnNouvelleMission.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnNouvelleMission.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.btnNouvelleMission.Location = new System.Drawing.Point(322, 28);
-            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNouvelleMission.Margin = new System.Windows.Forms.Padding(2);
             this.btnNouvelleMission.Name = "btnNouvelleMission";
             this.btnNouvelleMission.Size = new System.Drawing.Size(167, 59);
             this.btnNouvelleMission.TabIndex = 1;
@@ -72,7 +73,7 @@
             this.btn_NVplnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btn_NVplnt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.btn_NVplnt.Location = new System.Drawing.Point(23, 28);
-            this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_NVplnt.Margin = new System.Windows.Forms.Padding(2);
             this.btn_NVplnt.Name = "btn_NVplnt";
             this.btn_NVplnt.Size = new System.Drawing.Size(167, 59);
             this.btn_NVplnt.TabIndex = 3;
@@ -83,12 +84,13 @@
             // flowLayoutPanelMissions
             // 
             this.flowLayoutPanelMissions.AutoScroll = true;
+            this.flowLayoutPanelMissions.AutoSize = true;
             this.flowLayoutPanelMissions.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelMissions.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanelMissions.Location = new System.Drawing.Point(322, 126);
             this.flowLayoutPanelMissions.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.flowLayoutPanelMissions.Name = "flowLayoutPanelMissions";
-            this.flowLayoutPanelMissions.Size = new System.Drawing.Size(704, 499);
+            this.flowLayoutPanelMissions.Size = new System.Drawing.Size(731, 529);
             this.flowLayoutPanelMissions.TabIndex = 4;
             // 
             // contextMenuStrip1
@@ -130,7 +132,7 @@
             this.btnRaces.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.btnRaces.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
             this.btnRaces.Location = new System.Drawing.Point(591, 28);
-            this.btnRaces.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRaces.Margin = new System.Windows.Forms.Padding(2);
             this.btnRaces.Name = "btnRaces";
             this.btnRaces.Size = new System.Drawing.Size(167, 59);
             this.btnRaces.TabIndex = 8;
@@ -157,7 +159,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::appStargate.Properties.Resources.background;
+            this.AutoSize = true;
+            this.BackgroundImage = global::appStargate.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1064, 667);
             this.Controls.Add(this.btnStats);
@@ -169,10 +172,12 @@
             this.Controls.Add(this.btnNouvelleMission);
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tableau de bord";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

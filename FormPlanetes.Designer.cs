@@ -67,6 +67,7 @@
             // flpPlanetes
             // 
             this.flpPlanetes.AutoScroll = true;
+            this.flpPlanetes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.flpPlanetes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpPlanetes.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flpPlanetes.Location = new System.Drawing.Point(0, 0);
@@ -201,7 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::appStargate.Properties.Resources.background1;
+            this.BackgroundImage = global::appStargate.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(979, 592);
             this.Controls.Add(this.splitContainer1);

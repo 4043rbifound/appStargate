@@ -258,6 +258,14 @@
     <Content Include="bin\Debug\appStargate.pdb" />
     <Content Include="bin\Debug\BCrypt.Net-Core.dll" />
     <Content Include="bin\Debug\BCrypt.Net-Core.pdb" />
+    <Content Include="bin\Debug\Images\458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom.png" />
+    <Content Include="bin\Debug\Images\694985.png" />
+    <Content Include="bin\Debug\Images\background.png" />
+    <Content Include="bin\Debug\Images\Jupiter.jpg" />
+    <Content Include="bin\Debug\Images\Mars.jpg" />
+    <Content Include="bin\Debug\Images\Mercure.jpg" />
+    <Content Include="bin\Debug\Images\Terre.jpg" />
+    <Content Include="bin\Debug\Images\Vénus.jpg" />
     <Content Include="bin\Debug\System.Data.SQLite.dll" />
     <Content Include="bin\Debug\System.Data.SQLite.xml" />
     <Content Include="bin\Debug\x64\SQLite.Interop.dll" />

@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlBas = new System.Windows.Forms.Panel();
             this.tabStats = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btnRetour = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cboMembres = new System.Windows.Forms.ComboBox();
             this.dgvMembresCommuns = new System.Windows.Forms.DataGridView();
@@ -45,7 +43,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cboMissions = new System.Windows.Forms.ComboBox();
             this.dgvInformateurs = new System.Windows.Forms.DataGridView();
-            this.pnlBas.SuspendLayout();
+            this.btnRetour = new System.Windows.Forms.Button();
+            this.pnlBas = new System.Windows.Forms.Panel();
             this.tabStats.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -57,16 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMissionsPlanete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepensesMax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformateurs)).BeginInit();
+            this.pnlBas.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlBas
-            // 
-            this.pnlBas.Controls.Add(this.btnRetour);
-            this.pnlBas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBas.Location = new System.Drawing.Point(0, 405);
-            this.pnlBas.Name = "pnlBas";
-            this.pnlBas.Size = new System.Drawing.Size(800, 45);
-            this.pnlBas.TabIndex = 0;
             // 
             // tabStats
             // 
@@ -84,6 +75,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Black;
             this.tabPage1.Controls.Add(this.dgvMembresCommuns);
             this.tabPage1.Controls.Add(this.cboMembres);
             this.tabPage1.Controls.Add(this.label1);
@@ -93,10 +85,10 @@
             this.tabPage1.Size = new System.Drawing.Size(792, 379);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Membres communs";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
+            this.tabPage2.BackColor = System.Drawing.Color.Black;
             this.tabPage2.Controls.Add(this.dgvMissionsGrandes);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -104,7 +96,6 @@
             this.tabPage2.Size = new System.Drawing.Size(792, 379);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Missions > 10";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -130,6 +121,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.Color.Black;
             this.tabPage5.Controls.Add(this.dgvInformateurs);
             this.tabPage5.Controls.Add(this.cboMissions);
             this.tabPage5.Controls.Add(this.label2);
@@ -139,21 +131,11 @@
             this.tabPage5.Size = new System.Drawing.Size(792, 379);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Informateurs";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // btnRetour
-            // 
-            this.btnRetour.Location = new System.Drawing.Point(12, 6);
-            this.btnRetour.Name = "btnRetour";
-            this.btnRetour.Size = new System.Drawing.Size(110, 35);
-            this.btnRetour.TabIndex = 0;
-            this.btnRetour.Text = "← Retour";
-            this.btnRetour.UseVisualStyleBackColor = true;
-            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(10, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
@@ -180,30 +162,31 @@
             // dgvMissionsGrandes
             // 
             this.dgvMissionsGrandes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMissionsGrandes.Location = new System.Drawing.Point(10, 10);
+            this.dgvMissionsGrandes.Location = new System.Drawing.Point(0, 0);
             this.dgvMissionsGrandes.Name = "dgvMissionsGrandes";
-            this.dgvMissionsGrandes.Size = new System.Drawing.Size(782, 369);
+            this.dgvMissionsGrandes.Size = new System.Drawing.Size(792, 379);
             this.dgvMissionsGrandes.TabIndex = 0;
             // 
             // dgvMissionsPlanete
             // 
             this.dgvMissionsPlanete.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMissionsPlanete.Location = new System.Drawing.Point(10, 10);
+            this.dgvMissionsPlanete.Location = new System.Drawing.Point(0, 0);
             this.dgvMissionsPlanete.Name = "dgvMissionsPlanete";
-            this.dgvMissionsPlanete.Size = new System.Drawing.Size(782, 369);
+            this.dgvMissionsPlanete.Size = new System.Drawing.Size(792, 379);
             this.dgvMissionsPlanete.TabIndex = 0;
             // 
             // dgvDepensesMax
             // 
             this.dgvDepensesMax.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDepensesMax.Location = new System.Drawing.Point(10, 10);
+            this.dgvDepensesMax.Location = new System.Drawing.Point(0, 0);
             this.dgvDepensesMax.Name = "dgvDepensesMax";
-            this.dgvDepensesMax.Size = new System.Drawing.Size(782, 369);
+            this.dgvDepensesMax.Size = new System.Drawing.Size(792, 379);
             this.dgvDepensesMax.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(10, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
@@ -222,21 +205,41 @@
             // dgvInformateurs
             // 
             this.dgvInformateurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformateurs.Location = new System.Drawing.Point(10, 80);
+            this.dgvInformateurs.Location = new System.Drawing.Point(-8, 84);
             this.dgvInformateurs.Name = "dgvInformateurs";
-            this.dgvInformateurs.Size = new System.Drawing.Size(782, 299);
+            this.dgvInformateurs.Size = new System.Drawing.Size(792, 299);
             this.dgvInformateurs.TabIndex = 2;
+            // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(12, 6);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(110, 35);
+            this.btnRetour.TabIndex = 0;
+            this.btnRetour.Text = "← Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
+            // pnlBas
+            // 
+            this.pnlBas.BackColor = System.Drawing.Color.Transparent;
+            this.pnlBas.Controls.Add(this.btnRetour);
+            this.pnlBas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlBas.Location = new System.Drawing.Point(0, 405);
+            this.pnlBas.Name = "pnlBas";
+            this.pnlBas.Size = new System.Drawing.Size(800, 45);
+            this.pnlBas.TabIndex = 0;
             // 
             // FormStats
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabStats);
             this.Controls.Add(this.pnlBas);
             this.Name = "FormStats";
             this.Text = "FormStats";
-            this.pnlBas.ResumeLayout(false);
             this.tabStats.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -250,20 +253,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMissionsPlanete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepensesMax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInformateurs)).EndInit();
+            this.pnlBas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnlBas;
         private System.Windows.Forms.TabControl tabStats;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvMembresCommuns;
         private System.Windows.Forms.ComboBox cboMembres;
@@ -273,5 +274,7 @@
         private System.Windows.Forms.DataGridView dgvInformateurs;
         private System.Windows.Forms.ComboBox cboMissions;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.Panel pnlBas;
     }
 }
