@@ -29,6 +29,29 @@ namespace appStargate
             RequeteMissionsPlanete();
             RequeteDepensesMax();
         }
+        private void TabStats_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            // Couleurs
+            Color fondOnglet = Color.FromArgb(20, 25, 40);
+            Color fondActif = Color.FromArgb(180, 20, 20);
+            Color texte = Color.FromArgb(200, 200, 210);
+
+            // Fond de l'onglet
+            if (e.Index == tabStats.SelectedIndex)
+                e.Graphics.FillRectangle(new SolidBrush(fondActif), e.Bounds);
+            else
+                e.Graphics.FillRectangle(new SolidBrush(fondOnglet), e.Bounds);
+
+            // Texte de l'onglet
+            string titre = tabStats.TabPages[e.Index].Text;
+            e.Graphics.DrawString(
+                titre,
+                new Font("Segoe UI", 9, FontStyle.Bold),
+                new SolidBrush(texte),
+                e.Bounds.X + 5,
+                e.Bounds.Y + 5
+            );
+        }
 
         // ─── CHARGEMENT DES DONNÉES ───────────────────────────────────────
         private void ChargerDonnees()
