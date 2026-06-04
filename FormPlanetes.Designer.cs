@@ -51,7 +51,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -66,9 +66,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.dgvRaces);
             this.splitContainer1.Panel2.Controls.Add(this.lblTitrePlanete);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(729, 531);
-            this.splitContainer1.SplitterDistance = 241;
-            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.Size = new System.Drawing.Size(972, 654);
+            this.splitContainer1.SplitterDistance = 321;
             this.splitContainer1.TabIndex = 0;
             // 
             // flpPlanetes
@@ -77,17 +76,17 @@
             this.flpPlanetes.Controls.Add(this.button1);
             this.flpPlanetes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flpPlanetes.Location = new System.Drawing.Point(0, 0);
-            this.flpPlanetes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpPlanetes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpPlanetes.Name = "flpPlanetes";
-            this.flpPlanetes.Size = new System.Drawing.Size(241, 531);
+            this.flpPlanetes.Size = new System.Drawing.Size(321, 654);
             this.flpPlanetes.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(2, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(3, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 80);
+            this.button1.Size = new System.Drawing.Size(75, 98);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -95,20 +94,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 200);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(44, 246);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Missions effectuées :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(44, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(116, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Races présentes :";
             // 
@@ -116,31 +113,31 @@
             // 
             this.lbMissions.FormattingEnabled = true;
             this.lbMissions.HorizontalScrollbar = true;
-            this.lbMissions.Location = new System.Drawing.Point(35, 225);
-            this.lbMissions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbMissions.ItemHeight = 16;
+            this.lbMissions.Location = new System.Drawing.Point(47, 277);
+            this.lbMissions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbMissions.Name = "lbMissions";
-            this.lbMissions.Size = new System.Drawing.Size(361, 121);
+            this.lbMissions.Size = new System.Drawing.Size(480, 148);
             this.lbMissions.TabIndex = 2;
             // 
             // dgvRaces
             // 
             this.dgvRaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRaces.Location = new System.Drawing.Point(35, 62);
-            this.dgvRaces.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvRaces.Location = new System.Drawing.Point(47, 76);
+            this.dgvRaces.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvRaces.Name = "dgvRaces";
             this.dgvRaces.RowHeadersWidth = 51;
             this.dgvRaces.RowTemplate.Height = 24;
-            this.dgvRaces.Size = new System.Drawing.Size(360, 122);
+            this.dgvRaces.Size = new System.Drawing.Size(480, 150);
             this.dgvRaces.TabIndex = 1;
             this.dgvRaces.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRaces_CellContentClick);
             // 
             // lblTitrePlanete
             // 
             this.lblTitrePlanete.AutoSize = true;
-            this.lblTitrePlanete.Location = new System.Drawing.Point(33, 7);
-            this.lblTitrePlanete.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitrePlanete.Location = new System.Drawing.Point(44, 9);
             this.lblTitrePlanete.Name = "lblTitrePlanete";
-            this.lblTitrePlanete.Size = new System.Drawing.Size(35, 13);
+            this.lblTitrePlanete.Size = new System.Drawing.Size(44, 16);
             this.lblTitrePlanete.TabIndex = 0;
             this.lblTitrePlanete.Text = "label1";
             // 
@@ -149,10 +146,10 @@
             this.pnlNotif.BackColor = System.Drawing.Color.Red;
             this.pnlNotif.Controls.Add(this.lblNotif);
             this.pnlNotif.ForeColor = System.Drawing.Color.Snow;
-            this.pnlNotif.Location = new System.Drawing.Point(2, 0);
-            this.pnlNotif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlNotif.Location = new System.Drawing.Point(3, 0);
+            this.pnlNotif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlNotif.Name = "pnlNotif";
-            this.pnlNotif.Size = new System.Drawing.Size(295, 20);
+            this.pnlNotif.Size = new System.Drawing.Size(393, 25);
             this.pnlNotif.TabIndex = 1;
             this.pnlNotif.Visible = false;
             // 
@@ -162,21 +159,20 @@
             this.lblNotif.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblNotif.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotif.Location = new System.Drawing.Point(0, 0);
-            this.lblNotif.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNotif.Name = "lblNotif";
-            this.lblNotif.Size = new System.Drawing.Size(51, 19);
+            this.lblNotif.Size = new System.Drawing.Size(61, 24);
             this.lblNotif.TabIndex = 0;
             this.lblNotif.Text = "label3";
             this.lblNotif.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormPlanetes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 531);
+            this.ClientSize = new System.Drawing.Size(972, 654);
             this.Controls.Add(this.pnlNotif);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormPlanetes";
             this.Text = "FormPlanetes";
             this.splitContainer1.Panel1.ResumeLayout(false);
