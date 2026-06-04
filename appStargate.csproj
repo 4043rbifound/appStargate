@@ -111,6 +111,12 @@
     <Compile Include="FormRaces.Designer.cs">
       <DependentUpon>FormRaces.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEquipageMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipageMission.Designer.cs">
+      <DependentUpon>frmEquipageMission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Membre.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRaces.resx">
       <DependentUpon>FormRaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipageMission.resx">
+      <DependentUpon>frmEquipageMission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Membre.resx">
       <DependentUpon>Membre.cs</DependentUpon>
