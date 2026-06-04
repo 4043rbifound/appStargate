@@ -20,6 +20,9 @@ namespace appStargate
         private int _nbMembresRequis;
         private int _placesRestantes;
 
+        private bool _membresValides = false;
+        private bool _objectifsValides = false;
+
         // Constructeur qui reçoit les paramètres de formNouvelleMission
         public frmEquipageMission(int numero, string planete, int nbMembre)
         {
@@ -116,10 +119,7 @@ namespace appStargate
             }
         }
 
-        // ==========================================
-        // SECTION 4 - AJOUT MEMBRE ET TRANSACTION DIRECTE
-        // ==========================================
-        private void btnAjouterMembre_Click(object sender, EventArgs e)
+        private void ExecuterAjoutMembre()
         {
             if (cboMembres.SelectedIndex == -1)
             {
@@ -137,7 +137,6 @@ namespace appStargate
             string[] fragments = ligneSelectionnee.Split('-');
             string matricule = fragments.Last().Trim();
 
-            // TRANSACTION SQL DIRECTE LORS DU CLIC
             using (SQLiteTransaction transaction = Connexion.Connec.BeginTransaction())
             {
                 try
@@ -151,13 +150,11 @@ namespace appStargate
                         cmd.ExecuteNonQuery();
                     }
 
-                    transaction.Commit(); // On valide en BDD
+                    transaction.Commit();
 
-                    // Décrémentation des places restantes
                     _placesRestantes--;
                     lblNbMembreaffecter.Text = _placesRestantes.ToString();
 
-                    // Affichage immédiat dans la RichTextBox
                     string nomPrenom = fragments[0].Trim();
                     string statut = fragments[1].Trim();
                     richtxtMembres.AppendText($"{nomPrenom} - {statut}\n");
@@ -165,25 +162,31 @@ namespace appStargate
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    AfficherNotif("Ce membre est déjà affecté ou erreur : " + ex.Message);
+                    AfficherNotif("Ce membre est déjà affecté à cette mission.");
                 }
             }
         }
 
-        private void btnValiderMembres_Click(object sender, EventArgs e)
+        private void btnAjouterMembre_Click(object sender, EventArgs e) { ExecuterAjoutMembre(); }
+        private void btnAjouterMembre_Click_1(object sender, EventArgs e) { ExecuterAjoutMembre(); }
+
+        private void ExecuterValiderMembres()
         {
-            // GRISE (désactive) la section équipage pour valider l'étape
             cboMembres.Enabled = false;
             btnAjouterMembre.Enabled = false;
-            btnValiderMembres.Enabled = false;
 
-            AfficherNotif("Membres verrouillés avec succès !", true);
+            _membresValides = true;
+            AfficherNotif("Section membres validée et verrouillée !", true);
+
+            VérifierFermetureFormulaire();
         }
 
-        // ==========================================
-        // SECTION 5 - AJOUT ALIEN ET TRANSACTION DIRECTE
-        // ==========================================
-        private void btnAjouterAlien_Click(object sender, EventArgs e)
+        // On redirige TOUS les clics possibles vers ExecuterValiderMembres()
+        private void btnValiderMembres_Click(object sender, EventArgs e) { ExecuterValiderMembres(); }
+        private void btnValiderMembres_Click_1(object sender, EventArgs e) { ExecuterValiderMembres(); }
+        private void btnValiderMembres_Click_2(object sender, EventArgs e) { ExecuterValiderMembres(); }
+
+        private void ExecuterAjoutAlien()
         {
             if (cboAliens.SelectedIndex == -1)
             {
@@ -202,7 +205,6 @@ namespace appStargate
             int idEspece = Convert.ToInt32(fragments.Last().Trim());
             int quantite = Convert.ToInt32(txtQuantiteAlien.Text);
 
-            // TRANSACTION SQL DIRECTE LORS DU CLIC
             using (SQLiteTransaction transaction = Connexion.Connec.BeginTransaction())
             {
                 try
@@ -217,61 +219,69 @@ namespace appStargate
                         cmd.ExecuteNonQuery();
                     }
 
-                    transaction.Commit(); // On valide en BDD
+                    transaction.Commit();
 
-                    // Affichage immédiat dans la RichTextBox (Sans décrémenter puisqu'on ne connaît pas le total requis)
                     string nomAlien = fragments[0].Trim();
                     string couleur = fragments[1].Trim();
                     richtxtAliens.AppendText($"{nomAlien} - {couleur} --> objectif de captures : {quantite}\n");
 
-                    txtQuantiteAlien.Text = "1"; // Reset du champ
+                    txtQuantiteAlien.Text = "1";
                 }
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    AfficherNotif("Cet objectif existe déjà ou erreur : " + ex.Message);
+                    AfficherNotif("Cet objectif existe déjà pour cette mission.");
                 }
             }
         }
 
-        private void btnValiderObjectifs_Click(object sender, EventArgs e)
+        private void btnAjouterAlien_Click(object sender, EventArgs e) { ExecuterAjoutAlien(); }
+        private void btnAjouterAlien_Click_1(object sender, EventArgs e) { ExecuterAjoutAlien(); }
+        private void btnAjouterAlien_Click_2(object sender, EventArgs e) { ExecuterAjoutAlien(); }
+
+        private void ExecuterValiderObjectifs()
         {
-            // GRISE (désactive) la section objectifs
             cboAliens.Enabled = false;
             txtQuantiteAlien.Enabled = false;
             btnAjouterAlien.Enabled = false;
-            btnValiderObjectifs.Enabled = false;
 
-            // Notification verte finale de succès total !
-            AfficherNotif("Mission et objectifs finalisés avec succès !", true);
+            _objectifsValides = true;
+            AfficherNotif("Section objectifs validée et verrouillée !", true);
 
-            // Attente de 1.5s pour voir la notification avant de fermer l'écran proprement
-            Timer timerFermeture = new Timer();
-            timerFermeture.Interval = 1500;
-            timerFermeture.Tick += (s, ev) =>
-            {
-                timerFermeture.Stop();
-                timerFermeture.Dispose();
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            };
-            timerFermeture.Start();
+            VérifierFermetureFormulaire();
         }
 
-        // ==========================================
-        // SYSTÈME DE NOTIFICATIONS ANIMÉES
-        // ==========================================
+        private void btnValiderObjectifs_Click(object sender, EventArgs e) { ExecuterValiderObjectifs(); }
+        private void btnValiderObjectifs_Click_1(object sender, EventArgs e) { ExecuterValiderObjectifs(); }
+
+        private void VérifierFermetureFormulaire()
+        {
+            if (_membresValides && _objectifsValides)
+            {
+                AfficherNotif("Validation en cours...", true);
+
+                Timer timerFermeture = new Timer();
+                timerFermeture.Interval = 1500;
+                timerFermeture.Tick += (s, ev) =>
+                {
+                    timerFermeture.Stop();
+                    timerFermeture.Dispose();
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                };
+                timerFermeture.Start();
+            }
+        }
+
+        private void cboMembres_SelectedIndexChanged(object sender, EventArgs e) { }
+
         private List<Panel> _notifs = new List<Panel>();
 
         private void AfficherNotif(string message, bool isSuccess = false)
         {
             Panel notif = new Panel();
             notif.Size = new Size(380, 60);
-
-            if (isSuccess)
-                notif.BackColor = Color.FromArgb(39, 174, 96); // Vert
-            else
-                notif.BackColor = Color.FromArgb(192, 57, 43); // Rouge
+            notif.BackColor = isSuccess ? Color.FromArgb(39, 174, 96) : Color.FromArgb(192, 57, 43);
 
             Label lbl = new Label();
             lbl.Text = message;

@@ -70,6 +70,7 @@
             this.cboMembres.Name = "cboMembres";
             this.cboMembres.Size = new System.Drawing.Size(838, 40);
             this.cboMembres.TabIndex = 2;
+            this.cboMembres.SelectedIndexChanged += new System.EventHandler(this.cboMembres_SelectedIndexChanged);
             // 
             // btnAjouterMembre
             // 
@@ -79,6 +80,7 @@
             this.btnAjouterMembre.TabIndex = 3;
             this.btnAjouterMembre.Text = "Ajouter";
             this.btnAjouterMembre.UseVisualStyleBackColor = true;
+            this.btnAjouterMembre.Click += new System.EventHandler(this.btnAjouterMembre_Click_1);
             // 
             // richtxtMembres
             // 
@@ -96,6 +98,7 @@
             this.btnValiderMembres.TabIndex = 5;
             this.btnValiderMembres.Text = "Valider membres";
             this.btnValiderMembres.UseVisualStyleBackColor = true;
+            this.btnValiderMembres.Click += new System.EventHandler(this.btnValiderMembres_Click_2);
             // 
             // lblTitreCaptures
             // 
@@ -123,6 +126,7 @@
             this.btnAjouterAlien.TabIndex = 8;
             this.btnAjouterAlien.Text = "Ajouter";
             this.btnAjouterAlien.UseVisualStyleBackColor = true;
+            this.btnAjouterAlien.Click += new System.EventHandler(this.btnAjouterAlien_Click_2);
             // 
             // contextMenuStrip1
             // 
@@ -153,6 +157,7 @@
             this.btnValiderObjectifs.TabIndex = 12;
             this.btnValiderObjectifs.Text = "Valider Objectifs";
             this.btnValiderObjectifs.UseVisualStyleBackColor = true;
+            this.btnValiderObjectifs.Click += new System.EventHandler(this.btnValiderObjectifs_Click_1);
             // 
             // frmEquipageMission
             // 
@@ -172,7 +177,7 @@
             this.Controls.Add(this.lblNbMembreaffecter);
             this.Controls.Add(this.lblTitreMembres);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEquipageMission";
             this.Text = "frmEquipageMission";
             this.Load += new System.EventHandler(this.frmEquipageMission_Load);

@@ -157,7 +157,7 @@ namespace appStargate
                 cmd.ExecuteNonQuery();
 
                 // 1. On affiche la notification verte de succès !
-                AfficherNotif("Insertion en cours ... !", true);
+                AfficherNotif("Insertion en cours ... ", true);
 
                 // 2. On bloque temporairement le bouton pour éviter les double-clics
                 btnValiderMission.Enabled = false;
