@@ -35,6 +35,10 @@ namespace appStargate
 
         private void frmEquipageMission_Load(object sender, EventArgs e)
         {
+            // BLOQUE L'ÉCRITURE CLAVIER DANS LES COMBOBOX 
+            cboMembres.DropDownStyle = ComboBoxStyle.DropDownList;
+            cboAliens.DropDownStyle = ComboBoxStyle.DropDownList;
+
             // Initialisation du compteur visuel
             lblNbMembreaffecter.Text = _placesRestantes.ToString();
 
@@ -181,7 +185,6 @@ namespace appStargate
             VérifierFermetureFormulaire();
         }
 
-        // On redirige TOUS les clics possibles vers ExecuterValiderMembres()
         private void btnValiderMembres_Click(object sender, EventArgs e) { ExecuterValiderMembres(); }
         private void btnValiderMembres_Click_1(object sender, EventArgs e) { ExecuterValiderMembres(); }
         private void btnValiderMembres_Click_2(object sender, EventArgs e) { ExecuterValiderMembres(); }
