@@ -174,5 +174,38 @@ namespace appStargate
                 diverseInfosPanel.Visible = true;
             }
         }
+
+        private void pctJournal_Click(object sender, EventArgs e)
+        {
+            string planete = maMission["nomPlanete"].ToString();
+            int numero = Convert.ToInt32(maMission["numero"]);
+
+            journal frmJournal = new journal(planete, numero);
+            frmJournal.ShowDialog();
+        }
+
+        private void pctJournal_MouseEnter(object sender, EventArgs e)
+        {
+            pctJournal.BackColor = Color.White;
+            pctJournal.BackgroundImage = Properties.Resources.journoir;
+        }
+
+        private void pctJournal_MouseLeave(object sender, EventArgs e)
+        {
+            pctJournal.BackColor = Color.Transparent;
+            pctJournal.BackgroundImage = Properties.Resources.journal;
+        }
+
+        private void pctEditerMission_MouseEnter(object sender, EventArgs e)
+        {
+            pctEditerMission.BackColor = Color.White;
+            pctEditerMission.BackgroundImage = Properties.Resources.EditerMissionNoir;
+        }
+
+        private void pctEditerMission_MouseLeave(object sender, EventArgs e)
+        {
+            pctEditerMission.BackColor = Color.Transparent;
+            pctEditerMission.BackgroundImage = Properties.Resources.EditerMission;
+        }
     }
 }
