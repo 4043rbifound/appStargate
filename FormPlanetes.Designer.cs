@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flpPlanetes = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -38,6 +41,7 @@
             this.lblTitrePlanete = new System.Windows.Forms.Label();
             this.pnlNotif = new System.Windows.Forms.Panel();
             this.lblNotif = new System.Windows.Forms.Label();
+            this.chartRaces = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -45,6 +49,7 @@
             this.flpPlanetes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).BeginInit();
             this.pnlNotif.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -60,11 +65,11 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.chartRaces);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.lbMissions);
             this.splitContainer1.Panel2.Controls.Add(this.dgvRaces);
-            this.splitContainer1.Panel2.Controls.Add(this.lblTitrePlanete);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(972, 654);
             this.splitContainer1.SplitterDistance = 321;
@@ -94,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 246);
+            this.label2.Location = new System.Drawing.Point(15, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 16);
             this.label2.TabIndex = 4;
@@ -103,7 +108,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 39);
+            this.label1.Location = new System.Drawing.Point(15, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 16);
             this.label1.TabIndex = 3;
@@ -114,28 +119,28 @@
             this.lbMissions.FormattingEnabled = true;
             this.lbMissions.HorizontalScrollbar = true;
             this.lbMissions.ItemHeight = 16;
-            this.lbMissions.Location = new System.Drawing.Point(47, 277);
+            this.lbMissions.Location = new System.Drawing.Point(18, 213);
             this.lbMissions.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lbMissions.Name = "lbMissions";
-            this.lbMissions.Size = new System.Drawing.Size(480, 148);
+            this.lbMissions.Size = new System.Drawing.Size(378, 148);
             this.lbMissions.TabIndex = 2;
             // 
             // dgvRaces
             // 
             this.dgvRaces.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRaces.Location = new System.Drawing.Point(47, 76);
+            this.dgvRaces.Location = new System.Drawing.Point(18, 45);
             this.dgvRaces.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvRaces.Name = "dgvRaces";
             this.dgvRaces.RowHeadersWidth = 51;
             this.dgvRaces.RowTemplate.Height = 24;
-            this.dgvRaces.Size = new System.Drawing.Size(480, 150);
+            this.dgvRaces.Size = new System.Drawing.Size(263, 150);
             this.dgvRaces.TabIndex = 1;
             this.dgvRaces.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRaces_CellContentClick);
             // 
             // lblTitrePlanete
             // 
             this.lblTitrePlanete.AutoSize = true;
-            this.lblTitrePlanete.Location = new System.Drawing.Point(44, 9);
+            this.lblTitrePlanete.Location = new System.Drawing.Point(337, 9);
             this.lblTitrePlanete.Name = "lblTitrePlanete";
             this.lblTitrePlanete.Size = new System.Drawing.Size(44, 16);
             this.lblTitrePlanete.TabIndex = 0;
@@ -145,6 +150,7 @@
             // 
             this.pnlNotif.BackColor = System.Drawing.Color.Red;
             this.pnlNotif.Controls.Add(this.lblNotif);
+            this.pnlNotif.Controls.Add(this.lblTitrePlanete);
             this.pnlNotif.ForeColor = System.Drawing.Color.Snow;
             this.pnlNotif.Location = new System.Drawing.Point(3, 0);
             this.pnlNotif.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -165,6 +171,23 @@
             this.lblNotif.Text = "label3";
             this.lblNotif.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chartRaces
+            // 
+            this.chartRaces.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartRaces.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRaces.Legends.Add(legend1);
+            this.chartRaces.Location = new System.Drawing.Point(18, 366);
+            this.chartRaces.Name = "chartRaces";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartRaces.Series.Add(series1);
+            this.chartRaces.Size = new System.Drawing.Size(378, 276);
+            this.chartRaces.TabIndex = 5;
+            this.chartRaces.Text = "chart1";
+            // 
             // FormPlanetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -184,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).EndInit();
             this.pnlNotif.ResumeLayout(false);
             this.pnlNotif.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +224,6 @@
         private System.Windows.Forms.Panel pnlNotif;
         private System.Windows.Forms.Label lblNotif;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRaces;
     }
 }

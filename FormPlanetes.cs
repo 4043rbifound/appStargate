@@ -6,6 +6,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace appStargate
 {
@@ -54,9 +55,7 @@ namespace appStargate
 
         }
 
-        /// <summary>
-        /// Charge les tables nécessaires dans le DataSet global (mode déconnecté)
-        /// </summary>
+        
         private void ChargerDonnees()
         {
             DataSet ds = MesDatas.DsGlobal;
@@ -106,10 +105,10 @@ namespace appStargate
                 bool databazON = row["dataBazON"] != DBNull.Value && Convert.ToInt32(row["dataBazON"]) == 1;
 
                 // Chemin vers l'image dans le dossier img
-                string cheminImage = Path.Combine(
-                    Application.StartupPath, "images", nom + ".jpg"
-                );
-
+                string cheminImage = File.Exists(
+                Path.Combine(Application.StartupPath, "images", nom + ".png"))
+                    ? Path.Combine(Application.StartupPath, "images", nom + ".png")
+                    : Path.Combine(Application.StartupPath, "images", nom + ".jpg");
                 // Création du User Control
                 UCPlanete uc = new UCPlanete(nom, temperature, gravite, databazON, cheminImage);
 
@@ -126,9 +125,7 @@ namespace appStargate
             }
         }
 
-        /// <summary>
-        /// Méthode déléguée : appelée quand on clique sur un UC planète
-        /// </summary>
+        
         private void AfficherDetail(object sender, EventArgs e)
         {
             UCPlanete uc = sender as UCPlanete;
@@ -152,6 +149,7 @@ namespace appStargate
             lblTitrePlanete.Text = nomPlanete;
             AfficherRacesPlanete(nomPlanete);
             AfficherMissionsPlanete(nomPlanete);
+            AfficherGraphiqueRaces(nomPlanete);
             splitContainer1.Panel2Collapsed = false;
         }
 
@@ -202,10 +200,48 @@ namespace appStargate
             dgvRaces.AllowUserToAddRows = false;
         }
 
-        /// <summary>
-        /// Affiche les missions effectuées sur la planète dans la ListBox
-        /// Tout depuis le DataSet — aucun accès base de données
-        /// </summary>
+        private void AfficherGraphiqueRaces(string nomPlanete)
+        {
+            chartRaces.Series.Clear();
+            chartRaces.Titles.Clear();
+
+            DataTable dtHabiter = MesDatas.DsGlobal.Tables["Habiter"];
+            DataTable dtEspece = MesDatas.DsGlobal.Tables["Espece"];
+
+            Series serie = new Series("Races");
+            serie.ChartType = SeriesChartType.Pie;
+
+            DataRow[] habitants = dtHabiter.Select($"nomPlanete = '{nomPlanete}'");
+
+            foreach (DataRow hab in habitants)
+            {
+                int idEspece = Convert.ToInt32(hab["idEspece"]);
+                int pourcentage = Convert.ToInt32(hab["pourcentage"]);
+
+                DataRow[] espece = dtEspece.Select($"id = {idEspece}");
+
+                if (espece.Length > 0)
+                {
+                    string nomEspece = espece[0]["nom"].ToString();
+
+                    DataPoint point = new DataPoint();
+                    point.AxisLabel = nomEspece;
+                    point.YValues = new double[] { pourcentage };
+                    point.LegendText = nomEspece;
+                    point.Label = pourcentage + "%";
+
+                    serie.Points.Add(point);
+                }
+            }
+
+            chartRaces.Series.Add(serie);
+
+            chartRaces.Titles.Add(
+                $"Répartition des races sur {nomPlanete}"
+            );
+
+            chartRaces.Legends[0].Docking = Docking.Right;
+        }
         private void AfficherMissionsPlanete(string nomPlanete)
         {
             lbMissions.Items.Clear();
