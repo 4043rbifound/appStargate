@@ -63,7 +63,7 @@
             this.tabStats.Controls.Add(this.tabPage5);
             this.tabStats.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabStats.Location = new System.Drawing.Point(0, 0);
-            this.tabStats.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabStats.Margin = new System.Windows.Forms.Padding(4);
             this.tabStats.Name = "tabStats";
             this.tabStats.SelectedIndex = 0;
             this.tabStats.Size = new System.Drawing.Size(592, 543);
@@ -76,9 +76,9 @@
             this.tabPage1.Controls.Add(this.cboMembres);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(584, 514);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Membres communs";
@@ -91,7 +91,7 @@
             this.rtbMembresCommuns.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMembresCommuns.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.rtbMembresCommuns.Location = new System.Drawing.Point(4, 51);
-            this.rtbMembresCommuns.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbMembresCommuns.Margin = new System.Windows.Forms.Padding(4);
             this.rtbMembresCommuns.Name = "rtbMembresCommuns";
             this.rtbMembresCommuns.ReadOnly = true;
             this.rtbMembresCommuns.Size = new System.Drawing.Size(576, 459);
@@ -106,7 +106,7 @@
             this.cboMembres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.cboMembres.FormattingEnabled = true;
             this.cboMembres.Location = new System.Drawing.Point(4, 27);
-            this.cboMembres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboMembres.Margin = new System.Windows.Forms.Padding(4);
             this.cboMembres.Name = "cboMembres";
             this.cboMembres.Size = new System.Drawing.Size(576, 24);
             this.cboMembres.TabIndex = 1;
@@ -129,9 +129,9 @@
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.tabPage2.Controls.Add(this.rtbMissionsGrandes);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(584, 514);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Missions > 10";
@@ -144,7 +144,7 @@
             this.rtbMissionsGrandes.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMissionsGrandes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.rtbMissionsGrandes.Location = new System.Drawing.Point(4, 4);
-            this.rtbMissionsGrandes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbMissionsGrandes.Margin = new System.Windows.Forms.Padding(4);
             this.rtbMissionsGrandes.Name = "rtbMissionsGrandes";
             this.rtbMissionsGrandes.ReadOnly = true;
             this.rtbMissionsGrandes.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -157,9 +157,9 @@
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.tabPage3.Controls.Add(this.rtbMissionsPlanete);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(584, 514);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Missions par planète";
@@ -172,7 +172,7 @@
             this.rtbMissionsPlanete.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMissionsPlanete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.rtbMissionsPlanete.Location = new System.Drawing.Point(4, 4);
-            this.rtbMissionsPlanete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbMissionsPlanete.Margin = new System.Windows.Forms.Padding(4);
             this.rtbMissionsPlanete.Name = "rtbMissionsPlanete";
             this.rtbMissionsPlanete.ReadOnly = true;
             this.rtbMissionsPlanete.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -185,9 +185,9 @@
             this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(40)))));
             this.tabPage4.Controls.Add(this.rtbDepensesMax);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage4.Size = new System.Drawing.Size(584, 514);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Dépenses max";
@@ -200,7 +200,7 @@
             this.rtbDepensesMax.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbDepensesMax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.rtbDepensesMax.Location = new System.Drawing.Point(4, 4);
-            this.rtbDepensesMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbDepensesMax.Margin = new System.Windows.Forms.Padding(4);
             this.rtbDepensesMax.Name = "rtbDepensesMax";
             this.rtbDepensesMax.ReadOnly = true;
             this.rtbDepensesMax.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -215,9 +215,9 @@
             this.tabPage5.Controls.Add(this.cboMissions);
             this.tabPage5.Controls.Add(this.label2);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage5.Size = new System.Drawing.Size(584, 514);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Informateurs";
@@ -230,7 +230,7 @@
             this.rtbInformateurs.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbInformateurs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.rtbInformateurs.Location = new System.Drawing.Point(4, 51);
-            this.rtbInformateurs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbInformateurs.Margin = new System.Windows.Forms.Padding(4);
             this.rtbInformateurs.Name = "rtbInformateurs";
             this.rtbInformateurs.ReadOnly = true;
             this.rtbInformateurs.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
@@ -245,7 +245,7 @@
             this.cboMissions.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
             this.cboMissions.FormattingEnabled = true;
             this.cboMissions.Location = new System.Drawing.Point(4, 27);
-            this.cboMissions.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboMissions.Margin = new System.Windows.Forms.Padding(4);
             this.cboMissions.Name = "cboMissions";
             this.cboMissions.Size = new System.Drawing.Size(576, 24);
             this.cboMissions.TabIndex = 7;
@@ -269,7 +269,7 @@
             this.pnlBas.Controls.Add(this.btnRetour);
             this.pnlBas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlBas.Location = new System.Drawing.Point(0, 488);
-            this.pnlBas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBas.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBas.Name = "pnlBas";
             this.pnlBas.Size = new System.Drawing.Size(592, 55);
             this.pnlBas.TabIndex = 1;
@@ -281,7 +281,7 @@
             this.btnRetour.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRetour.ForeColor = System.Drawing.Color.White;
             this.btnRetour.Location = new System.Drawing.Point(0, 0);
-            this.btnRetour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRetour.Margin = new System.Windows.Forms.Padding(4);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(131, 55);
             this.btnRetour.TabIndex = 0;
@@ -298,7 +298,7 @@
             this.Controls.Add(this.pnlBas);
             this.Controls.Add(this.tabStats);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(210)))));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormStats";
             this.Text = "FormStats";
             this.tabStats.ResumeLayout(false);
