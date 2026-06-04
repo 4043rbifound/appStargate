@@ -173,6 +173,26 @@ namespace appStargate.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap EditerMission {
+            get {
+                object obj = ResourceManager.GetObject("EditerMission", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EditerMissionNoir {
+            get {
+                object obj = ResourceManager.GetObject("EditerMissionNoir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fond_gauche {
             get {
                 object obj = ResourceManager.GetObject("fond_gauche", resourceCulture);
@@ -216,6 +236,36 @@ namespace appStargate.Properties {
         internal static System.Drawing.Bitmap imgtext {
             get {
                 object obj = ResourceManager.GetObject("imgtext", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap journal {
+            get {
+                object obj = ResourceManager.GetObject("journal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap journalNoir {
+            get {
+                object obj = ResourceManager.GetObject("journalNoir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap journoir {
+            get {
+                object obj = ResourceManager.GetObject("journoir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

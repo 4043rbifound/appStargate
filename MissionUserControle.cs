@@ -51,5 +51,10 @@ namespace appStargate
         private void lblDateDebutMission_Click(object sender, EventArgs e) { }
         private void lblTitreMission_Click(object sender, EventArgs e) { }
         private void lblBudget_Click(object sender, EventArgs e) { }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

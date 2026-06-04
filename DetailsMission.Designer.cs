@@ -41,6 +41,8 @@
             this.grpActionRapides = new System.Windows.Forms.GroupBox();
             this.grpInfosMissions = new System.Windows.Forms.GroupBox();
             this.grpImagePlanete = new System.Windows.Forms.GroupBox();
+            this.pctJournal = new System.Windows.Forms.PictureBox();
+            this.pctEditerMission = new System.Windows.Forms.PictureBox();
             this.panelMembres = new System.Windows.Forms.FlowLayoutPanel();
             this.flowMembres = new System.Windows.Forms.FlowLayoutPanel();
             this.imagePlanete = new System.Windows.Forms.PictureBox();
@@ -64,6 +66,8 @@
             this.grpActionRapides.SuspendLayout();
             this.grpInfosMissions.SuspendLayout();
             this.grpImagePlanete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).BeginInit();
             this.panelMembres.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -176,7 +180,7 @@
             this.grpObjectifCapture.ForeColor = System.Drawing.Color.White;
             this.grpObjectifCapture.Location = new System.Drawing.Point(1233, 284);
             this.grpObjectifCapture.Name = "grpObjectifCapture";
-            this.grpObjectifCapture.Size = new System.Drawing.Size(350, 425);
+            this.grpObjectifCapture.Size = new System.Drawing.Size(350, 222);
             this.grpObjectifCapture.TabIndex = 32;
             this.grpObjectifCapture.TabStop = false;
             this.grpObjectifCapture.Text = "Objectifs de Capture";
@@ -251,6 +255,35 @@
             this.grpImagePlanete.TabIndex = 33;
             this.grpImagePlanete.TabStop = false;
             this.grpImagePlanete.Text = "La Planète plnt";
+            // 
+            // pctJournal
+            // 
+            this.pctJournal.BackColor = System.Drawing.Color.Transparent;
+            this.pctJournal.BackgroundImage = global::appStargate.Properties.Resources.journal;
+            this.pctJournal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pctJournal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctJournal.Location = new System.Drawing.Point(1436, 539);
+            this.pctJournal.Name = "pctJournal";
+            this.pctJournal.Size = new System.Drawing.Size(134, 142);
+            this.pctJournal.TabIndex = 44;
+            this.pctJournal.TabStop = false;
+            this.pctJournal.Click += new System.EventHandler(this.pctJournal_Click);
+            this.pctJournal.MouseEnter += new System.EventHandler(this.pctJournal_MouseEnter);
+            this.pctJournal.MouseLeave += new System.EventHandler(this.pctJournal_MouseLeave);
+            // 
+            // pctEditerMission
+            // 
+            this.pctEditerMission.BackColor = System.Drawing.Color.Transparent;
+            this.pctEditerMission.BackgroundImage = global::appStargate.Properties.Resources.EditerMission;
+            this.pctEditerMission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pctEditerMission.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctEditerMission.Location = new System.Drawing.Point(1251, 539);
+            this.pctEditerMission.Name = "pctEditerMission";
+            this.pctEditerMission.Size = new System.Drawing.Size(145, 142);
+            this.pctEditerMission.TabIndex = 43;
+            this.pctEditerMission.TabStop = false;
+            this.pctEditerMission.MouseEnter += new System.EventHandler(this.pctEditerMission_MouseEnter);
+            this.pctEditerMission.MouseLeave += new System.EventHandler(this.pctEditerMission_MouseLeave);
             // 
             // panelMembres
             // 
@@ -478,6 +511,8 @@
             this.BackgroundImage = global::appStargate.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1597, 1026);
+            this.Controls.Add(this.pctJournal);
+            this.Controls.Add(this.pctEditerMission);
             this.Controls.Add(this.panelMembres);
             this.Controls.Add(this.grpImagePlanete);
             this.Controls.Add(this.grpObjectifCapture);
@@ -495,6 +530,7 @@
             this.Controls.Add(this.ImageMission);
             this.Controls.Add(this.lblTitreMission);
             this.Controls.Add(this.grpInfosMissions);
+            this.MaximizeBox = false;
             this.Name = "DetailsMission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DetailsMission";
@@ -505,6 +541,8 @@
             this.grpInfosMissions.ResumeLayout(false);
             this.grpInfosMissions.PerformLayout();
             this.grpImagePlanete.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).EndInit();
             this.panelMembres.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -560,5 +598,7 @@
         private System.Windows.Forms.FlowLayoutPanel panelMembres;
         private System.Windows.Forms.FlowLayoutPanel flowMembres;
         private System.Windows.Forms.PictureBox imagePlanete;
+        private System.Windows.Forms.PictureBox pctEditerMission;
+        private System.Windows.Forms.PictureBox pctJournal;
     }
 }

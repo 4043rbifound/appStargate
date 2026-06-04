@@ -111,6 +111,12 @@
     <Compile Include="FormRaces.Designer.cs">
       <DependentUpon>FormRaces.cs</DependentUpon>
     </Compile>
+    <Compile Include="journal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="journal.Designer.cs">
+      <DependentUpon>journal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Membre.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRaces.resx">
       <DependentUpon>FormRaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="journal.resx">
+      <DependentUpon>journal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Membre.resx">
       <DependentUpon>Membre.cs</DependentUpon>
@@ -264,6 +273,10 @@
     <None Include="Images\btnimggris.png" />
     <None Include="Images\ContourText.png" />
     <None Include="Images\civil.png" />
+    <None Include="Images\EditerMission.png" />
+    <None Include="Images\journal.png" />
+    <None Include="Images\journalNoir.png" />
+    <None Include="Images\EditerMissionNoir.png" />
     <Content Include="Images\Jupiter.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
