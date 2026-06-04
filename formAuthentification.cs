@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows .Forms;
+using System.Windows.Forms;
 
 namespace appliPandora
 {
@@ -20,7 +20,11 @@ namespace appliPandora
 
         private void formAuthentification_Load(object sender, EventArgs e)
         {
+            // Met des * quand on écrit dans le champ mot de passe
+            txtMdp.PasswordChar = '*';
 
+            // associe la touche "Entreex" du clavier au btn Valider
+            this.AcceptButton = btnValider;
         }
 
         private void btnValider_Click(object sender, EventArgs e)
@@ -177,8 +181,5 @@ namespace appliPandora
                 timerReorg.Start();
             }
         }
-
-
-        
     }
-}           
+}
