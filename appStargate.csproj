@@ -117,6 +117,12 @@
     <Compile Include="frmEquipageMission.Designer.cs">
       <DependentUpon>frmEquipageMission.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStats.Designer.cs">
+      <DependentUpon>FormStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="Membre.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEquipageMission.resx">
       <DependentUpon>frmEquipageMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStats.resx">
+      <DependentUpon>FormStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Membre.resx">
       <DependentUpon>Membre.cs</DependentUpon>
