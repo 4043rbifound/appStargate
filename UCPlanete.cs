@@ -25,9 +25,7 @@ namespace appStargate
         // Propriété pour récupérer le nom de la planète depuis le formulaire parent
         public string NomPlanete { get { return lblNom.Text; } }
 
-        /// <summary>
-        /// Constructeur surchargé : reçoit toutes les données de la planète
-        /// </summary>
+        
         public UCPlanete(string nom, int temperature, double gravite, bool databazON, string cheminImage)
         {
             InitializeComponent();
@@ -64,10 +62,7 @@ namespace appStargate
             BrancherClics();
         }
 
-        /// <summary>
-        /// Branche l'événement clic sur tous les contrôles du UC
-        /// pour que le clic fonctionne où qu'on clique sur la carte
-        /// </summary>
+        
         private void BrancherClics()
         {
             this.Click += UCPlanete_Click;
@@ -78,9 +73,7 @@ namespace appStargate
             lblDatabaz.Click += UCPlanete_Click;            
         }
 
-        /// <summary>
-        /// Quand on clique, on passe la main au délégué du formulaire parent
-        /// </summary>
+        
         private void UCPlanete_Click(object sender, EventArgs e)
         {
             if (afficheurDetail != null)

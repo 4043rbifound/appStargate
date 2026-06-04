@@ -67,7 +67,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.lblTitrePlanete);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(972, 654);
-            this.splitContainer1.SplitterDistance = 322;
+            this.splitContainer1.SplitterDistance = 321;
             this.splitContainer1.TabIndex = 0;
             // 
             // flpPlanetes
@@ -78,7 +78,7 @@
             this.flpPlanetes.Location = new System.Drawing.Point(0, 0);
             this.flpPlanetes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpPlanetes.Name = "flpPlanetes";
-            this.flpPlanetes.Size = new System.Drawing.Size(322, 654);
+            this.flpPlanetes.Size = new System.Drawing.Size(321, 654);
             this.flpPlanetes.TabIndex = 0;
             // 
             // button1

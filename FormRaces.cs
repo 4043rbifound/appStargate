@@ -113,9 +113,10 @@ namespace appStargate
                     continue;
 
                 // Chemin image
-                string cheminImage = Path.Combine(
-                    Application.StartupPath, "images", nom + ".jpg"
-                );
+                string cheminImage = File.Exists(
+                Path.Combine(Application.StartupPath, "images", nom + ".png"))
+                    ? Path.Combine(Application.StartupPath, "images", nom + ".png")
+                    : Path.Combine(Application.StartupPath, "images", nom + ".jpg");
 
                 // Création du UC
                 UCAlien uc = new UCAlien(nom, couleur, type, cheminImage);
@@ -163,9 +164,7 @@ namespace appStargate
             AfficherAliensFiltre();
         }
 
-        /// <summary>
-        /// Met en surbrillance le bouton actif et remet les autres à la normale
-        /// </summary>
+        
         private void StylerBoutons(Button btnActif)
         {
             Button[] boutons = { btnTous, btnAllies, btnEnnemis };
@@ -181,9 +180,6 @@ namespace appStargate
 
         // ─── MÉTHODE APPELÉE PAR UCFiltres ────────────────────────────────
 
-        /// <summary>
-        /// Applique les filtres nom et couleur depuis le UCFiltres
-        /// </summary>
         public void AppliquerFiltres(string nom, string couleur)
         {
             _filtreNom = nom;

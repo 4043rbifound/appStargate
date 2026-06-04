@@ -128,5 +128,20 @@ namespace appliPandora
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in Application.OpenForms)
+            {
+                if (f is FormStats)
+                {
+                    f.BringToFront();
+                    return;
+                }
+            }
+
+            FormStats frmStats = new FormStats();
+            frmStats.Show();
+        }
     }
 }

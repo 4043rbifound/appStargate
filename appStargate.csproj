@@ -111,6 +111,18 @@
     <Compile Include="FormRaces.Designer.cs">
       <DependentUpon>FormRaces.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEquipageMission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEquipageMission.Designer.cs">
+      <DependentUpon>frmEquipageMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStats.Designer.cs">
+      <DependentUpon>FormStats.cs</DependentUpon>
+    </Compile>
     <Compile Include="journal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +194,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="journal.resx">
       <DependentUpon>journal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEquipageMission.resx">
+      <DependentUpon>frmEquipageMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStats.resx">
+      <DependentUpon>FormStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Membre.resx">
       <DependentUpon>Membre.cs</DependentUpon>
