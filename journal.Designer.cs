@@ -68,7 +68,6 @@
             this.lblBilanCaptures = new System.Windows.Forms.Label();
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
             this.lblEvenements = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnPDF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepenses)).BeginInit();
@@ -514,15 +513,6 @@
             this.lblEvenements.TabIndex = 76;
             this.lblEvenements.Text = "Evénements du Journal";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnPDF
             // 
             this.btnPDF.Location = new System.Drawing.Point(1251, 26);
@@ -540,7 +530,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1597, 1026);
             this.Controls.Add(this.btnPDF);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblEvenements);
             this.Controls.Add(this.lblBilanCaptures);
             this.Controls.Add(this.pictureBox15);
@@ -643,7 +632,6 @@
         private System.Windows.Forms.Label lblBilanCaptures;
         private System.Windows.Forms.PictureBox pictureBox17;
         private System.Windows.Forms.Label lblEvenements;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPDF;
     }
 }
