@@ -17,7 +17,7 @@ namespace appliPandora
         {
             InitializeComponent();
         }
-
+        private Point _pointDepart;
         private void formAuthentification_Load(object sender, EventArgs e)
         {
             // Met des * quand on écrit dans le champ mot de passe
@@ -180,6 +180,25 @@ namespace appliPandora
                 };
                 timerReorg.Start();
             }
+        }
+
+        private void formAuthentification_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void formAuthentification_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

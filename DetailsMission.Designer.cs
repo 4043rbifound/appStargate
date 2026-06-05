@@ -47,7 +47,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.grpImagePlanete = new System.Windows.Forms.GroupBox();
-            this.imagePlanete = new System.Windows.Forms.PictureBox();
+            this.pctPlanete = new System.Windows.Forms.PictureBox();
             this.pctJournal = new System.Windows.Forms.PictureBox();
             this.pctEditerMission = new System.Windows.Forms.PictureBox();
             this.panelMembres = new System.Windows.Forms.FlowLayoutPanel();
@@ -74,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.grpImagePlanete.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPlanete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).BeginInit();
             this.panelMembres.SuspendLayout();
@@ -332,7 +332,7 @@
             // grpImagePlanete
             // 
             this.grpImagePlanete.BackColor = System.Drawing.Color.Transparent;
-            this.grpImagePlanete.Controls.Add(this.imagePlanete);
+            this.grpImagePlanete.Controls.Add(this.pctPlanete);
             this.grpImagePlanete.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpImagePlanete.ForeColor = System.Drawing.Color.White;
             this.grpImagePlanete.Location = new System.Drawing.Point(119, 284);
@@ -342,15 +342,15 @@
             this.grpImagePlanete.TabStop = false;
             this.grpImagePlanete.Text = "La Planète plnt";
             // 
-            // imagePlanete
+            // pctPlanete
             // 
-            this.imagePlanete.BackgroundImage = global::appStargate.Properties.Resources.Saturne;
-            this.imagePlanete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imagePlanete.Location = new System.Drawing.Point(11, 48);
-            this.imagePlanete.Name = "imagePlanete";
-            this.imagePlanete.Size = new System.Drawing.Size(476, 342);
-            this.imagePlanete.TabIndex = 0;
-            this.imagePlanete.TabStop = false;
+            this.pctPlanete.BackgroundImage = global::appStargate.Properties.Resources.Saturne;
+            this.pctPlanete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pctPlanete.Location = new System.Drawing.Point(11, 48);
+            this.pctPlanete.Name = "pctPlanete";
+            this.pctPlanete.Size = new System.Drawing.Size(476, 342);
+            this.pctPlanete.TabIndex = 0;
+            this.pctPlanete.TabStop = false;
             // 
             // pctJournal
             // 
@@ -610,7 +610,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.grpImagePlanete.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctPlanete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).EndInit();
             this.panelMembres.ResumeLayout(false);
@@ -666,7 +666,7 @@
         private System.Windows.Forms.GroupBox grpImagePlanete;
         private System.Windows.Forms.FlowLayoutPanel panelMembres;
         private System.Windows.Forms.FlowLayoutPanel flowMembres;
-        private System.Windows.Forms.PictureBox imagePlanete;
+        private System.Windows.Forms.PictureBox pctPlanete;
         private System.Windows.Forms.PictureBox pctEditerMission;
         private System.Windows.Forms.PictureBox pctJournal;
         private System.Windows.Forms.PictureBox pictureBox20;

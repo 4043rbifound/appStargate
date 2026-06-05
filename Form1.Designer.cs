@@ -56,7 +56,6 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pctQuitter = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -76,7 +75,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +90,7 @@
             this.btnNouvelleMission.Name = "btnNouvelleMission";
             this.btnNouvelleMission.Size = new System.Drawing.Size(251, 91);
             this.btnNouvelleMission.TabIndex = 1;
-            this.btnNouvelleMission.Text = "Nouvelle mission";
+            this.btnNouvelleMission.Text = "NOUVELLE MISSION";
             this.btnNouvelleMission.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNouvelleMission.UseVisualStyleBackColor = false;
             this.btnNouvelleMission.Click += new System.EventHandler(this.button2_Click);
@@ -108,7 +106,7 @@
             this.btn_NVplnt.Name = "btn_NVplnt";
             this.btn_NVplnt.Size = new System.Drawing.Size(251, 91);
             this.btn_NVplnt.TabIndex = 3;
-            this.btn_NVplnt.Text = "Infos Planètes";
+            this.btn_NVplnt.Text = "🪐 | PLANÈTES";
             this.btn_NVplnt.UseVisualStyleBackColor = false;
             this.btn_NVplnt.Click += new System.EventHandler(this.btn_NVplnt_Click);
             // 
@@ -166,7 +164,7 @@
             this.btnRaces.Name = "btnRaces";
             this.btnRaces.Size = new System.Drawing.Size(251, 91);
             this.btnRaces.TabIndex = 8;
-            this.btnRaces.Text = "👽 Races";
+            this.btnRaces.Text = "👽 | ESPÈCES";
             this.btnRaces.UseVisualStyleBackColor = false;
             this.btnRaces.Click += new System.EventHandler(this.btnRaces_Click);
             // 
@@ -229,7 +227,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(251, 91);
             this.button1.TabIndex = 14;
-            this.button1.Text = "Statistique";
+            this.button1.Text = "STATISTIQUES";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -377,16 +375,6 @@
             this.pctQuitter.TabStop = false;
             this.pctQuitter.Click += new System.EventHandler(this.pctQuitter_Click);
             // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.pictureBox18.Location = new System.Drawing.Point(1338, -1);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(10, 92);
-            this.pictureBox18.TabIndex = 32;
-            this.pictureBox18.TabStop = false;
-            // 
             // pictureBox19
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
@@ -421,7 +409,6 @@
             this.ClientSize = new System.Drawing.Size(1597, 1026);
             this.Controls.Add(this.pictureBox20);
             this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.pictureBox18);
             this.Controls.Add(this.pctQuitter);
             this.Controls.Add(this.btnNouvelleMission);
             this.Controls.Add(this.pictureBox16);
@@ -473,7 +460,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
             this.ResumeLayout(false);
@@ -508,7 +494,6 @@
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pctQuitter;
-        private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
     }
