@@ -93,8 +93,10 @@ namespace appStargate
             if (_ds.Tables["InfosMission"].Rows.Count > 0)
             {
                 DataRow infos = _ds.Tables["InfosMission"].Rows[0];
-                _dateDepart = infos["dateDepart"].ToString();
-                _dateRetour = infos["dateRetour"].ToString();
+                _dateDepart = Convert.ToDateTime(infos["dateDepart"])
+                    .ToString("dd-MM-yyyy");
+                _dateRetour = Convert.ToDateTime(infos["dateRetour"])
+                                    .ToString("dd-MM-yyyy");
                 _feuilleDeRoute = infos["feuilleDeRoute"].ToString();
                 _budget = Convert.ToInt32(infos["budget"]);
                 _nomChef = $"{infos["prenomChef"]} {infos["nomChef"]}";
