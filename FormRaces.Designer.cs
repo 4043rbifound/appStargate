@@ -43,56 +43,74 @@
             this.pnlFiltres.Controls.Add(this.btnTous);
             this.pnlFiltres.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlFiltres.Location = new System.Drawing.Point(0, 0);
+            this.pnlFiltres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlFiltres.Name = "pnlFiltres";
-            this.pnlFiltres.Size = new System.Drawing.Size(200, 450);
+            this.pnlFiltres.Size = new System.Drawing.Size(300, 692);
             this.pnlFiltres.TabIndex = 0;
             // 
             // btnEnnemis
             // 
-            this.btnEnnemis.Location = new System.Drawing.Point(10, 110);
+            this.btnEnnemis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnEnnemis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEnnemis.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnnemis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.btnEnnemis.Location = new System.Drawing.Point(15, 169);
+            this.btnEnnemis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEnnemis.Name = "btnEnnemis";
-            this.btnEnnemis.Size = new System.Drawing.Size(160, 35);
+            this.btnEnnemis.Size = new System.Drawing.Size(240, 54);
             this.btnEnnemis.TabIndex = 2;
             this.btnEnnemis.Text = "☠ Ennemis";
-            this.btnEnnemis.UseVisualStyleBackColor = true;
+            this.btnEnnemis.UseVisualStyleBackColor = false;
             this.btnEnnemis.Click += new System.EventHandler(this.btnEnnemis_Click);
             // 
             // btnAllies
             // 
-            this.btnAllies.Location = new System.Drawing.Point(10, 65);
+            this.btnAllies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnAllies.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllies.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAllies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.btnAllies.Location = new System.Drawing.Point(15, 100);
+            this.btnAllies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAllies.Name = "btnAllies";
-            this.btnAllies.Size = new System.Drawing.Size(160, 35);
+            this.btnAllies.Size = new System.Drawing.Size(240, 54);
             this.btnAllies.TabIndex = 1;
             this.btnAllies.Text = "⚡ Alliés";
-            this.btnAllies.UseVisualStyleBackColor = true;
+            this.btnAllies.UseVisualStyleBackColor = false;
             this.btnAllies.Click += new System.EventHandler(this.btnAllies_Click);
             // 
             // btnTous
             // 
-            this.btnTous.Location = new System.Drawing.Point(10, 20);
+            this.btnTous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnTous.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTous.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTous.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.btnTous.Location = new System.Drawing.Point(15, 31);
+            this.btnTous.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTous.Name = "btnTous";
-            this.btnTous.Size = new System.Drawing.Size(160, 35);
+            this.btnTous.Size = new System.Drawing.Size(240, 54);
             this.btnTous.TabIndex = 0;
             this.btnTous.Text = "Tous";
-            this.btnTous.UseVisualStyleBackColor = true;
+            this.btnTous.UseVisualStyleBackColor = false;
             this.btnTous.Click += new System.EventHandler(this.btnTous_Click);
             // 
             // flpAliens
             // 
             this.flpAliens.AutoScroll = true;
             this.flpAliens.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpAliens.Location = new System.Drawing.Point(200, 0);
+            this.flpAliens.Location = new System.Drawing.Point(300, 0);
+            this.flpAliens.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flpAliens.Name = "flpAliens";
-            this.flpAliens.Size = new System.Drawing.Size(600, 450);
+            this.flpAliens.Size = new System.Drawing.Size(900, 692);
             this.flpAliens.TabIndex = 1;
             // 
             // FormRaces
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.flpAliens);
             this.Controls.Add(this.pnlFiltres);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormRaces";
             this.Text = "FormRaces";
             this.Load += new System.EventHandler(this.FormRaces_Load);
