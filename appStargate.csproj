@@ -283,6 +283,9 @@
     <Content Include="bin\Debug\x86\SQLite.Interop.dll" />
     <Content Include="Images\458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom.png" />
     <Content Include="Images\694985.png" />
+    <None Include="Resources\minimiser.png" />
+    <None Include="Resources\croix.png" />
+    <None Include="Resources\marque-x.png" />
     <None Include="Images\Artemis_II_patch.png" />
     <None Include="Images\fond_gauche.png" />
     <None Include="Images\imgbtn.png" />

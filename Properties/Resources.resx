@@ -127,8 +127,8 @@
   <data name="journalNoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\journalNoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondCadre" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\fondCadre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pieces" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pieces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="imgtext" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\imgtext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,11 +181,11 @@
   <data name="civil1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\civil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="694985" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\694985.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="EditerMission" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\EditerMission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditerMissionNoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\EditerMissionNoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logoSg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\logoSg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +199,17 @@
   <data name="saturnRings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\saturnRings.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="croix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\croix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fond_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\fond_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ContourText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\ContourText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EditerMissionNoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\EditerMissionNoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondCadre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\fondCadre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="out" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,10 +217,10 @@
   <data name="btnimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\btnimg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pieces" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\pieces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="694985" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\694985.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="croix" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\croix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimiser" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimiser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

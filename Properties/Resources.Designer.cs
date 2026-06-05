@@ -323,6 +323,16 @@ namespace appStargate.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minimiser {
+            get {
+                object obj = ResourceManager.GetObject("minimiser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap navette {
             get {
                 object obj = ResourceManager.GetObject("navette", resourceCulture);
