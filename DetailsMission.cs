@@ -1,6 +1,7 @@
 ﻿using appliPandora;
 using System;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
@@ -193,27 +194,12 @@ namespace appStargate
             frmJournal.ShowDialog();
         }
 
-        private void pctEditerMission_Click(object sender, EventArgs e)
-        {
-            DateTime dateRetour = Convert.ToDateTime(maMission["dateRetour"]);
+        
 
-            if (dateRetour < DateTime.Today)
-            {
-                MessageBox.Show("Cette mission est terminée, elle ne peut plus être modifiée.",
-                    "Mission terminée", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            formEditMission frm = new formEditMission(maMission, this);
-            frm.Show();
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e) { this.Close(); }
+        
         private void DetailsMission_Load(object sender, EventArgs e) { }
         private void lblTitreMission_Click(object sender, EventArgs e) { }
         private void lblObjDatabaz_Click(object sender, EventArgs e) { }
-        private void lblSolde_Click(object sender, EventArgs e) { }
-        private void grpObjectifCapture_Enter(object sender, EventArgs e) { }
         private void pctJournal_MouseEnter(object sender, EventArgs e) { pctJournal.BackColor = Color.White; pctJournal.BackgroundImage = Properties.Resources.journoir; }
         private void pctJournal_MouseLeave(object sender, EventArgs e) { pctJournal.BackColor = Color.Transparent; pctJournal.BackgroundImage = Properties.Resources.journal; }
         private void pctEditerMission_MouseEnter(object sender, EventArgs e) { pctEditerMission.BackColor = Color.White; pctEditerMission.BackgroundImage = Properties.Resources.EditerMissionNoir; }
