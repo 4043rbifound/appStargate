@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SQLite;
+using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -10,7 +11,7 @@ namespace appStargate
     public partial class journal : Form
     {
         private BindingSource _bsJournal = new BindingSource();
-
+        private Point _pointDepart;
         public journal(string nomPlanete, int numeroMission)
         {
             InitializeComponent();
@@ -173,6 +174,44 @@ namespace appStargate
         private void journal_Load(object sender, EventArgs e)
         {
             lblDateJournal.Text = DateTime.Parse(lblDateJournal.Text).ToString("dd/MM/yyyy");
+        }
+
+        private void pctQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox8_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pictureBox8_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void pictureBox9_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pictureBox9_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
         }
     }
 }

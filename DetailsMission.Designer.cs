@@ -62,6 +62,10 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblFeuilleDeRoute = new System.Windows.Forms.Label();
             this.ImageMission = new System.Windows.Forms.PictureBox();
+            this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox19 = new System.Windows.Forms.PictureBox();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.pctQuitter = new System.Windows.Forms.PictureBox();
             this.grpObjectifCapture.SuspendLayout();
             this.grpActionRapides.SuspendLayout();
             this.grpInfosMissions.SuspendLayout();
@@ -83,6 +87,10 @@
             this.diverseInfosPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitreMission
@@ -400,7 +408,7 @@
             this.pictureBox10.BackgroundImage = global::appStargate.Properties.Resources._out;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Location = new System.Drawing.Point(-2, 932);
+            this.pictureBox10.Location = new System.Drawing.Point(1228, -2);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(97, 94);
             this.pictureBox10.TabIndex = 14;
@@ -447,6 +455,8 @@
             this.pictureBox8.Size = new System.Drawing.Size(1621, 104);
             this.pictureBox8.TabIndex = 38;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
             // pictureBox9
             // 
@@ -456,6 +466,8 @@
             this.pictureBox9.Size = new System.Drawing.Size(96, 956);
             this.pictureBox9.TabIndex = 39;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseDown);
+            this.pictureBox9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseMove);
             // 
             // diverseInfosPanel
             // 
@@ -503,6 +515,54 @@
             this.ImageMission.TabIndex = 17;
             this.ImageMission.TabStop = false;
             // 
+            // pictureBox20
+            // 
+            this.pictureBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.pictureBox20.Location = new System.Drawing.Point(1474, -1);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox20.Name = "pictureBox20";
+            this.pictureBox20.Size = new System.Drawing.Size(10, 92);
+            this.pictureBox20.TabIndex = 48;
+            this.pictureBox20.TabStop = false;
+            // 
+            // pictureBox19
+            // 
+            this.pictureBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.pictureBox19.BackgroundImage = global::appStargate.Properties.Resources.minimiser;
+            this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox19.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox19.Location = new System.Drawing.Point(1362, -2);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox19.Name = "pictureBox19";
+            this.pictureBox19.Size = new System.Drawing.Size(98, 94);
+            this.pictureBox19.TabIndex = 47;
+            this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.pictureBox18.Location = new System.Drawing.Point(1338, -2);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(10, 92);
+            this.pictureBox18.TabIndex = 46;
+            this.pictureBox18.TabStop = false;
+            // 
+            // pctQuitter
+            // 
+            this.pctQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.pctQuitter.BackgroundImage = global::appStargate.Properties.Resources.croix;
+            this.pctQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pctQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctQuitter.Location = new System.Drawing.Point(1499, -2);
+            this.pctQuitter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pctQuitter.Name = "pctQuitter";
+            this.pctQuitter.Size = new System.Drawing.Size(98, 94);
+            this.pctQuitter.TabIndex = 45;
+            this.pctQuitter.TabStop = false;
+            this.pctQuitter.Click += new System.EventHandler(this.pctQuitter_Click);
+            // 
             // DetailsMission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -511,6 +571,10 @@
             this.BackgroundImage = global::appStargate.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1597, 1026);
+            this.Controls.Add(this.pictureBox20);
+            this.Controls.Add(this.pictureBox19);
+            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.pctQuitter);
             this.Controls.Add(this.pctJournal);
             this.Controls.Add(this.pctEditerMission);
             this.Controls.Add(this.panelMembres);
@@ -530,6 +594,7 @@
             this.Controls.Add(this.ImageMission);
             this.Controls.Add(this.lblTitreMission);
             this.Controls.Add(this.grpInfosMissions);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "DetailsMission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -559,6 +624,10 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -600,5 +669,9 @@
         private System.Windows.Forms.PictureBox imagePlanete;
         private System.Windows.Forms.PictureBox pctEditerMission;
         private System.Windows.Forms.PictureBox pctJournal;
+        private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.PictureBox pictureBox19;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox pctQuitter;
     }
 }

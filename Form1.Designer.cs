@@ -393,7 +393,7 @@
             this.pictureBox19.BackgroundImage = global::appStargate.Properties.Resources.minimiser;
             this.pictureBox19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox19.Location = new System.Drawing.Point(1362, 0);
+            this.pictureBox19.Location = new System.Drawing.Point(1362, -1);
             this.pictureBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.Size = new System.Drawing.Size(98, 94);

@@ -12,7 +12,7 @@ namespace appStargate
     {
         private DataRow maMission;
         private DataTable tableMembres = new DataTable();
-
+        private Point _pointDepart;
         public DetailsMission(DataRow ligneRecue, string nomChefComplet)
         {
             InitializeComponent();
@@ -206,6 +206,44 @@ namespace appStargate
         {
             pctEditerMission.BackColor = Color.Transparent;
             pctEditerMission.BackgroundImage = Properties.Resources.EditerMission;
+        }
+
+        private void pictureBox8_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pictureBox8_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void pictureBox9_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pictureBox9_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void pctQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
