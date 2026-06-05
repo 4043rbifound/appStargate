@@ -576,7 +576,7 @@
             // 
             // pnlEdition
             // 
-            this.pnlEdition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(20)))));
+            this.pnlEdition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(12)))), ((int)(((byte)(20)))));
             this.pnlEdition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlEdition.Controls.Add(this.btnAnnuler);
             this.pnlEdition.Controls.Add(this.btnValider);
@@ -594,22 +594,30 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(158, 485);
+            this.btnAnnuler.BackColor = System.Drawing.Color.Red;
+            this.btnAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnuler.ForeColor = System.Drawing.Color.White;
+            this.btnAnnuler.Location = new System.Drawing.Point(172, 520);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(95, 100);
+            this.btnAnnuler.Size = new System.Drawing.Size(95, 33);
             this.btnAnnuler.TabIndex = 7;
             this.btnAnnuler.Text = "✖ Annuler";
-            this.btnAnnuler.UseVisualStyleBackColor = true;
+            this.btnAnnuler.UseVisualStyleBackColor = false;
             this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(11, 485);
+            this.btnValider.BackColor = System.Drawing.Color.Lime;
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValider.ForeColor = System.Drawing.Color.Black;
+            this.btnValider.Location = new System.Drawing.Point(172, 559);
             this.btnValider.Name = "btnValider";
-            this.btnValider.Size = new System.Drawing.Size(97, 100);
+            this.btnValider.Size = new System.Drawing.Size(97, 33);
             this.btnValider.TabIndex = 6;
             this.btnValider.Text = "✔ Valider";
-            this.btnValider.UseVisualStyleBackColor = true;
+            this.btnValider.UseVisualStyleBackColor = false;
             this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
             // 
             // pnlEvenement
@@ -625,37 +633,52 @@
             // 
             // txtCommentaire
             // 
-            this.txtCommentaire.Location = new System.Drawing.Point(34, 94);
+            this.txtCommentaire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtCommentaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCommentaire.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentaire.ForeColor = System.Drawing.Color.White;
+            this.txtCommentaire.Location = new System.Drawing.Point(3, 92);
+            this.txtCommentaire.Multiline = true;
             this.txtCommentaire.Name = "txtCommentaire";
-            this.txtCommentaire.Size = new System.Drawing.Size(100, 20);
+            this.txtCommentaire.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCommentaire.Size = new System.Drawing.Size(233, 191);
             this.txtCommentaire.TabIndex = 13;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(31, 76);
+            this.label11.Location = new System.Drawing.Point(3, 70);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 13);
+            this.label11.Size = new System.Drawing.Size(99, 17);
             this.label11.TabIndex = 10;
             this.label11.Text = "Commentaire :";
             // 
             // dtpEvenement
             // 
-            this.dtpEvenement.Location = new System.Drawing.Point(34, 45);
+            this.dtpEvenement.CalendarForeColor = System.Drawing.Color.White;
+            this.dtpEvenement.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.dtpEvenement.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.dtpEvenement.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtpEvenement.CustomFormat = "dd/MM/yyyy";
+            this.dtpEvenement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEvenement.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEvenement.Location = new System.Drawing.Point(6, 36);
             this.dtpEvenement.Name = "dtpEvenement";
-            this.dtpEvenement.Size = new System.Drawing.Size(200, 20);
+            this.dtpEvenement.Size = new System.Drawing.Size(100, 25);
             this.dtpEvenement.TabIndex = 9;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(31, 25);
+            this.label12.Location = new System.Drawing.Point(3, 12);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 13);
+            this.label12.Size = new System.Drawing.Size(154, 17);
             this.label12.TabIndex = 8;
-            this.label12.Text = "Date :";
+            this.label12.Text = "DATE DE L\'ÉVÈNEMENT";
             // 
             // pnlDepense
             // 
@@ -697,30 +720,33 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(15, 172);
+            this.label5.Location = new System.Drawing.Point(15, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(54, 21);
             this.label5.TabIndex = 12;
             this.label5.Text = "Type :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(15, 123);
+            this.label6.Location = new System.Drawing.Point(15, 113);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 13);
+            this.label6.Size = new System.Drawing.Size(60, 21);
             this.label6.TabIndex = 11;
             this.label6.Text = "Motif :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(15, 76);
+            this.label7.Location = new System.Drawing.Point(15, 66);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.Size = new System.Drawing.Size(84, 21);
             this.label7.TabIndex = 10;
             this.label7.Text = "Montant :";
             // 
@@ -734,10 +760,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(15, 25);
+            this.label8.Location = new System.Drawing.Point(15, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 13);
+            this.label8.Size = new System.Drawing.Size(54, 21);
             this.label8.TabIndex = 8;
             this.label8.Text = "Date :";
             // 
@@ -781,30 +808,33 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(16, 172);
+            this.label4.Location = new System.Drawing.Point(16, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.Size = new System.Drawing.Size(110, 21);
             this.label4.TabIndex = 4;
             this.label4.Text = "Informateur :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 123);
+            this.label3.Location = new System.Drawing.Point(16, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 13);
+            this.label3.Size = new System.Drawing.Size(117, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "Appréciation :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(20, 76);
+            this.label2.Location = new System.Drawing.Point(20, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Somme :";
             // 
@@ -818,41 +848,65 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(16, 25);
+            this.label1.Location = new System.Drawing.Point(16, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(54, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Date :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnNouvelEvenement
             // 
-            this.btnNouvelEvenement.Location = new System.Drawing.Point(61, 126);
+            this.btnNouvelEvenement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnNouvelEvenement.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNouvelEvenement.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.btnNouvelEvenement.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.btnNouvelEvenement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNouvelEvenement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNouvelEvenement.ForeColor = System.Drawing.Color.White;
+            this.btnNouvelEvenement.Location = new System.Drawing.Point(32, 103);
             this.btnNouvelEvenement.Name = "btnNouvelEvenement";
-            this.btnNouvelEvenement.Size = new System.Drawing.Size(150, 35);
+            this.btnNouvelEvenement.Size = new System.Drawing.Size(194, 35);
             this.btnNouvelEvenement.TabIndex = 2;
             this.btnNouvelEvenement.Text = "📋 Nouvel événement";
-            this.btnNouvelEvenement.UseVisualStyleBackColor = true;
+            this.btnNouvelEvenement.UseVisualStyleBackColor = false;
             this.btnNouvelEvenement.Click += new System.EventHandler(this.btnNouvelEvenement_Click);
             // 
             // btnNouvelleDepense
             // 
-            this.btnNouvelleDepense.Location = new System.Drawing.Point(61, 76);
+            this.btnNouvelleDepense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnNouvelleDepense.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNouvelleDepense.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.btnNouvelleDepense.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.btnNouvelleDepense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNouvelleDepense.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNouvelleDepense.ForeColor = System.Drawing.Color.White;
+            this.btnNouvelleDepense.Location = new System.Drawing.Point(32, 65);
             this.btnNouvelleDepense.Name = "btnNouvelleDepense";
-            this.btnNouvelleDepense.Size = new System.Drawing.Size(150, 35);
+            this.btnNouvelleDepense.Size = new System.Drawing.Size(194, 32);
             this.btnNouvelleDepense.TabIndex = 1;
             this.btnNouvelleDepense.Text = "💰 Nouvelle dépense";
-            this.btnNouvelleDepense.UseVisualStyleBackColor = true;
+            this.btnNouvelleDepense.UseVisualStyleBackColor = false;
             this.btnNouvelleDepense.Click += new System.EventHandler(this.btnNouvelleDepense_Click);
             // 
             // btnNouveauContact
             // 
-            this.btnNouveauContact.Location = new System.Drawing.Point(61, 25);
+            this.btnNouveauContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.btnNouveauContact.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNouveauContact.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.btnNouveauContact.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(80)))), ((int)(((byte)(100)))));
+            this.btnNouveauContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNouveauContact.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNouveauContact.ForeColor = System.Drawing.Color.White;
+            this.btnNouveauContact.Location = new System.Drawing.Point(32, 24);
             this.btnNouveauContact.Name = "btnNouveauContact";
-            this.btnNouveauContact.Size = new System.Drawing.Size(150, 35);
+            this.btnNouveauContact.Size = new System.Drawing.Size(194, 35);
             this.btnNouveauContact.TabIndex = 0;
             this.btnNouveauContact.Text = "👤 Nouveau contact";
-            this.btnNouveauContact.UseVisualStyleBackColor = true;
+            this.btnNouveauContact.UseVisualStyleBackColor = false;
             this.btnNouveauContact.Click += new System.EventHandler(this.btnNouveauContact_Click);
             // 
             // DetailsMission
