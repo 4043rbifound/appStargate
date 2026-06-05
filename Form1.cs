@@ -40,6 +40,12 @@ namespace appliPandora
                 { MesDatas.DsGlobal.Tables["Mission"].Clear(); }
                 if (MesDatas.DsGlobal.Tables.Contains("Membre"))
                 { MesDatas.DsGlobal.Tables["Membre"].Clear(); }
+                if (MesDatas.DsGlobal.Tables.Contains("Composer"))
+                { MesDatas.DsGlobal.Tables["Composer"].Clear(); }
+
+                SQLiteCommand cmdComposer = new SQLiteCommand("SELECT * FROM Composer", maConnec);
+                SQLiteDataAdapter daComposer = new SQLiteDataAdapter(cmdComposer);
+                daComposer.Fill(MesDatas.DsGlobal, "Composer");
 
                 SQLiteCommand cmdMission = new SQLiteCommand("SELECT * FROM Mission", maConnec);
                 SQLiteDataAdapter daMission = new SQLiteDataAdapter(cmdMission);

@@ -464,5 +464,10 @@ namespace appStargate
         {
             Application.Exit();
         }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
