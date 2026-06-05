@@ -2,15 +2,8 @@
 {
     partial class DetailsMission
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lblTitreMission = new System.Windows.Forms.Label();
@@ -64,6 +53,35 @@
             this.pctQuitter = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
+            this.pnlEdition = new System.Windows.Forms.Panel();
+            this.btnAnnuler = new System.Windows.Forms.Button();
+            this.btnValider = new System.Windows.Forms.Button();
+            this.pnlEvenement = new System.Windows.Forms.Panel();
+            this.txtCommentaire = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dtpEvenement = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pnlContact = new System.Windows.Forms.Panel();
+            this.cboInformateur = new System.Windows.Forms.ComboBox();
+            this.txtAppreciation = new System.Windows.Forms.TextBox();
+            this.txtSomme = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpContact = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNouvelEvenement = new System.Windows.Forms.Button();
+            this.btnNouvelleDepense = new System.Windows.Forms.Button();
+            this.btnNouveauContact = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpDepense = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtMontant = new System.Windows.Forms.TextBox();
+            this.txtMotif = new System.Windows.Forms.TextBox();
+            this.cboTypeDepense = new System.Windows.Forms.ComboBox();
+            this.pnlDepense = new System.Windows.Forms.Panel();
             this.grpObjectifCapture.SuspendLayout();
             this.grpActionRapides.SuspendLayout();
             this.grpInfosMissions.SuspendLayout();
@@ -87,6 +105,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
+            this.pnlEdition.SuspendLayout();
+            this.pnlEvenement.SuspendLayout();
+            this.pnlContact.SuspendLayout();
+            this.pnlDepense.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitreMission
@@ -192,12 +214,11 @@
             // 
             // lblListeObjectifs
             // 
-            this.lblListeObjectifs.AutoSize = true;
             this.lblListeObjectifs.BackColor = System.Drawing.Color.Transparent;
             this.lblListeObjectifs.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblListeObjectifs.Location = new System.Drawing.Point(9, 38);
             this.lblListeObjectifs.Name = "lblListeObjectifs";
-            this.lblListeObjectifs.Size = new System.Drawing.Size(81, 29);
+            this.lblListeObjectifs.Size = new System.Drawing.Size(472, 378);
             this.lblListeObjectifs.TabIndex = 0;
             this.lblListeObjectifs.Text = "label2";
             // 
@@ -264,9 +285,9 @@
             // grpInfosMissions
             // 
             this.grpInfosMissions.BackColor = System.Drawing.Color.Transparent;
+            this.grpInfosMissions.Controls.Add(this.lblChefMission);
             this.grpInfosMissions.Controls.Add(this.lblObjDatabaz);
             this.grpInfosMissions.Controls.Add(this.pictureBox5);
-            this.grpInfosMissions.Controls.Add(this.lblChefMission);
             this.grpInfosMissions.Controls.Add(this.lblSolde);
             this.grpInfosMissions.Controls.Add(this.pictureBox3);
             this.grpInfosMissions.Controls.Add(this.lblBudget);
@@ -351,6 +372,7 @@
             this.pctEditerMission.Size = new System.Drawing.Size(145, 142);
             this.pctEditerMission.TabIndex = 43;
             this.pctEditerMission.TabStop = false;
+            this.pctEditerMission.Click += new System.EventHandler(this.pctEditerMission_Click);
             this.pctEditerMission.MouseEnter += new System.EventHandler(this.pctEditerMission_MouseEnter);
             this.pctEditerMission.MouseLeave += new System.EventHandler(this.pctEditerMission_MouseLeave);
             // 
@@ -360,7 +382,7 @@
             this.panelMembres.BackgroundImage = global::appStargate.Properties.Resources.imgfondtext;
             this.panelMembres.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMembres.Controls.Add(this.flowMembres);
-            this.panelMembres.Location = new System.Drawing.Point(119, 725);
+            this.panelMembres.Location = new System.Drawing.Point(565, 749);
             this.panelMembres.MaximumSize = new System.Drawing.Size(1093, 320);
             this.panelMembres.Name = "panelMembres";
             this.panelMembres.Padding = new System.Windows.Forms.Padding(32, 18, 0, 0);
@@ -428,8 +450,6 @@
             this.pictureBox8.Size = new System.Drawing.Size(1621, 104);
             this.pictureBox8.TabIndex = 38;
             this.pictureBox8.TabStop = false;
-            this.pictureBox8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.pictureBox8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
             // pictureBox9
             // 
@@ -439,8 +459,6 @@
             this.pictureBox9.Size = new System.Drawing.Size(96, 956);
             this.pictureBox9.TabIndex = 39;
             this.pictureBox9.TabStop = false;
-            this.pictureBox9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseDown);
-            this.pictureBox9.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox9_MouseMove);
             // 
             // diverseInfosPanel
             // 
@@ -448,7 +466,7 @@
             this.diverseInfosPanel.BackgroundImage = global::appStargate.Properties.Resources.imgfondtext;
             this.diverseInfosPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.diverseInfosPanel.Controls.Add(this.flowLayoutPanel1);
-            this.diverseInfosPanel.Location = new System.Drawing.Point(119, 725);
+            this.diverseInfosPanel.Location = new System.Drawing.Point(317, 171);
             this.diverseInfosPanel.Name = "diverseInfosPanel";
             this.diverseInfosPanel.Size = new System.Drawing.Size(1093, 320);
             this.diverseInfosPanel.TabIndex = 0;
@@ -524,7 +542,6 @@
             this.pictureBox19.Size = new System.Drawing.Size(98, 94);
             this.pictureBox19.TabIndex = 47;
             this.pictureBox19.TabStop = false;
-            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
             // 
             // pictureBox20
             // 
@@ -535,6 +552,329 @@
             this.pictureBox20.Size = new System.Drawing.Size(10, 92);
             this.pictureBox20.TabIndex = 48;
             this.pictureBox20.TabStop = false;
+            // 
+            // pnlEdition
+            // 
+            this.pnlEdition.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(12)))), ((int)(((byte)(20)))));
+            this.pnlEdition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlEdition.Controls.Add(this.pnlContact);
+            this.pnlEdition.Controls.Add(this.btnAnnuler);
+            this.pnlEdition.Controls.Add(this.btnValider);
+            this.pnlEdition.Controls.Add(this.btnNouvelEvenement);
+            this.pnlEdition.Controls.Add(this.btnNouvelleDepense);
+            this.pnlEdition.Controls.Add(this.btnNouveauContact);
+            this.pnlEdition.Controls.Add(this.pnlEvenement);
+            this.pnlEdition.Controls.Add(this.pnlDepense);
+            this.pnlEdition.Controls.Add(this.diverseInfosPanel);
+            this.pnlEdition.Location = new System.Drawing.Point(0, 0);
+            this.pnlEdition.Name = "pnlEdition";
+            this.pnlEdition.Size = new System.Drawing.Size(475, 1025);
+            this.pnlEdition.TabIndex = 45;
+            this.pnlEdition.Visible = false;
+            // 
+            // btnAnnuler
+            // 
+            this.btnAnnuler.BackColor = System.Drawing.Color.Red;
+            this.btnAnnuler.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnnuler.ForeColor = System.Drawing.Color.White;
+            this.btnAnnuler.Location = new System.Drawing.Point(19, 927);
+            this.btnAnnuler.Name = "btnAnnuler";
+            this.btnAnnuler.Size = new System.Drawing.Size(184, 66);
+            this.btnAnnuler.TabIndex = 7;
+            this.btnAnnuler.Text = "✖ Annuler";
+            this.btnAnnuler.UseVisualStyleBackColor = false;
+            this.btnAnnuler.Click += new System.EventHandler(this.btnAnnuler_Click);
+            // 
+            // btnValider
+            // 
+            this.btnValider.BackColor = System.Drawing.Color.Lime;
+            this.btnValider.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnValider.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnValider.ForeColor = System.Drawing.Color.Black;
+            this.btnValider.Location = new System.Drawing.Point(258, 923);
+            this.btnValider.Name = "btnValider";
+            this.btnValider.Size = new System.Drawing.Size(184, 66);
+            this.btnValider.TabIndex = 6;
+            this.btnValider.Text = "✔ Valider";
+            this.btnValider.UseVisualStyleBackColor = false;
+            this.btnValider.Click += new System.EventHandler(this.btnValider_Click);
+            // 
+            // pnlEvenement
+            // 
+            this.pnlEvenement.Controls.Add(this.txtCommentaire);
+            this.pnlEvenement.Controls.Add(this.label11);
+            this.pnlEvenement.Controls.Add(this.dtpEvenement);
+            this.pnlEvenement.Controls.Add(this.label12);
+            this.pnlEvenement.Location = new System.Drawing.Point(11, 232);
+            this.pnlEvenement.Name = "pnlEvenement";
+            this.pnlEvenement.Size = new System.Drawing.Size(434, 661);
+            this.pnlEvenement.TabIndex = 5;
+            // 
+            // txtCommentaire
+            // 
+            this.txtCommentaire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.txtCommentaire.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCommentaire.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCommentaire.ForeColor = System.Drawing.Color.White;
+            this.txtCommentaire.Location = new System.Drawing.Point(3, 171);
+            this.txtCommentaire.Multiline = true;
+            this.txtCommentaire.Name = "txtCommentaire";
+            this.txtCommentaire.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCommentaire.Size = new System.Drawing.Size(428, 496);
+            this.txtCommentaire.TabIndex = 13;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(3, 126);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(179, 29);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Commentaire :";
+            // 
+            // dtpEvenement
+            // 
+            this.dtpEvenement.CalendarForeColor = System.Drawing.Color.White;
+            this.dtpEvenement.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.dtpEvenement.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.dtpEvenement.CalendarTitleForeColor = System.Drawing.Color.White;
+            this.dtpEvenement.CustomFormat = "dd/MM/yyyy";
+            this.dtpEvenement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEvenement.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEvenement.Location = new System.Drawing.Point(8, 45);
+            this.dtpEvenement.Name = "dtpEvenement";
+            this.dtpEvenement.Size = new System.Drawing.Size(186, 33);
+            this.dtpEvenement.TabIndex = 9;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(3, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(241, 24);
+            this.label12.TabIndex = 8;
+            this.label12.Text = "DATE DE L\'ÉVÈNEMENT";
+            // 
+            // pnlContact
+            // 
+            this.pnlContact.Controls.Add(this.label1);
+            this.pnlContact.Controls.Add(this.cboInformateur);
+            this.pnlContact.Controls.Add(this.txtAppreciation);
+            this.pnlContact.Controls.Add(this.txtSomme);
+            this.pnlContact.Controls.Add(this.label4);
+            this.pnlContact.Controls.Add(this.label3);
+            this.pnlContact.Controls.Add(this.label2);
+            this.pnlContact.Controls.Add(this.dtpContact);
+            this.pnlContact.Location = new System.Drawing.Point(11, 232);
+            this.pnlContact.Name = "pnlContact";
+            this.pnlContact.Size = new System.Drawing.Size(431, 661);
+            this.pnlContact.TabIndex = 3;
+            // 
+            // cboInformateur
+            // 
+            this.cboInformateur.FormattingEnabled = true;
+            this.cboInformateur.Location = new System.Drawing.Point(19, 332);
+            this.cboInformateur.Name = "cboInformateur";
+            this.cboInformateur.Size = new System.Drawing.Size(391, 28);
+            this.cboInformateur.TabIndex = 7;
+            this.cboInformateur.SelectedIndexChanged += new System.EventHandler(this.cboInformateur_SelectedIndexChanged);
+            // 
+            // txtAppreciation
+            // 
+            this.txtAppreciation.Location = new System.Drawing.Point(23, 242);
+            this.txtAppreciation.Name = "txtAppreciation";
+            this.txtAppreciation.Size = new System.Drawing.Size(389, 26);
+            this.txtAppreciation.TabIndex = 6;
+            // 
+            // txtSomme
+            // 
+            this.txtSomme.Location = new System.Drawing.Point(22, 160);
+            this.txtSomme.Name = "txtSomme";
+            this.txtSomme.Size = new System.Drawing.Size(387, 26);
+            this.txtSomme.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(15, 296);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(167, 32);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Informateur :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(19, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(176, 32);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Appréciation :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(19, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 32);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Somme :";
+            // 
+            // dtpContact
+            // 
+            this.dtpContact.Location = new System.Drawing.Point(22, 69);
+            this.dtpContact.Name = "dtpContact";
+            this.dtpContact.Size = new System.Drawing.Size(391, 26);
+            this.dtpContact.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Date :";
+            // 
+            // btnNouvelEvenement
+            // 
+            this.btnNouvelEvenement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnNouvelEvenement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNouvelEvenement.ForeColor = System.Drawing.Color.White;
+            this.btnNouvelEvenement.Location = new System.Drawing.Point(112, 21);
+            this.btnNouvelEvenement.Name = "btnNouvelEvenement";
+            this.btnNouvelEvenement.Size = new System.Drawing.Size(232, 52);
+            this.btnNouvelEvenement.TabIndex = 2;
+            this.btnNouvelEvenement.Text = "+ Évènement";
+            this.btnNouvelEvenement.UseVisualStyleBackColor = false;
+            this.btnNouvelEvenement.Click += new System.EventHandler(this.btnNouvelEvenement_Click);
+            // 
+            // btnNouvelleDepense
+            // 
+            this.btnNouvelleDepense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnNouvelleDepense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNouvelleDepense.ForeColor = System.Drawing.Color.White;
+            this.btnNouvelleDepense.Location = new System.Drawing.Point(112, 81);
+            this.btnNouvelleDepense.Name = "btnNouvelleDepense";
+            this.btnNouvelleDepense.Size = new System.Drawing.Size(232, 52);
+            this.btnNouvelleDepense.TabIndex = 1;
+            this.btnNouvelleDepense.Text = "+ Dépense";
+            this.btnNouvelleDepense.UseVisualStyleBackColor = false;
+            this.btnNouvelleDepense.Click += new System.EventHandler(this.btnNouvelleDepense_Click);
+            // 
+            // btnNouveauContact
+            // 
+            this.btnNouveauContact.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnNouveauContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNouveauContact.ForeColor = System.Drawing.Color.White;
+            this.btnNouveauContact.Location = new System.Drawing.Point(112, 144);
+            this.btnNouveauContact.Name = "btnNouveauContact";
+            this.btnNouveauContact.Size = new System.Drawing.Size(232, 52);
+            this.btnNouveauContact.TabIndex = 0;
+            this.btnNouveauContact.Text = "+ Contact";
+            this.btnNouveauContact.UseVisualStyleBackColor = false;
+            this.btnNouveauContact.Click += new System.EventHandler(this.btnNouveauContact_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(13, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(81, 32);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Date :";
+            // 
+            // dtpDepense
+            // 
+            this.dtpDepense.Location = new System.Drawing.Point(16, 70);
+            this.dtpDepense.Name = "dtpDepense";
+            this.dtpDepense.Size = new System.Drawing.Size(394, 26);
+            this.dtpDepense.TabIndex = 9;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(13, 123);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(127, 32);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Montant :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 208);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 32);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Motif :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(15, 298);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 32);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Type :";
+            // 
+            // txtMontant
+            // 
+            this.txtMontant.Location = new System.Drawing.Point(15, 162);
+            this.txtMontant.Name = "txtMontant";
+            this.txtMontant.Size = new System.Drawing.Size(395, 26);
+            this.txtMontant.TabIndex = 13;
+            // 
+            // txtMotif
+            // 
+            this.txtMotif.Location = new System.Drawing.Point(15, 243);
+            this.txtMotif.Name = "txtMotif";
+            this.txtMotif.Size = new System.Drawing.Size(395, 26);
+            this.txtMotif.TabIndex = 14;
+            // 
+            // cboTypeDepense
+            // 
+            this.cboTypeDepense.FormattingEnabled = true;
+            this.cboTypeDepense.Location = new System.Drawing.Point(16, 333);
+            this.cboTypeDepense.Name = "cboTypeDepense";
+            this.cboTypeDepense.Size = new System.Drawing.Size(394, 28);
+            this.cboTypeDepense.TabIndex = 15;
+            // 
+            // pnlDepense
+            // 
+            this.pnlDepense.Controls.Add(this.cboTypeDepense);
+            this.pnlDepense.Controls.Add(this.txtMotif);
+            this.pnlDepense.Controls.Add(this.txtMontant);
+            this.pnlDepense.Controls.Add(this.label5);
+            this.pnlDepense.Controls.Add(this.label6);
+            this.pnlDepense.Controls.Add(this.label7);
+            this.pnlDepense.Controls.Add(this.dtpDepense);
+            this.pnlDepense.Controls.Add(this.label8);
+            this.pnlDepense.Location = new System.Drawing.Point(11, 231);
+            this.pnlDepense.Name = "pnlDepense";
+            this.pnlDepense.Size = new System.Drawing.Size(431, 653);
+            this.pnlDepense.TabIndex = 4;
             // 
             // DetailsMission
             // 
@@ -549,22 +889,23 @@
             this.Controls.Add(this.pctQuitter);
             this.Controls.Add(this.pctJournal);
             this.Controls.Add(this.pctEditerMission);
-            this.Controls.Add(this.panelMembres);
-            this.Controls.Add(this.grpObjectifCapture);
             this.Controls.Add(this.grpActionRapides);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.lblDateFinMission);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.lblDateDebutMission);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblTitreMission);
+            this.Controls.Add(this.grpInfosMissions);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblDetailsMission);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.diverseInfosPanel);
             this.Controls.Add(this.ImageMission);
-            this.Controls.Add(this.lblTitreMission);
-            this.Controls.Add(this.grpInfosMissions);
+            this.Controls.Add(this.grpObjectifCapture);
+            this.Controls.Add(this.pnlEdition);
+            this.Controls.Add(this.panelMembres);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "DetailsMission";
@@ -572,7 +913,6 @@
             this.Text = "DetailsMission";
             this.Load += new System.EventHandler(this.DetailsMission_Load);
             this.grpObjectifCapture.ResumeLayout(false);
-            this.grpObjectifCapture.PerformLayout();
             this.grpActionRapides.ResumeLayout(false);
             this.grpInfosMissions.ResumeLayout(false);
             this.grpInfosMissions.PerformLayout();
@@ -597,6 +937,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
+            this.pnlEdition.ResumeLayout(false);
+            this.pnlEvenement.ResumeLayout(false);
+            this.pnlEvenement.PerformLayout();
+            this.pnlContact.ResumeLayout(false);
+            this.pnlContact.PerformLayout();
+            this.pnlDepense.ResumeLayout(false);
+            this.pnlDepense.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -604,6 +951,7 @@
 
         #endregion
 
+        // Contrôles VERSION 1
         private System.Windows.Forms.Label lblTitreMission;
         private System.Windows.Forms.Label lblBudget;
         private System.Windows.Forms.Label lblDateFinMission;
@@ -640,5 +988,34 @@
         private System.Windows.Forms.PictureBox pctQuitter;
         private System.Windows.Forms.PictureBox pictureBox19;
         private System.Windows.Forms.PictureBox pictureBox20;
+        private System.Windows.Forms.Panel pnlEdition;
+        private System.Windows.Forms.Button btnAnnuler;
+        private System.Windows.Forms.Button btnValider;
+        private System.Windows.Forms.Panel pnlEvenement;
+        private System.Windows.Forms.TextBox txtCommentaire;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DateTimePicker dtpEvenement;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel pnlContact;
+        private System.Windows.Forms.ComboBox cboInformateur;
+        private System.Windows.Forms.TextBox txtAppreciation;
+        private System.Windows.Forms.TextBox txtSomme;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpContact;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnNouvelEvenement;
+        private System.Windows.Forms.Button btnNouvelleDepense;
+        private System.Windows.Forms.Button btnNouveauContact;
+        private System.Windows.Forms.Panel pnlDepense;
+        private System.Windows.Forms.ComboBox cboTypeDepense;
+        private System.Windows.Forms.TextBox txtMotif;
+        private System.Windows.Forms.TextBox txtMontant;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dtpDepense;
+        private System.Windows.Forms.Label label8;
     }
 }

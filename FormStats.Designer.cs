@@ -44,8 +44,8 @@
             this.cboMissions = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pnlBas = new System.Windows.Forms.Panel();
-            this.btnRetour = new System.Windows.Forms.Button();
             this.lblBouger = new System.Windows.Forms.Label();
+            this.btnRetour = new System.Windows.Forms.Button();
             this.tabStats.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -286,6 +286,17 @@
             this.pnlBas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBas_MouseDown);
             this.pnlBas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlBas_MouseMove);
             // 
+            // lblBouger
+            // 
+            this.lblBouger.AutoSize = true;
+            this.lblBouger.Location = new System.Drawing.Point(182, 27);
+            this.lblBouger.Name = "lblBouger";
+            this.lblBouger.Size = new System.Drawing.Size(438, 20);
+            this.lblBouger.TabIndex = 1;
+            this.lblBouger.Text = "(cet espace permet de modifer l\'emplacement de cette page)";
+            this.lblBouger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblBouger_MouseDown);
+            this.lblBouger.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblBouger_MouseMove);
+            // 
             // btnRetour
             // 
             this.btnRetour.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -300,17 +311,6 @@
             this.btnRetour.Text = "← Retour";
             this.btnRetour.UseVisualStyleBackColor = false;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
-            // 
-            // lblBouger
-            // 
-            this.lblBouger.AutoSize = true;
-            this.lblBouger.Location = new System.Drawing.Point(182, 27);
-            this.lblBouger.Name = "lblBouger";
-            this.lblBouger.Size = new System.Drawing.Size(438, 20);
-            this.lblBouger.TabIndex = 1;
-            this.lblBouger.Text = "(cet espace permet de modifer l\'emplacement de cette page)";
-            this.lblBouger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblBouger_MouseDown);
-            this.lblBouger.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lblBouger_MouseMove);
             // 
             // FormStats
             // 
