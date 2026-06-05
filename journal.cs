@@ -56,10 +56,17 @@ namespace appStargate
 
             new SQLiteDataAdapter(sqlBilan, Connexion.Connec).Fill(dtBilan);
 
+            int totalObjectifs = 0;
+            int totalRealise = 0;
+
             foreach (DataRow row in dtBilan.Rows)
             {
                 double obj = Convert.ToDouble(row["Objectif initial"]);
                 double real = Convert.ToDouble(row["Nombre de captures réalisées"]);
+
+                totalObjectifs += Convert.ToInt32(obj);
+                totalRealise += Convert.ToInt32(real);
+
                 if (obj > 0)
                 {
                     row["Taux de réussite (en %)"] = Math.Round((real / obj) * 100, 2) + " %";
@@ -68,6 +75,15 @@ namespace appStargate
                 {
                     row["Taux de réussite (en %)"] = "0 %";
                 }
+            }
+
+            if (totalObjectifs > 0)
+            {
+                lblCapture.Text = "Taux de capture total : "+Math.Round(((double)totalRealise / totalObjectifs) * 100, 2) + "%";
+            }
+            else
+            {
+                lblCapture.Text = "Taux de capture total : 0%";
             }
 
             ds.Tables.Add(dtBilan);
@@ -145,6 +161,11 @@ namespace appStargate
         private void pictureBox10_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void journal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

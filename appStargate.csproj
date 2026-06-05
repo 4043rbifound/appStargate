@@ -308,6 +308,12 @@
     <None Include="Images\out.png" />
     <None Include="Images\soldat.png" />
     <None Include="Images\Saturne.png" />
+    <None Include="Images\saturnRings.jpg" />
+    <None Include="Images\porte-monnaie.png" />
+    <None Include="Images\porteMonnaie.png" />
+    <None Include="Images\pieces.png" />
+    <None Include="Images\navette.png" />
+    <None Include="Images\sgback.jpg" />
     <Content Include="Images\Terre.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

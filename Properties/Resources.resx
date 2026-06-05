@@ -118,59 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="civil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\civil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="journal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\journal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imgtext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\imgtext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imgfondtext" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\imgfondtext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="EditerMission" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\EditerMission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnimggris" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\btnimggris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="journoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\journoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Saturne" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Saturne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Artemis_II_patch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Artemis_II_patch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="journalNoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\journalNoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgtext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\imgtext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\btnimg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoSg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\logoSg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imgbtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\imgbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soldat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\soldat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Artemis_II_patch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Artemis_II_patch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fond_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\fond_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="imgfondtext" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\imgfondtext.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,16 +136,76 @@
   <data name="694985" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\694985.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="journoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\journoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgbtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\imgbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Saturne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\Saturne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="porte-monnaie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\porte-monnaie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soldat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\soldat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimggris" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\btnimggris.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imgbtn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\imgbtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="journal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\journal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="porteMonnaie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\porteMonnaie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="civil1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\civil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditerMission" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\EditerMission.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoSg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\logoSg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\458-4583476_stargate-command-uk-stargate-command-logo-hd-png-Photoroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="civil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\civil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saturnRings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\saturnRings.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fond_gauche" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\fond_gauche.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="navette" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\navette.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ContourText" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\ContourText.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EditerMissionNoir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\EditerMissionNoir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnimg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\btnimg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pieces" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\pieces.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sgback" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\sgback.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
