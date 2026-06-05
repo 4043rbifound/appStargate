@@ -34,6 +34,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flpPlanetes = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
+            this.chartRaces = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbMissions = new System.Windows.Forms.ListBox();
@@ -41,15 +42,14 @@
             this.lblTitrePlanete = new System.Windows.Forms.Label();
             this.pnlNotif = new System.Windows.Forms.Panel();
             this.lblNotif = new System.Windows.Forms.Label();
-            this.chartRaces = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.flpPlanetes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).BeginInit();
             this.pnlNotif.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -95,6 +95,23 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // chartRaces
+            // 
+            this.chartRaces.BackColor = System.Drawing.Color.Transparent;
+            chartArea1.Name = "ChartArea1";
+            this.chartRaces.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRaces.Legends.Add(legend1);
+            this.chartRaces.Location = new System.Drawing.Point(18, 366);
+            this.chartRaces.Name = "chartRaces";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartRaces.Series.Add(series1);
+            this.chartRaces.Size = new System.Drawing.Size(378, 276);
+            this.chartRaces.TabIndex = 5;
+            this.chartRaces.Text = "chart1";
             // 
             // label2
             // 
@@ -171,23 +188,6 @@
             this.lblNotif.Text = "label3";
             this.lblNotif.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // chartRaces
-            // 
-            this.chartRaces.BackColor = System.Drawing.Color.Transparent;
-            chartArea1.Name = "ChartArea1";
-            this.chartRaces.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRaces.Legends.Add(legend1);
-            this.chartRaces.Location = new System.Drawing.Point(18, 366);
-            this.chartRaces.Name = "chartRaces";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartRaces.Series.Add(series1);
-            this.chartRaces.Size = new System.Drawing.Size(378, 276);
-            this.chartRaces.TabIndex = 5;
-            this.chartRaces.Text = "chart1";
-            // 
             // FormPlanetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -204,10 +204,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.flpPlanetes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).EndInit();
             this.pnlNotif.ResumeLayout(false);
             this.pnlNotif.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).EndInit();
             this.ResumeLayout(false);
 
         }

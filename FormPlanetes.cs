@@ -153,10 +153,7 @@ namespace appStargate
             splitContainer1.Panel2Collapsed = false;
         }
 
-        /// <summary>
-        /// Affiche les races présentes sur la planète dans le DataGridView
-        /// Tout depuis le DataSet — aucun accès base de données
-        /// </summary>
+        
         private void AfficherRacesPlanete(string nomPlanete)
         {
             DataSet ds = MesDatas.DsGlobal;
