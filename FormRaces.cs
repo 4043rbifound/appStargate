@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace appStargate
 {
@@ -117,6 +118,8 @@ namespace appStargate
                 Path.Combine(Application.StartupPath, "images", nom + ".png"))
                     ? Path.Combine(Application.StartupPath, "images", nom + ".png")
                     : Path.Combine(Application.StartupPath, "images", nom + ".jpg");
+                if (nom.Equals("Petits Gris", StringComparison.OrdinalIgnoreCase))
+                    cheminImage = Path.Combine(Application.StartupPath, "images", "petitgris.png");
 
                 // Création du UC
                 UCAlien uc = new UCAlien(nom, couleur, type, cheminImage);
