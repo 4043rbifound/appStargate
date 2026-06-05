@@ -1,7 +1,6 @@
 ﻿using appliPandora;
 using System;
 using System.Data;
-using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
@@ -33,70 +32,63 @@ namespace appStargate
             DateTime dateRetour = Convert.ToDateTime(maMission["dateRetour"]);
             lblDateFinMission.Text = "Retour : " + dateRetour.ToString("d", new CultureInfo("fr-FR"));
 
-            double budget = Convert.ToDouble(maMission["budget"]);
-            double totalDepenses = 0;
+            // Appel de la méthode de calcul du solde en mode déconnecté
+            RafraichirSolde();
 
+            // Objectifs de capture (Depuis le DataSet déconnecté si présent, sinon fallback sécurisé)
             string planete = maMission["nomPlanete"].ToString();
             string num = maMission["numero"].ToString();
-
-            string sql = "SELECT montant FROM depense WHERE nomPlanete = '" + planete + "' AND numeroMission = " + num;
-
-            DataTable tableDepenses = new DataTable();
-            SQLiteDataAdapter adapter = new SQLiteDataAdapter(sql, Connexion.Connec);
-            adapter.Fill(tableDepenses);
-
-            foreach (DataRow ligne in tableDepenses.Rows)
-            {
-                totalDepenses += Convert.ToDouble(ligne["montant"]);
-            }
-
-            double solde = budget - totalDepenses;
-            double ratio = (solde / budget) * 100;
-
-            lblBudget.Text = "Budget : " + budget + " €";
-            lblSolde.Text = "Solde restant : " + solde + " € (" + Math.Round(ratio, 2) + "%)";
-
-            if (ratio > 75)
-            {
-                lblSolde.ForeColor = Color.LimeGreen;
-            }
-            else if (ratio > 45)
-            {
-                lblSolde.ForeColor = Color.Orange;
-            }
-            else
-            {
-                lblSolde.ForeColor = Color.Red;
-            }
-
-            string sqlCapture = "SELECT Espece.nom, ObjectifCapture.objectif FROM ObjectifCapture INNER JOIN Espece ON ObjectifCapture.idEspeceEnnemi = Espece.id WHERE ObjectifCapture.nomPlanete = '" + planete + "' AND ObjectifCapture.numeroMission = " + num;
-            DataTable tableCaptures = new DataTable();
-            SQLiteDataAdapter adapterCap = new SQLiteDataAdapter(sqlCapture, Connexion.Connec);
-            adapterCap.Fill(tableCaptures);
-
             string texteObjectifs = "";
-            if (tableCaptures.Rows.Count > 0)
+
+            if (MesDatas.DsGlobal.Tables.Contains("ObjectifCapture") && MesDatas.DsGlobal.Tables.Contains("Espece"))
             {
-                foreach (DataRow ligne in tableCaptures.Rows)
+                DataTable dtCapture = MesDatas.DsGlobal.Tables["ObjectifCapture"];
+                DataTable dtEspece = MesDatas.DsGlobal.Tables["Espece"];
+
+                // Filtrage local déconnecté des objectifs de cette mission
+                DataRow[] lignesObj = dtCapture.Select($"nomPlanete = '{planete.Replace("'", "''")}' AND numeroMission = {num}");
+
+                if (lignesObj.Length > 0)
                 {
-                    texteObjectifs += "- " + ligne["nom"].ToString() + " : " + ligne["objectif"].ToString() + "\n";
+                    foreach (DataRow rowObj in lignesObj)
+                    {
+                        string nomEspece = "Espèce inconnue";
+                        DataRow[] rowEspece = dtEspece.Select($"id = {rowObj["idEspeceEnnemi"]}");
+                        if (rowEspece.Length > 0) nomEspece = rowEspece[0]["nom"].ToString();
+
+                        texteObjectifs += "- " + nomEspece + " : " + rowObj["objectif"].ToString() + "\n";
+                    }
+                }
+                else
+                {
+                    texteObjectifs = "Aucun objectif de capture";
                 }
             }
             else
             {
-                texteObjectifs = "Aucun objectif de capture";
+                texteObjectifs = "Données d'objectifs indisponibles (MCD Déconnecté)";
             }
             lblListeObjectifs.Text = texteObjectifs;
 
-            // Remplir tableMembres
-            string sqlMembres = "SELECT Membre.matricule, Membre.nom, Membre.prenom FROM Membre " +
-                                 "INNER JOIN Composer ON Membre.matricule = Composer.matriculeMembre " +
-                                 "WHERE Composer.nomPlanete = '" + planete + "' AND Composer.numeroMission = " + num;
+            // Remplir tableMembres depuis le DataSet déconnecté
+            if (MesDatas.DsGlobal.Tables.Contains("Membre") && MesDatas.DsGlobal.Tables.Contains("Composer"))
+            {
+                DataTable dtMembre = MesDatas.DsGlobal.Tables["Membre"];
+                DataTable dtComposer = MesDatas.DsGlobal.Tables["Composer"];
 
-            SQLiteDataAdapter adapterMembres = new SQLiteDataAdapter(sqlMembres, Connexion.Connec);
-            adapterMembres.Fill(tableMembres);
+                tableMembres = dtMembre.Clone(); // Copie la structure
 
-            // Etat initial : feuille visible, membres cachés
+                DataRow[] composition = dtComposer.Select($"nomPlanete = '{planete.Replace("'", "''")}' AND numeroMission = {num}");
+                foreach (DataRow compRow in composition)
+                {
+                    DataRow[] membresTrouves = dtMembre.Select($"matricule = '{compRow["matriculeMembre"]}'");
+                    foreach (DataRow m in membresTrouves)
+                    {
+                        tableMembres.ImportRow(m);
+                    }
+                }
+            }
+
             diverseInfosPanel.Visible = true;
             panelMembres.Visible = false;
         }
@@ -132,31 +124,6 @@ namespace appStargate
             }
         }
 
-        private void DetailsMission_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void lblTitreMission_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblObjDatabaz_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void lblSolde_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void grpObjectifCapture_Enter(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnVoirFeuille_Click(object sender, EventArgs e)
         {
             if (btnVoirFeuille.Tag?.ToString() == "ROUGE")
@@ -184,28 +151,65 @@ namespace appStargate
             frmJournal.ShowDialog();
         }
 
-        private void pctJournal_MouseEnter(object sender, EventArgs e)
+        private void pctEditerMission_Click(object sender, EventArgs e)
         {
-            pctJournal.BackColor = Color.White;
-            pctJournal.BackgroundImage = Properties.Resources.journoir;
+            DateTime dateRetour = Convert.ToDateTime(maMission["dateRetour"]);
+
+            if (dateRetour < DateTime.Today)
+            {
+                MessageBox.Show("Cette mission est terminée, elle ne peut plus être modifiée.",
+                    "Mission terminée", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            formEditMission frm = new formEditMission(maMission, this);
+            frm.Show();
         }
 
-        private void pctJournal_MouseLeave(object sender, EventArgs e)
-        {
-            pctJournal.BackColor = Color.Transparent;
-            pctJournal.BackgroundImage = Properties.Resources.journal;
-        }
+        private void pictureBox10_Click(object sender, EventArgs e) { this.Close(); }
+        private void DetailsMission_Load(object sender, EventArgs e) { }
+        private void lblTitreMission_Click(object sender, EventArgs e) { }
+        private void lblObjDatabaz_Click(object sender, EventArgs e) { }
+        private void lblSolde_Click(object sender, EventArgs e) { }
+        private void grpObjectifCapture_Enter(object sender, EventArgs e) { }
+        private void pctJournal_MouseEnter(object sender, EventArgs e) { pctJournal.BackColor = Color.White; pctJournal.BackgroundImage = Properties.Resources.journoir; }
+        private void pctJournal_MouseLeave(object sender, EventArgs e) { pctJournal.BackColor = Color.Transparent; pctJournal.BackgroundImage = Properties.Resources.journal; }
+        private void pctEditerMission_MouseEnter(object sender, EventArgs e) { pctEditerMission.BackColor = Color.White; pctEditerMission.BackgroundImage = Properties.Resources.EditerMissionNoir; }
+        private void pctEditerMission_MouseLeave(object sender, EventArgs e) { pctEditerMission.BackColor = Color.Transparent; pctEditerMission.BackgroundImage = Properties.Resources.EditerMission; }
 
-        private void pctEditerMission_MouseEnter(object sender, EventArgs e)
+        public void RafraichirSolde()
         {
-            pctEditerMission.BackColor = Color.White;
-            pctEditerMission.BackgroundImage = Properties.Resources.EditerMissionNoir;
-        }
+            string planete = maMission["nomPlanete"].ToString();
+            string num = maMission["numero"].ToString();
+            double budget = Convert.ToDouble(maMission["budget"]);
+            double total = 0;
 
-        private void pctEditerMission_MouseLeave(object sender, EventArgs e)
-        {
-            pctEditerMission.BackColor = Color.Transparent;
-            pctEditerMission.BackgroundImage = Properties.Resources.EditerMission;
+            // Protection si la table n'existe pas encore localement
+            if (MesDatas.DsGlobal.Tables.Contains("Depense"))
+            {
+                DataTable dtDepenses = MesDatas.DsGlobal.Tables["Depense"];
+
+                // Filtrer localement les lignes en mémoire correspondant à la mission courante
+                DataRow[] lignesFiltrees = dtDepenses.Select($"nomPlanete = '{planete.Replace("'", "''")}' AND numeroMission = {num}");
+
+                foreach (DataRow r in lignesFiltrees)
+                {
+                    // Éviter de compter les lignes supprimées en mémoire
+                    if (r.RowState != DataRowState.Deleted)
+                    {
+                        total += Convert.ToDouble(r["montant"]);
+                    }
+                }
+            }
+
+            double solde = budget - total;
+            double ratio = budget > 0 ? (solde / budget) * 100 : 0;
+
+            lblBudget.Text = "Budget : " + budget + " €";
+            lblSolde.Text = "Solde restant : " + solde + " € (" + Math.Round(ratio, 2) + "%)";
+            lblSolde.ForeColor = ratio > 75 ? Color.LimeGreen
+                               : ratio > 45 ? Color.Orange
+                                            : Color.Red;
         }
     }
 }
