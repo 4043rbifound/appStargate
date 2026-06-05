@@ -88,6 +88,8 @@ namespace appliPandora
             {
                 formNouvelleMission formCrea = new formNouvelleMission();
                 formCrea.ShowDialog();
+                // Quand formNouvelleMission se ferme, on recharge la liste des missions
+                Form1_Load(null, null);
             }
         }
 

@@ -406,5 +406,43 @@ namespace appStargate
         {
 
         }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pctQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private Point _pointDepart;
+        private void splitContainer1_Panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void splitContainer1_Panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void flpPlanetes_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void flpPlanetes_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace appStargate
         {
             InitializeComponent();
         }
-
+        private Point _pointDepart;
         private void formNouvelleMission_Load(object sender, EventArgs e)
         {
             dtpDepart.Value = DateTime.Today;
@@ -315,5 +315,34 @@ namespace appStargate
         private void txtNbMembre_TextChanged(object sender, EventArgs e) { }
         private void label1_Click(object sender, EventArgs e) { }
         private void grpNouvelleMission_Enter(object sender, EventArgs e) { }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pctQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
     }
 }

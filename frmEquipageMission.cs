@@ -32,7 +32,7 @@ namespace appStargate
             this._nbMembresRequis = nbMembre;
             this._placesRestantes = nbMembre;
         }
-
+        private Point _pointDepart;
         private void frmEquipageMission_Load(object sender, EventArgs e)
         {
             // BLOQUE L'ÉCRITURE CLAVIER DANS LES COMBOBOX 
@@ -383,6 +383,34 @@ namespace appStargate
                     }
                 };
                 timerReorg.Start();
+            }
+        }
+
+        private void pictureBox19_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pctQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox7_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pictureBox7_Move(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox7_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
             }
         }
     }
