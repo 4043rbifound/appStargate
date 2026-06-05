@@ -120,7 +120,7 @@
             this.lblDateFinMission.BackColor = System.Drawing.Color.Transparent;
             this.lblDateFinMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblDateFinMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateFinMission.Location = new System.Drawing.Point(1258, 442);
+            this.lblDateFinMission.Location = new System.Drawing.Point(1268, 442);
             this.lblDateFinMission.Name = "lblDateFinMission";
             this.lblDateFinMission.Size = new System.Drawing.Size(290, 35);
             this.lblDateFinMission.TabIndex = 20;
@@ -144,7 +144,7 @@
             this.lblDateDebutMission.BackColor = System.Drawing.Color.Transparent;
             this.lblDateDebutMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblDateDebutMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateDebutMission.Location = new System.Drawing.Point(1258, 358);
+            this.lblDateDebutMission.Location = new System.Drawing.Point(1268, 358);
             this.lblDateDebutMission.Name = "lblDateDebutMission";
             this.lblDateDebutMission.Size = new System.Drawing.Size(289, 35);
             this.lblDateDebutMission.TabIndex = 18;
@@ -331,7 +331,7 @@
             this.pctJournal.BackgroundImage = global::appStargate.Properties.Resources.journal;
             this.pctJournal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pctJournal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctJournal.Location = new System.Drawing.Point(1436, 539);
+            this.pctJournal.Location = new System.Drawing.Point(1436, 532);
             this.pctJournal.Name = "pctJournal";
             this.pctJournal.Size = new System.Drawing.Size(134, 142);
             this.pctJournal.TabIndex = 44;
@@ -346,7 +346,7 @@
             this.pctEditerMission.BackgroundImage = global::appStargate.Properties.Resources.EditerMission;
             this.pctEditerMission.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pctEditerMission.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctEditerMission.Location = new System.Drawing.Point(1251, 539);
+            this.pctEditerMission.Location = new System.Drawing.Point(1251, 532);
             this.pctEditerMission.Name = "pctEditerMission";
             this.pctEditerMission.Size = new System.Drawing.Size(145, 142);
             this.pctEditerMission.TabIndex = 43;
@@ -395,7 +395,7 @@
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Location = new System.Drawing.Point(1244, 428);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(319, 64);
+            this.pictureBox7.Size = new System.Drawing.Size(339, 64);
             this.pictureBox7.TabIndex = 42;
             this.pictureBox7.TabStop = false;
             // 
@@ -406,7 +406,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(1244, 345);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(319, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(339, 64);
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             // 
