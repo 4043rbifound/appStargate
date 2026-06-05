@@ -19,6 +19,7 @@ namespace appliPandora
             InitializeComponent();
             ConfigurerFlowLayoutPanel();
         }
+        private Point _pointDepart;
 
         SQLiteConnection maConnec = Connexion.Connec;
 
@@ -142,6 +143,20 @@ namespace appliPandora
 
             FormStats frmStats = new FormStats();
             frmStats.Show();
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
         }
     }
 }

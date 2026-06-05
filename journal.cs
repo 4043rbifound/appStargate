@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace appStargate
@@ -19,7 +20,10 @@ namespace appStargate
             DataSet ds = new DataSet();
 
             new SQLiteDataAdapter(
-                "SELECT dateJ, commentaires FROM JournalDeBord WHERE nomPlanete = '" + nomPlanete + "' AND numero = " + numeroMission + " ORDER BY dateJ ASC",
+                "SELECT dateJ, commentaires FROM JournalDeBord WHERE nomPlanete = '" + nomPlanete + "' AND numero = " + numeroMission +
+                " ORDER BY CASE WHEN dateJ LIKE '__/__/____' " +
+                " THEN substr(dateJ,7,4)||substr(dateJ,4,2)||substr(dateJ,1,2) " +
+                " ELSE replace(dateJ,'-','') END ASC",
                 Connexion.Connec).Fill(ds, "Journal");
 
             new SQLiteDataAdapter(
@@ -31,7 +35,7 @@ namespace appStargate
                 Connexion.Connec).Fill(ds, "Depenses");
 
             _bsJournal.DataSource = ds.Tables["Journal"];
-            lblDateJournal.DataBindings.Add("Text", _bsJournal, "dateJ");
+            lblDateJournal.DataBindings.Add("Text", _bsJournal, "dateJ", true, DataSourceUpdateMode.Never, null, "dd/MM/yyyy");
             lblCommentaireJournal.DataBindings.Add("Text", _bsJournal, "commentaires");
 
             _bsJournal.PositionChanged += _bsJournal_PositionChanged;
@@ -79,7 +83,7 @@ namespace appStargate
 
             if (totalObjectifs > 0)
             {
-                lblCapture.Text = "Taux de capture total : "+Math.Round(((double)totalRealise / totalObjectifs) * 100, 2) + "%";
+                lblCapture.Text = "Taux de capture total : " + Math.Round(((double)totalRealise / totalObjectifs) * 100, 2) + "%";
             }
             else
             {
@@ -97,11 +101,14 @@ namespace appStargate
 
             CalculerTotaux(ds);
             MettreAJourCompteur();
+
         }
 
         private void _bsJournal_PositionChanged(object sender, EventArgs e)
         {
             MettreAJourCompteur();
+            // Re-formate la date en français après chaque changement de position
+            lblDateJournal.Text = DateTime.Parse(lblDateJournal.Text).ToString("dd/MM/yyyy");
         }
 
         private void CalculerTotaux(DataSet ds)
@@ -165,7 +172,7 @@ namespace appStargate
 
         private void journal_Load(object sender, EventArgs e)
         {
-
+            lblDateJournal.Text = DateTime.Parse(lblDateJournal.Text).ToString("dd/MM/yyyy");
         }
     }
 }

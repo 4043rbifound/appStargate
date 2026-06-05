@@ -39,15 +39,19 @@
             this.lblListeObjectifs = new System.Windows.Forms.Label();
             this.lblDetailsMission = new System.Windows.Forms.Label();
             this.grpActionRapides = new System.Windows.Forms.GroupBox();
+            this.btnVoirFeuille = new System.Windows.Forms.Button();
+            this.btnVoirMembresOuFeuille = new System.Windows.Forms.Button();
             this.grpInfosMissions = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.grpImagePlanete = new System.Windows.Forms.GroupBox();
+            this.imagePlanete = new System.Windows.Forms.PictureBox();
             this.pctJournal = new System.Windows.Forms.PictureBox();
             this.pctEditerMission = new System.Windows.Forms.PictureBox();
             this.panelMembres = new System.Windows.Forms.FlowLayoutPanel();
             this.flowMembres = new System.Windows.Forms.FlowLayoutPanel();
-            this.imagePlanete = new System.Windows.Forms.PictureBox();
-            this.btnVoirFeuille = new System.Windows.Forms.Button();
-            this.btnVoirMembresOuFeuille = new System.Windows.Forms.Button();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,18 +62,18 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblFeuilleDeRoute = new System.Windows.Forms.Label();
             this.ImageMission = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.grpObjectifCapture.SuspendLayout();
             this.grpActionRapides.SuspendLayout();
             this.grpInfosMissions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.grpImagePlanete.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).BeginInit();
             this.panelMembres.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,10 +83,6 @@
             this.diverseInfosPanel.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitreMission
@@ -223,6 +223,40 @@
             this.grpActionRapides.TabStop = false;
             this.grpActionRapides.Text = "Actions Rapides";
             // 
+            // btnVoirFeuille
+            // 
+            this.btnVoirFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnVoirFeuille.BackgroundImage = global::appStargate.Properties.Resources.btnimggris;
+            this.btnVoirFeuille.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoirFeuille.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoirFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoirFeuille.Font = new System.Drawing.Font("Impact", 15F);
+            this.btnVoirFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))));
+            this.btnVoirFeuille.Location = new System.Drawing.Point(18, 164);
+            this.btnVoirFeuille.Name = "btnVoirFeuille";
+            this.btnVoirFeuille.Size = new System.Drawing.Size(319, 66);
+            this.btnVoirFeuille.TabIndex = 31;
+            this.btnVoirFeuille.Text = "Voir Feuille";
+            this.btnVoirFeuille.UseVisualStyleBackColor = false;
+            this.btnVoirFeuille.Click += new System.EventHandler(this.btnVoirFeuille_Click);
+            // 
+            // btnVoirMembresOuFeuille
+            // 
+            this.btnVoirMembresOuFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
+            this.btnVoirMembresOuFeuille.BackgroundImage = global::appStargate.Properties.Resources.btnimg;
+            this.btnVoirMembresOuFeuille.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoirMembresOuFeuille.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoirMembresOuFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVoirMembresOuFeuille.Font = new System.Drawing.Font("Impact", 15F);
+            this.btnVoirMembresOuFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
+            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(18, 71);
+            this.btnVoirMembresOuFeuille.Name = "btnVoirMembresOuFeuille";
+            this.btnVoirMembresOuFeuille.Size = new System.Drawing.Size(319, 66);
+            this.btnVoirMembresOuFeuille.TabIndex = 25;
+            this.btnVoirMembresOuFeuille.Text = "Voir Membres";
+            this.btnVoirMembresOuFeuille.UseVisualStyleBackColor = false;
+            this.btnVoirMembresOuFeuille.Click += new System.EventHandler(this.btnVoirMembresOuFeuille_Click);
+            // 
             // grpInfosMissions
             // 
             this.grpInfosMissions.BackColor = System.Drawing.Color.Transparent;
@@ -243,6 +277,50 @@
             this.grpInfosMissions.TabStop = false;
             this.grpInfosMissions.Text = "Infos de la Mission";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(22, 326);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(503, 64);
+            this.pictureBox5.TabIndex = 34;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(22, 59);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(503, 64);
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(22, 144);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(503, 64);
+            this.pictureBox4.TabIndex = 28;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Location = new System.Drawing.Point(22, 234);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(503, 64);
+            this.pictureBox6.TabIndex = 30;
+            this.pictureBox6.TabStop = false;
+            // 
             // grpImagePlanete
             // 
             this.grpImagePlanete.BackColor = System.Drawing.Color.Transparent;
@@ -255,6 +333,16 @@
             this.grpImagePlanete.TabIndex = 33;
             this.grpImagePlanete.TabStop = false;
             this.grpImagePlanete.Text = "La Planète plnt";
+            // 
+            // imagePlanete
+            // 
+            this.imagePlanete.BackgroundImage = global::appStargate.Properties.Resources.Saturne;
+            this.imagePlanete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imagePlanete.Location = new System.Drawing.Point(11, 48);
+            this.imagePlanete.Name = "imagePlanete";
+            this.imagePlanete.Size = new System.Drawing.Size(476, 342);
+            this.imagePlanete.TabIndex = 0;
+            this.imagePlanete.TabStop = false;
             // 
             // pctJournal
             // 
@@ -306,50 +394,6 @@
             this.flowMembres.Size = new System.Drawing.Size(1026, 248);
             this.flowMembres.TabIndex = 0;
             this.flowMembres.WrapContents = false;
-            // 
-            // imagePlanete
-            // 
-            this.imagePlanete.BackgroundImage = global::appStargate.Properties.Resources.Saturne;
-            this.imagePlanete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imagePlanete.Location = new System.Drawing.Point(11, 48);
-            this.imagePlanete.Name = "imagePlanete";
-            this.imagePlanete.Size = new System.Drawing.Size(476, 342);
-            this.imagePlanete.TabIndex = 0;
-            this.imagePlanete.TabStop = false;
-            // 
-            // btnVoirFeuille
-            // 
-            this.btnVoirFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.btnVoirFeuille.BackgroundImage = global::appStargate.Properties.Resources.btnimggris;
-            this.btnVoirFeuille.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVoirFeuille.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoirFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVoirFeuille.Font = new System.Drawing.Font("Impact", 15F);
-            this.btnVoirFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(129)))));
-            this.btnVoirFeuille.Location = new System.Drawing.Point(18, 164);
-            this.btnVoirFeuille.Name = "btnVoirFeuille";
-            this.btnVoirFeuille.Size = new System.Drawing.Size(319, 66);
-            this.btnVoirFeuille.TabIndex = 31;
-            this.btnVoirFeuille.Text = "Voir Feuille";
-            this.btnVoirFeuille.UseVisualStyleBackColor = false;
-            this.btnVoirFeuille.Click += new System.EventHandler(this.btnVoirFeuille_Click);
-            // 
-            // btnVoirMembresOuFeuille
-            // 
-            this.btnVoirMembresOuFeuille.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.btnVoirMembresOuFeuille.BackgroundImage = global::appStargate.Properties.Resources.btnimg;
-            this.btnVoirMembresOuFeuille.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVoirMembresOuFeuille.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoirMembresOuFeuille.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVoirMembresOuFeuille.Font = new System.Drawing.Font("Impact", 15F);
-            this.btnVoirMembresOuFeuille.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnVoirMembresOuFeuille.Location = new System.Drawing.Point(18, 71);
-            this.btnVoirMembresOuFeuille.Name = "btnVoirMembresOuFeuille";
-            this.btnVoirMembresOuFeuille.Size = new System.Drawing.Size(319, 66);
-            this.btnVoirMembresOuFeuille.TabIndex = 25;
-            this.btnVoirMembresOuFeuille.Text = "Voir Membres";
-            this.btnVoirMembresOuFeuille.UseVisualStyleBackColor = false;
-            this.btnVoirMembresOuFeuille.Click += new System.EventHandler(this.btnVoirMembresOuFeuille_Click);
             // 
             // pictureBox10
             // 
@@ -443,7 +487,7 @@
             this.lblFeuilleDeRoute.Location = new System.Drawing.Point(3, 0);
             this.lblFeuilleDeRoute.MaximumSize = new System.Drawing.Size(990, 0);
             this.lblFeuilleDeRoute.Name = "lblFeuilleDeRoute";
-            this.lblFeuilleDeRoute.Size = new System.Drawing.Size(70, 0);
+            this.lblFeuilleDeRoute.Size = new System.Drawing.Size(70, 25);
             this.lblFeuilleDeRoute.TabIndex = 0;
             this.lblFeuilleDeRoute.Text = "label2";
             // 
@@ -458,50 +502,6 @@
             this.ImageMission.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ImageMission.TabIndex = 17;
             this.ImageMission.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(22, 326);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(503, 64);
-            this.pictureBox5.TabIndex = 34;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(22, 59);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(503, 64);
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(22, 144);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(503, 64);
-            this.pictureBox4.TabIndex = 28;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(22, 234);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(503, 64);
-            this.pictureBox6.TabIndex = 30;
-            this.pictureBox6.TabStop = false;
             // 
             // DetailsMission
             // 
@@ -540,11 +540,15 @@
             this.grpActionRapides.ResumeLayout(false);
             this.grpInfosMissions.ResumeLayout(false);
             this.grpInfosMissions.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.grpImagePlanete.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).EndInit();
             this.panelMembres.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imagePlanete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -555,10 +559,6 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageMission)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

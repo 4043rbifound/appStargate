@@ -143,6 +143,16 @@ namespace appStargate.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CadreRB {
+            get {
+                object obj = ResourceManager.GetObject("CadreRB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap civil {
             get {
                 object obj = ResourceManager.GetObject("civil", resourceCulture);
@@ -173,6 +183,16 @@ namespace appStargate.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap croix {
+            get {
+                object obj = ResourceManager.GetObject("croix", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap EditerMission {
             get {
                 object obj = ResourceManager.GetObject("EditerMission", resourceCulture);
@@ -196,6 +216,16 @@ namespace appStargate.Properties {
         internal static System.Drawing.Bitmap fond_gauche {
             get {
                 object obj = ResourceManager.GetObject("fond_gauche", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondCadre {
+            get {
+                object obj = ResourceManager.GetObject("fondCadre", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -276,6 +306,16 @@ namespace appStargate.Properties {
         internal static System.Drawing.Bitmap logoSg {
             get {
                 object obj = ResourceManager.GetObject("logoSg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marque_x {
+            get {
+                object obj = ResourceManager.GetObject("marque-x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
