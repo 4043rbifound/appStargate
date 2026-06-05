@@ -231,6 +231,7 @@
     <None Include="app.manifest" />
     <None Include="bin\Debug\appStargate.exe.config" />
     <None Include="bin\Debug\Stargate.db" />
+    <None Include="Images\latest-3226236543.webp" />
     <None Include="obj\Debug\appStarg.BD589BE1.Up2Date" />
     <None Include="obj\Debug\appStargate.csproj.AssemblyReference.cache" />
     <None Include="obj\Debug\appStargate.csproj.CoreCompileInputs.cache" />
@@ -296,13 +297,40 @@
     <None Include="Images\journal.png" />
     <None Include="Images\journalNoir.png" />
     <None Include="Images\EditerMissionNoir.png" />
+    <Content Include="Images\Aina.png" />
+    <Content Include="Images\Aurae.png" />
+    <Content Include="Images\background1.png" />
+    <Content Include="Images\bahC.png" />
+    <Content Include="Images\ChatGPT Image 4 juin 2026, 17_10_53.png" />
+    <Content Include="Images\daaS.png" />
+    <Content Include="Images\ehcuomiK.jpg" />
+    <Content Include="Images\eérnad.jpg" />
+    <Content Include="Images\gadulU.png" />
+    <Content Include="Images\gitsuL-rebierT.png" />
+    <Content Include="Images\hainihC.png" />
+    <Content Include="Images\hsybvoD.jpg" />
+    <Content Include="Images\ibarhoS.jpg" />
+    <Content Include="Images\icikE.jpg" />
+    <Content Include="Images\iJ.jpg" />
+    <Content Include="Images\iriceZ.jpg" />
+    <Content Include="Images\iugrahC.png" />
+    <Content Include="Images\jdaH.png" />
+    <Content Include="Images\jeT.jpg" />
+    <Content Include="Images\journoir.png" />
     <Content Include="Images\Jupiter.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Images\logoSg.png" />
+    <Content Include="Images\Jupiter.png" />
+    <Content Include="Images\Kobaia.png" />
+    <Content Include="Images\La 9ème planète.png" />
+    <Content Include="Images\lesnaT.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\Malaria.png" />
     <Content Include="Images\Mars.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\Mars.png" />
     <Content Include="Images\Mercure.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -315,12 +343,38 @@
     <None Include="Images\pieces.png" />
     <None Include="Images\navette.png" />
     <None Include="Images\sgback.jpg" />
+    <Content Include="Images\miaN.jpg" />
+    <Content Include="Images\mlehliW.jpg" />
+    <Content Include="Images\Muh.png" />
+    <Content Include="Images\Neptune.png" />
+    <Content Include="Images\nevestruY.jpg" />
+    <Content Include="Images\nolliauT.png" />
+    <Content Include="Images\noomahS.jpg" />
+    <Content Include="Images\ognoL.jpg" />
+    <Content Include="Images\petitgris.png" />
+    <Content Include="Images\pieces-de-monnaie.png" />
+    <Content Include="Images\regnetS.jpg" />
+    <Content Include="Images\rentsaK.jpg" />
+    <Content Include="Images\rüglÜ.png" />
+    <Content Include="Images\Sckxyss.png" />
+    <Content Include="Images\Setna.png" />
+    <Content Include="Images\siaruO.jpg" />
+    <Content Include="Images\snewuaB.png" />
+    <Content Include="Images\Sohia.png" />
+    <Content Include="Images\syL aicraG.png" />
     <Content Include="Images\Terre.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\ukathsuL.png" />
+    <Content Include="Images\uohpiaS.png" />
+    <Content Include="Images\Uranus.png" />
+    <Content Include="Images\uT.jpg" />
     <Content Include="Images\Vénus.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\yeM.jpg" />
+    <Content Include="Images\zamliY.jpg" />
+    <Content Include="Images\ztreH.png" />
     <Content Include="obj\Debug\appStargate.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\appStargate.exe" />
     <Content Include="obj\Debug\appStargate.pdb" />
