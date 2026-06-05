@@ -36,6 +36,7 @@
             this.flpPlanetes = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.chartRaces = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbMissions = new System.Windows.Forms.ListBox();
@@ -43,18 +44,15 @@
             this.lblTitrePlanete = new System.Windows.Forms.Label();
             this.pnlNotif = new System.Windows.Forms.Panel();
             this.lblNotif = new System.Windows.Forms.Label();
-            this.pctQuitter = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.flpPlanetes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).BeginInit();
             this.pnlNotif.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -70,7 +68,6 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.pctQuitter);
             this.splitContainer1.Panel2.Controls.Add(this.chartRaces);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox10);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
@@ -125,6 +122,18 @@
             this.chartRaces.TabIndex = 5;
             this.chartRaces.Text = "chart1";
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::appStargate.Properties.Resources._out;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox10.Location = new System.Drawing.Point(631, 0);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(97, 94);
+            this.pictureBox10.TabIndex = 83;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -164,7 +173,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -212,32 +221,6 @@
             this.lblNotif.Text = "label3";
             this.lblNotif.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pctQuitter
-            // 
-            this.pctQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.pctQuitter.BackgroundImage = global::appStargate.Properties.Resources.croix;
-            this.pctQuitter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pctQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctQuitter.Location = new System.Drawing.Point(631, 0);
-            this.pctQuitter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pctQuitter.Name = "pctQuitter";
-            this.pctQuitter.Size = new System.Drawing.Size(98, 94);
-            this.pctQuitter.TabIndex = 84;
-            this.pctQuitter.TabStop = false;
-            this.pctQuitter.Click += new System.EventHandler(this.pctQuitter_Click);
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = global::appStargate.Properties.Resources._out;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Location = new System.Drawing.Point(505, 0);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(97, 94);
-            this.pictureBox10.TabIndex = 83;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
-            // 
             // FormPlanetes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -259,11 +242,10 @@
             this.splitContainer1.ResumeLayout(false);
             this.flpPlanetes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartRaces)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRaces)).EndInit();
             this.pnlNotif.ResumeLayout(false);
             this.pnlNotif.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctQuitter)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,7 +263,6 @@
         private System.Windows.Forms.Label lblNotif;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRaces;
-        private System.Windows.Forms.PictureBox pctQuitter;
         private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

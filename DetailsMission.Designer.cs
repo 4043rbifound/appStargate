@@ -46,8 +46,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.grpImagePlanete = new System.Windows.Forms.GroupBox();
-            this.pctPlanete = new System.Windows.Forms.PictureBox();
             this.pctJournal = new System.Windows.Forms.PictureBox();
             this.pctEditerMission = new System.Windows.Forms.PictureBox();
             this.panelMembres = new System.Windows.Forms.FlowLayoutPanel();
@@ -73,8 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            this.grpImagePlanete.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctPlanete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).BeginInit();
             this.panelMembres.SuspendLayout();
@@ -124,7 +120,7 @@
             this.lblDateFinMission.BackColor = System.Drawing.Color.Transparent;
             this.lblDateFinMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblDateFinMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateFinMission.Location = new System.Drawing.Point(1265, 212);
+            this.lblDateFinMission.Location = new System.Drawing.Point(1258, 442);
             this.lblDateFinMission.Name = "lblDateFinMission";
             this.lblDateFinMission.Size = new System.Drawing.Size(290, 35);
             this.lblDateFinMission.TabIndex = 20;
@@ -148,7 +144,7 @@
             this.lblDateDebutMission.BackColor = System.Drawing.Color.Transparent;
             this.lblDateDebutMission.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold);
             this.lblDateDebutMission.ForeColor = System.Drawing.Color.White;
-            this.lblDateDebutMission.Location = new System.Drawing.Point(1265, 128);
+            this.lblDateDebutMission.Location = new System.Drawing.Point(1258, 358);
             this.lblDateDebutMission.Name = "lblDateDebutMission";
             this.lblDateDebutMission.Size = new System.Drawing.Size(289, 35);
             this.lblDateDebutMission.TabIndex = 18;
@@ -186,9 +182,9 @@
             this.grpObjectifCapture.Controls.Add(this.lblListeObjectifs);
             this.grpObjectifCapture.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpObjectifCapture.ForeColor = System.Drawing.Color.White;
-            this.grpObjectifCapture.Location = new System.Drawing.Point(1233, 284);
+            this.grpObjectifCapture.Location = new System.Drawing.Point(725, 284);
             this.grpObjectifCapture.Name = "grpObjectifCapture";
-            this.grpObjectifCapture.Size = new System.Drawing.Size(350, 222);
+            this.grpObjectifCapture.Size = new System.Drawing.Size(487, 425);
             this.grpObjectifCapture.TabIndex = 32;
             this.grpObjectifCapture.TabStop = false;
             this.grpObjectifCapture.Text = "Objectifs de Capture";
@@ -278,7 +274,7 @@
             this.grpInfosMissions.Controls.Add(this.pictureBox6);
             this.grpInfosMissions.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpInfosMissions.ForeColor = System.Drawing.Color.White;
-            this.grpInfosMissions.Location = new System.Drawing.Point(639, 284);
+            this.grpInfosMissions.Location = new System.Drawing.Point(119, 284);
             this.grpInfosMissions.Name = "grpInfosMissions";
             this.grpInfosMissions.Size = new System.Drawing.Size(573, 425);
             this.grpInfosMissions.TabIndex = 33;
@@ -328,29 +324,6 @@
             this.pictureBox6.Size = new System.Drawing.Size(503, 64);
             this.pictureBox6.TabIndex = 30;
             this.pictureBox6.TabStop = false;
-            // 
-            // grpImagePlanete
-            // 
-            this.grpImagePlanete.BackColor = System.Drawing.Color.Transparent;
-            this.grpImagePlanete.Controls.Add(this.pctPlanete);
-            this.grpImagePlanete.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpImagePlanete.ForeColor = System.Drawing.Color.White;
-            this.grpImagePlanete.Location = new System.Drawing.Point(119, 284);
-            this.grpImagePlanete.Name = "grpImagePlanete";
-            this.grpImagePlanete.Size = new System.Drawing.Size(500, 425);
-            this.grpImagePlanete.TabIndex = 33;
-            this.grpImagePlanete.TabStop = false;
-            this.grpImagePlanete.Text = "La Planète plnt";
-            // 
-            // pctPlanete
-            // 
-            this.pctPlanete.BackgroundImage = global::appStargate.Properties.Resources.Saturne;
-            this.pctPlanete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pctPlanete.Location = new System.Drawing.Point(11, 48);
-            this.pctPlanete.Name = "pctPlanete";
-            this.pctPlanete.Size = new System.Drawing.Size(476, 342);
-            this.pctPlanete.TabIndex = 0;
-            this.pctPlanete.TabStop = false;
             // 
             // pctJournal
             // 
@@ -420,7 +393,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(1251, 198);
+            this.pictureBox7.Location = new System.Drawing.Point(1244, 428);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(319, 64);
             this.pictureBox7.TabIndex = 42;
@@ -431,7 +404,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::appStargate.Properties.Resources.ContourText;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(1251, 115);
+            this.pictureBox1.Location = new System.Drawing.Point(1244, 345);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(319, 64);
             this.pictureBox1.TabIndex = 41;
@@ -568,7 +541,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::appStargate.Properties.Resources.background1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1597, 1026);
             this.Controls.Add(this.pictureBox20);
@@ -578,7 +550,6 @@
             this.Controls.Add(this.pctJournal);
             this.Controls.Add(this.pctEditerMission);
             this.Controls.Add(this.panelMembres);
-            this.Controls.Add(this.grpImagePlanete);
             this.Controls.Add(this.grpObjectifCapture);
             this.Controls.Add(this.grpActionRapides);
             this.Controls.Add(this.pictureBox10);
@@ -609,8 +580,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            this.grpImagePlanete.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctPlanete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctJournal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctEditerMission)).EndInit();
             this.panelMembres.ResumeLayout(false);
@@ -663,10 +632,8 @@
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.GroupBox grpInfosMissions;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.GroupBox grpImagePlanete;
         private System.Windows.Forms.FlowLayoutPanel panelMembres;
         private System.Windows.Forms.FlowLayoutPanel flowMembres;
-        private System.Windows.Forms.PictureBox pctPlanete;
         private System.Windows.Forms.PictureBox pctEditerMission;
         private System.Windows.Forms.PictureBox pctJournal;
         private System.Windows.Forms.PictureBox pictureBox18;

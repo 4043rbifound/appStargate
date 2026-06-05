@@ -430,5 +430,92 @@ namespace appStargate
         {
             this.Close();
         }
+        private Point _pointDepart;
+
+        //Drag page
+
+        private void pnlBas_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void pnlBas_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void rtbInformateurs_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void rtbInformateurs_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void rtbMissionsGrandes_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void rtbMissionsGrandes_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void rtbMissionsPlanete_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void rtbMissionsPlanete_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void tabStats_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void tabStats_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
+
+        private void lblBouger_MouseDown(object sender, MouseEventArgs e)
+        {
+            _pointDepart = e.Location;
+        }
+
+        private void lblBouger_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - _pointDepart.X;
+                this.Top += e.Y - _pointDepart.Y;
+            }
+        }
     }
 }

@@ -47,14 +47,16 @@
             this.pnlFiltres.Name = "pnlFiltres";
             this.pnlFiltres.Size = new System.Drawing.Size(300, 692);
             this.pnlFiltres.TabIndex = 0;
+            this.pnlFiltres.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlFiltres_MouseDown);
+            this.pnlFiltres.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlFiltres_MouseMove);
             // 
             // btnEnnemis
             // 
             this.btnEnnemis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.btnEnnemis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEnnemis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnnemis.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnnemis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnEnnemis.Location = new System.Drawing.Point(15, 169);
+            this.btnEnnemis.Location = new System.Drawing.Point(29, 172);
             this.btnEnnemis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEnnemis.Name = "btnEnnemis";
             this.btnEnnemis.Size = new System.Drawing.Size(240, 54);
@@ -66,10 +68,10 @@
             // btnAllies
             // 
             this.btnAllies.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.btnAllies.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllies.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAllies.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnAllies.Location = new System.Drawing.Point(15, 100);
+            this.btnAllies.Location = new System.Drawing.Point(29, 103);
             this.btnAllies.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAllies.Name = "btnAllies";
             this.btnAllies.Size = new System.Drawing.Size(240, 54);
@@ -81,10 +83,10 @@
             // btnTous
             // 
             this.btnTous.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
-            this.btnTous.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTous.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTous.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTous.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(0)))), ((int)(((byte)(43)))));
-            this.btnTous.Location = new System.Drawing.Point(15, 31);
+            this.btnTous.Location = new System.Drawing.Point(29, 34);
             this.btnTous.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTous.Name = "btnTous";
             this.btnTous.Size = new System.Drawing.Size(240, 54);
@@ -102,14 +104,18 @@
             this.flpAliens.Name = "flpAliens";
             this.flpAliens.Size = new System.Drawing.Size(900, 692);
             this.flpAliens.TabIndex = 1;
+            this.flpAliens.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flpAliens_MouseDown);
+            this.flpAliens.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flpAliens_MouseMove);
             // 
             // FormRaces
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(33)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1200, 692);
             this.Controls.Add(this.flpAliens);
             this.Controls.Add(this.pnlFiltres);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormRaces";
             this.Text = "FormRaces";
