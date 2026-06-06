@@ -36,25 +36,55 @@ namespace appliPandora
             {
                 if (maConnec.State != ConnectionState.Open) maConnec.Open();
 
+                // ── Mission ──────────────────────────────────────────────────
                 if (MesDatas.DsGlobal.Tables.Contains("Mission"))
-                { MesDatas.DsGlobal.Tables["Mission"].Clear(); }
-                if (MesDatas.DsGlobal.Tables.Contains("Membre"))
-                { MesDatas.DsGlobal.Tables["Membre"].Clear(); }
-                if (MesDatas.DsGlobal.Tables.Contains("Composer"))
-                { MesDatas.DsGlobal.Tables["Composer"].Clear(); }
-
-                SQLiteCommand cmdComposer = new SQLiteCommand("SELECT * FROM Composer", maConnec);
-                SQLiteDataAdapter daComposer = new SQLiteDataAdapter(cmdComposer);
-                daComposer.Fill(MesDatas.DsGlobal, "Composer");
+                    MesDatas.DsGlobal.Tables["Mission"].Clear();
 
                 SQLiteCommand cmdMission = new SQLiteCommand("SELECT * FROM Mission", maConnec);
                 SQLiteDataAdapter daMission = new SQLiteDataAdapter(cmdMission);
                 daMission.Fill(MesDatas.DsGlobal, "Mission");
 
+                // ── Membre ───────────────────────────────────────────────────
+                if (MesDatas.DsGlobal.Tables.Contains("Membre"))
+                    MesDatas.DsGlobal.Tables["Membre"].Clear();
+
                 SQLiteCommand cmdMembre = new SQLiteCommand("SELECT * FROM Membre", maConnec);
                 SQLiteDataAdapter daMembre = new SQLiteDataAdapter(cmdMembre);
                 daMembre.Fill(MesDatas.DsGlobal, "Membre");
 
+                // ── Composer ─────────────────────────────────────────────────
+                if (MesDatas.DsGlobal.Tables.Contains("Composer"))
+                    MesDatas.DsGlobal.Tables["Composer"].Clear();
+
+                SQLiteCommand cmdComposer = new SQLiteCommand("SELECT * FROM Composer", maConnec);
+                SQLiteDataAdapter daComposer = new SQLiteDataAdapter(cmdComposer);
+                daComposer.Fill(MesDatas.DsGlobal, "Composer");
+
+                // ── ObjectifCapture ──────────────────────────────────────────
+                if (MesDatas.DsGlobal.Tables.Contains("ObjectifCapture"))
+                    MesDatas.DsGlobal.Tables["ObjectifCapture"].Clear();
+
+                SQLiteCommand cmdObjectif = new SQLiteCommand("SELECT * FROM ObjectifCapture", maConnec);
+                SQLiteDataAdapter daObjectif = new SQLiteDataAdapter(cmdObjectif);
+                daObjectif.Fill(MesDatas.DsGlobal, "ObjectifCapture");
+
+                // ── Espece ───────────────────────────────────────────────────
+                if (MesDatas.DsGlobal.Tables.Contains("Espece"))
+                    MesDatas.DsGlobal.Tables["Espece"].Clear();
+
+                SQLiteCommand cmdEspece = new SQLiteCommand("SELECT * FROM Espece", maConnec);
+                SQLiteDataAdapter daEspece = new SQLiteDataAdapter(cmdEspece);
+                daEspece.Fill(MesDatas.DsGlobal, "Espece");
+
+                // ── Depense ──────────────────────────────────────────────────
+                if (MesDatas.DsGlobal.Tables.Contains("Depense"))
+                    MesDatas.DsGlobal.Tables["Depense"].Clear();
+
+                SQLiteCommand cmdDepense = new SQLiteCommand("SELECT * FROM Depense", maConnec);
+                SQLiteDataAdapter daDepense = new SQLiteDataAdapter(cmdDepense);
+                daDepense.Fill(MesDatas.DsGlobal, "Depense");
+
+                // ── Affichage des missions ───────────────────────────────────
                 flowLayoutPanelMissions.Controls.Clear();
 
                 foreach (DataRow ligneMission in MesDatas.DsGlobal.Tables["Mission"].Rows)
@@ -79,7 +109,6 @@ namespace appliPandora
 
                 int total = MesDatas.DsGlobal.Tables["Mission"].Rows.Count;
                 lblTotalMission.Text = total.ToString();
-
             }
             catch (Exception ex)
             {
@@ -94,7 +123,6 @@ namespace appliPandora
             {
                 formNouvelleMission formCrea = new formNouvelleMission();
                 formCrea.ShowDialog();
-                // Quand formNouvelleMission se ferme, on recharge la liste des missions
                 Form1_Load(null, null);
             }
         }
@@ -169,7 +197,6 @@ namespace appliPandora
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
