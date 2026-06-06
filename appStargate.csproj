@@ -313,7 +313,6 @@
     </Content>
     <None Include="Images\logoSg.png" />
     <None Include="Images\login.png" />
-    <None Include="Images\loginIcon.png" />
     <Content Include="Images\Mars.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -191,7 +191,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.White;
-            this.pictureBox7.BackgroundImage = global::appStargate.Properties.Resources.loginIcon;
+           // this.pictureBox7.BackgroundImage = global::appStargate.Properties.Resources.loginIcon;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox7.Location = new System.Drawing.Point(134, 146);
             this.pictureBox7.Name = "pictureBox7";

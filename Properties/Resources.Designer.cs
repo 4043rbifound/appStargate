@@ -343,16 +343,6 @@ namespace appStargate.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap loginIcon {
-            get {
-                object obj = ResourceManager.GetObject("loginIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logoSg {
             get {
                 object obj = ResourceManager.GetObject("logoSg", resourceCulture);
