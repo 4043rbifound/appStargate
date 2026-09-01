@@ -1,6 +1,7 @@
 ﻿using appliPandora;
 using System;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
@@ -124,6 +125,48 @@ namespace appStargate
             }
         }
 
+        private void lblSolde_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void grpObjectifCapture_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void RafraichirAffichage()
+        {
+            string planete = maMission["nomPlanete"].ToString();
+            string num = maMission["numero"].ToString();
+
+            // Recalcule le solde
+            double budget = Convert.ToDouble(maMission["budget"]);
+            double totalDepenses = 0;
+
+            DataTable tableDepenses = new DataTable();
+            new SQLiteDataAdapter(
+                $"SELECT montant FROM depense WHERE nomPlanete = '{planete}' AND numeroMission = {num}",
+                Connexion.Connec).Fill(tableDepenses);
+
+            foreach (DataRow ligne in tableDepenses.Rows)
+                totalDepenses += Convert.ToDouble(ligne["montant"]);
+
+            double solde = budget - totalDepenses;
+            double ratio = (solde / budget) * 100;
+
+            lblSolde.Text = $"Solde restant : {solde} € ({Math.Round(ratio, 2)}%)";
+
+            if (ratio > 75)
+                lblSolde.ForeColor = Color.LimeGreen;
+            else if (ratio > 45)
+                lblSolde.ForeColor = Color.Orange;
+            else
+                lblSolde.ForeColor = Color.Red;
+        }
+
         private void btnVoirFeuille_Click(object sender, EventArgs e)
         {
             if (btnVoirFeuille.Tag?.ToString() == "ROUGE")
@@ -151,27 +194,12 @@ namespace appStargate
             frmJournal.ShowDialog();
         }
 
-        private void pctEditerMission_Click(object sender, EventArgs e)
-        {
-            DateTime dateRetour = Convert.ToDateTime(maMission["dateRetour"]);
+        
 
-            if (dateRetour < DateTime.Today)
-            {
-                MessageBox.Show("Cette mission est terminée, elle ne peut plus être modifiée.",
-                    "Mission terminée", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            formEditMission frm = new formEditMission(maMission, this);
-            frm.Show();
-        }
-
-        private void pictureBox10_Click(object sender, EventArgs e) { this.Close(); }
+        
         private void DetailsMission_Load(object sender, EventArgs e) { }
         private void lblTitreMission_Click(object sender, EventArgs e) { }
         private void lblObjDatabaz_Click(object sender, EventArgs e) { }
-        private void lblSolde_Click(object sender, EventArgs e) { }
-        private void grpObjectifCapture_Enter(object sender, EventArgs e) { }
         private void pctJournal_MouseEnter(object sender, EventArgs e) { pctJournal.BackColor = Color.White; pctJournal.BackgroundImage = Properties.Resources.journoir; }
         private void pctJournal_MouseLeave(object sender, EventArgs e) { pctJournal.BackColor = Color.Transparent; pctJournal.BackgroundImage = Properties.Resources.journal; }
         private void pctEditerMission_MouseEnter(object sender, EventArgs e) { pctEditerMission.BackColor = Color.White; pctEditerMission.BackgroundImage = Properties.Resources.EditerMissionNoir; }
@@ -210,6 +238,221 @@ namespace appStargate
             lblSolde.ForeColor = ratio > 75 ? Color.LimeGreen
                                : ratio > 45 ? Color.Orange
                                             : Color.Red;
+        }
+        private void pctEditerMission_Click(object sender, EventArgs e)
+        {
+            // On affiche le panel d'édition
+            pnlEdition.Visible = true;
+            pnlEdition.BringToFront();
+
+            // Au départ tous les sous-panels sont cachés
+            pnlContact.Visible = false;
+            pnlDepense.Visible = false;
+            pnlEvenement.Visible = false;
+
+            // On charge les informateurs et types de dépense
+            ChargerInformateurs();
+            ChargerTypesDepense();
+        }
+        
+        
+
+        
+
+        // ─── CHARGEMENT DES LISTES DÉROULANTES ───────────────────────────────
+
+        private void ChargerInformateurs()
+        {
+            cboInformateur.Items.Clear();
+
+            string planete = maMission["nomPlanete"].ToString();
+            string num = maMission["numero"].ToString();
+
+            // On charge les informateurs contactés lors de cette mission
+            DataTable dt = new DataTable();
+            new SQLiteDataAdapter(
+                $"SELECT DISTINCT nomCodeInformateur FROM Contact WHERE nomPlanete = '{planete}' AND numeroMission = {num}",
+                Connexion.Connec).Fill(dt);
+
+            foreach (DataRow row in dt.Rows)
+                cboInformateur.Items.Add(row["nomCodeInformateur"].ToString());
+
+            if (cboInformateur.Items.Count > 0)
+                cboInformateur.SelectedIndex = 0;
+        }
+
+        private void ChargerTypesDepense()
+        {
+            cboTypeDepense.Items.Clear();
+
+            DataTable dt = new DataTable();
+            new SQLiteDataAdapter("SELECT id, libelle FROM TypeDepense", Connexion.Connec).Fill(dt);
+
+            foreach (DataRow row in dt.Rows)
+                cboTypeDepense.Items.Add(row["libelle"].ToString());
+
+            if (cboTypeDepense.Items.Count > 0)
+                cboTypeDepense.SelectedIndex = 0;
+        }
+
+        // ─── BOUTONS DE SÉLECTION DU TYPE ─────────────────────────────────────
+
+        private void btnNouveauContact_Click(object sender, EventArgs e)
+        {
+            // Cache les autres panels et affiche celui du contact
+            pnlContact.Visible = true;
+            pnlDepense.Visible = false;
+            pnlEvenement.Visible = false;
+
+            // Date du jour par défaut
+            dtpContact.Value = DateTime.Now;
+        }
+
+        private void btnNouvelleDepense_Click(object sender, EventArgs e)
+        {
+            pnlContact.Visible = false;
+            pnlDepense.Visible = true;
+            pnlEvenement.Visible = false;
+
+            dtpDepense.Value = DateTime.Now;
+        }
+
+        private void btnNouvelEvenement_Click(object sender, EventArgs e)
+        {
+            pnlContact.Visible = false;
+            pnlDepense.Visible = false;
+            pnlEvenement.Visible = true;
+
+            dtpEvenement.Value = DateTime.Now;
+        }
+
+        // ─── BOUTON VALIDER ───────────────────────────────────────────────────
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            string planete = maMission["nomPlanete"].ToString();
+            int num = Convert.ToInt32(maMission["numero"]);
+
+            // On détermine quel panel est visible et on enregistre
+            if (pnlContact.Visible)
+                ValiderContact(planete, num);
+            else if (pnlDepense.Visible)
+                ValiderDepense(planete, num);
+            else if (pnlEvenement.Visible)
+                ValiderEvenement(planete, num);
+            else
+                MessageBox.Show("Sélectionnez un type d'ajout.", "Erreur");
+        }
+
+        private void ValiderContact(string planete, int num)
+        {
+            // Validation
+            if (cboInformateur.SelectedItem == null)
+            {
+                MessageBox.Show("Sélectionnez un informateur.", "Erreur");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtSomme.Text) || !double.TryParse(txtSomme.Text, out double somme))
+            {
+                MessageBox.Show("Entrez un montant valide.", "Erreur");
+                return;
+            }
+
+            try
+            {
+                string sql = $"INSERT INTO Contact (nomPlanete, numeroMission, dateC, sommeVersee, appreciation, nomCodeInformateur) " +
+                             $"VALUES ('{planete}', {num}, '{dtpContact.Value:yyyy-MM-dd}', {somme}, '{txtAppreciation.Text}', '{cboInformateur.SelectedItem}')";
+
+                SQLiteCommand cmd = new SQLiteCommand(sql, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Contact enregistré !", "Succès");
+                RafraichirAffichage();
+                pnlEdition.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur : {ex.Message}", "Erreur");
+            }
+        }
+
+        private void ValiderDepense(string planete, int num)
+        {
+            // Validation
+            if (string.IsNullOrEmpty(txtMontant.Text) || !double.TryParse(txtMontant.Text, out double montant))
+            {
+                MessageBox.Show("Entrez un montant valide.", "Erreur");
+                return;
+            }
+            if (string.IsNullOrEmpty(txtMotif.Text))
+            {
+                MessageBox.Show("Entrez un motif.", "Erreur");
+                return;
+            }
+            if (cboTypeDepense.SelectedItem == null)
+            {
+                MessageBox.Show("Sélectionnez un type de dépense.", "Erreur");
+                return;
+            }
+
+            try
+            {
+                // On récupère l'id du type de dépense
+                DataTable dt = new DataTable();
+                new SQLiteDataAdapter(
+                    $"SELECT id FROM TypeDepense WHERE libelle = '{cboTypeDepense.SelectedItem}'",
+                    Connexion.Connec).Fill(dt);
+
+                int idType = Convert.ToInt32(dt.Rows[0]["id"]);
+
+                string sql = $"INSERT INTO Depense (nomPlanete, numeroMission, dateD, montant, motif, idTypeDepense) " +
+                             $"VALUES ('{planete}', {num}, '{dtpDepense.Value:yyyy-MM-dd}', {montant}, '{txtMotif.Text}', {idType})";
+
+                SQLiteCommand cmd = new SQLiteCommand(sql, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Dépense enregistrée !", "Succès");
+                RafraichirAffichage();
+                pnlEdition.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur : {ex.Message}", "Erreur");
+            }
+        }
+
+        private void ValiderEvenement(string planete, int num)
+        {
+            // Validation
+            if (string.IsNullOrEmpty(txtCommentaire.Text))
+            {
+                MessageBox.Show("Entrez un commentaire.", "Erreur");
+                return;
+            }
+
+            try
+            {
+                string sql = $"INSERT INTO JournalDeBord (nomPlanete, numero, dateJ, commentaires) " +
+                             $"VALUES ('{planete}', {num}, '{dtpEvenement.Value:yyyy-MM-dd}', '{txtCommentaire.Text}')";
+
+                SQLiteCommand cmd = new SQLiteCommand(sql, Connexion.Connec);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Événement enregistré !", "Succès");
+                RafraichirAffichage();
+                pnlEdition.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erreur : {ex.Message}", "Erreur");
+            }
+        }
+
+        // ─── BOUTON ANNULER ───────────────────────────────────────────────────
+
+        private void btnAnnuler_Click(object sender, EventArgs e)
+        {
+            pnlEdition.Visible = false;
         }
     }
 }
